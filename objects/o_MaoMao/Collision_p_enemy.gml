@@ -7,7 +7,7 @@ if (state == PLAYERSTATE.FREE) {
 	
 	state = PLAYERSTATE.HIT_STATE;
 	
-	hsp = facing * 10;
+	hsp = facing * 5;
 	vsp = -4;
 	
 	x -= hsp;
