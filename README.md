@@ -1,2 +1,0 @@
-# MAOMAO
-GameMaker Game 
