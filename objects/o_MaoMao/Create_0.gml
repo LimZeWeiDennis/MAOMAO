@@ -45,7 +45,8 @@ hp_start_Y = fullnessBar_height + 10;
 
 
 
-
+//to be deleted
+unlockRoom = false;
 
 // setting damage
 flash = 3;

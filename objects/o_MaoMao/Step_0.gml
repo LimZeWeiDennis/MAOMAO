@@ -187,12 +187,14 @@ switch (state)
 	
 	case PLAYERSTATE.DEAD_STATE:
 	
-       	if ( sprite_index != s_playerDead)
+    if ( sprite_index != s_playerDead)
 	{
 		sprite_index = s_playerDead;
 		image_index = 1;
 		image_speed = 0;
 	}
+	
+	room_goto(Dead1);
 	
 	 
 	
