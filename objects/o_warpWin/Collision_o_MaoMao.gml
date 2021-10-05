@@ -4,4 +4,7 @@
 if(o_MaoMao.unlockRoom){
 	
 	room_goto(Win);
-}
+	o_MaoMao.x = 764;
+	o_MaoMao.y = 92;
+
+} 

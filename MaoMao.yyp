@@ -43,6 +43,7 @@
     {"id":{"name":"s_fishKnightDead","path":"sprites/s_fishKnightDead/s_fishKnightDead.yy",},"order":6,},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":1,},
     {"id":{"name":"s_fishKnightR","path":"sprites/s_fishKnightR/s_fishKnightR.yy",},"order":7,},
+    {"id":{"name":"s_door","path":"sprites/s_door/s_door.yy",},"order":32,},
     {"id":{"name":"o_fishKnight","path":"objects/o_fishKnight/o_fishKnight.yy",},"order":1,},
     {"id":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"order":2,},
     {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},"order":1,},
