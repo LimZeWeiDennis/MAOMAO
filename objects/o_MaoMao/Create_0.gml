@@ -59,3 +59,10 @@ enum PLAYERSTATE {
 	DEAD_STATE, 
 	HIT_STATE
 }
+
+
+//setting up the sprites
+jump_sprite = s_MaoMaoJ;
+idle_sprite = s_MaoMaoIdle;
+moving_sprite = s_player;
+attack_sprite = s_playerAttack;

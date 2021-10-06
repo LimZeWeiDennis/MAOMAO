@@ -1,13 +1,13 @@
 {
   "spriteId": {
-    "name": "s_player",
-    "path": "sprites/s_player/s_player.yy",
+    "name": "s_MaoMaoIdle",
+    "path": "sprites/s_MaoMaoIdle/s_MaoMaoIdle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "s_playerR",
-    "path": "sprites/s_playerR/s_playerR.yy",
+    "name": "s_MaoMaoIdle",
+    "path": "sprites/s_MaoMaoIdle/s_MaoMaoIdle.yy",
   },
   "persistent": false,
   "parentObjectId": null,

@@ -5,6 +5,21 @@ key_attack = keyboard_check_pressed(ord("C"));
 key_eat = keyboard_check_pressed(ord("Z"));
 key_restart = keyboard_check_pressed(ord("R"));
 
+//to test the growth
+key_growth = keyboard_check_pressed(ord("A"));
+if(key_growth){
+	if(currentSize < 4){
+		
+		currentSize++;
+	} else {
+		currentSize = 1;
+	}
+	image_xscale = growthSize[currentSize - 1];
+	image_yscale = growthSize[currentSize - 1];
+	y -= sprite_height/3;
+}
+
+
 
 if(key_restart) {
 	game_restart();
@@ -91,15 +106,15 @@ switch (state)
 	//if player object is off the ground
 	if(!place_meeting(x,y+1,o_ground))
 	{
-		sprite_index = s_playerJ;
-		image_speed = 0;
-		if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
+		sprite_index = jump_sprite;
+		image_speed = 0.5;
+		//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
 	} 
 	else
 	{
 		image_speed = 0.1;
-		sprite_index = s_player;
+		sprite_index = idle_sprite;
 	}
 
 	if(hsp != 0) {
@@ -140,6 +155,8 @@ switch (state)
 	script_execute(checkHitBy, hitByNow, hits);
 	
 	
+	
+	
 	//checks if hits fishknight sprite
 	//var hits = instance_place_list(x, y, o_fishKnight, hitByNow, false);
 	
@@ -153,7 +170,7 @@ switch (state)
 	// to check if the attack animation has stopped
 	if (image_index = 5 ){
 		
-		mask_index = s_playerR;
+		mask_index = idle_sprite;
 		state = PLAYERSTATE.FREE;
 	}
 	
@@ -174,7 +191,6 @@ switch (state)
 	// to check if the attack animation has stopped
 	if (image_index = 5 ){
 		
-		mask_index = s_playerR;
 		state = PLAYERSTATE.FREE;
 	}
 	
