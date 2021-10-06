@@ -18,7 +18,7 @@ function checkHitBy(hitByNow, hits)
 				{
 					
 					hp -= o_MaoMao.currentAttack;
-					flash = 3;
+					flash = 3; 
 					hsp += sign(o_MaoMao.hsp) * 3 ;
 					state = ENEMY_STATE.HIT;
 				}

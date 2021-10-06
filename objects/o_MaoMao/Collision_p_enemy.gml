@@ -13,7 +13,7 @@ if (state == PLAYERSTATE.FREE) {
 	x -= hsp;
 	y += vsp;  
 		
-	flash = 20;
+	flash = 10;
 	
 	//for further experimentation on screen shake
 	//o_camera.shake = 3;

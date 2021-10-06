@@ -26,14 +26,18 @@ function hit_stateP(obj, freeState, deadState)
 		//changes the state back to free once the player hits the ground
 			if (obj.hitCoolDown < 0){
 				
+				
 				obj.state = freeState;
+				obj.hitCoolDown = 30;
 			}
+			
 		}
 		else 
 		{
-			show_debug_message("got dead");
-		// changes the state to dead state once the hp <= 0
+			
+			// changes the state to dead state once the hp <= 0
 			obj.state = deadState ;
+			
 		}
 	
 	}

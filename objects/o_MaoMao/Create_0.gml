@@ -57,12 +57,15 @@ enum PLAYERSTATE {
 	ATTACK_STATE,
 	EAT_STATE,
 	DEAD_STATE, 
-	HIT_STATE
+	HIT_STATE,
+	DEAD_IDLE_STATE
 }
 
 
 //setting up the sprites
 jump_sprite = s_MaoMaoJ;
 idle_sprite = s_MaoMaoIdle;
-moving_sprite = s_player;
-attack_sprite = s_playerAttack;
+moving_sprite = s_MaoMaoWalk;
+attack_sprite = s_MaoMaoAttack;
+dead_sprite = s_MaoMaoDead;
+dead_idle_sprite = s_MaoMaoDeadIdle;
