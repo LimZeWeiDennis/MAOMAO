@@ -2,8 +2,8 @@
 hsp = 0;
 vsp = 0;
 grav = 0.5 ;
-walk_spd = [3,3.5,4,4.5];
-jump_height = [9,10,11,12];
+walk_spd = [3,3,3,3];
+jump_height = [9,9,9,9];
 
 //how fast the player deccelerates
 drag = 0.8;

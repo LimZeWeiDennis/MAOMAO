@@ -9,7 +9,7 @@
     "name": "s_MaoMaoIdle",
     "path": "sprites/s_MaoMaoIdle/s_MaoMaoIdle.yy",
   },
-  "persistent": false,
+  "persistent": true,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,

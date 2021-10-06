@@ -107,7 +107,7 @@ switch (state)
 	if(!place_meeting(x,y+1,o_ground))
 	{
 		sprite_index = jump_sprite;
-		image_speed = 0.5;
+		image_speed = 0.6;
 		//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
 	} 
