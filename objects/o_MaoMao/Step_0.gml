@@ -123,6 +123,7 @@ switch (state)
 		
 		if (move == 0) {
 			sprite_index = idle_sprite;
+			image_speed = 0.3;
 		
 	
 			
@@ -194,14 +195,14 @@ switch (state)
 	case PLAYERSTATE.EAT_STATE:
 	
 		// check if the player sprite is the correct one
-	if (sprite_index != s_playerEat){
-		sprite_index = s_playerEat;
+	if (sprite_index != eating_sprite){
+		sprite_index = eating_sprite;
 		image_index = 0;
 		image_speed = 0.5;
 	}
 	
 	// to check if the attack animation has stopped
-	if (image_index = 5 ){
+	if (image_index = 7 ){
 		
 		state = PLAYERSTATE.FREE;
 	}

@@ -1,7 +1,7 @@
 //setting the resolution and scale of the camera
-RES_X = 640;
-RES_Y = 320;
-RES_Scale = 2;
+RES_X = 320	;
+RES_Y = 160;
+RES_Scale = 4;
 
 //not sure what it does but it works
 view_enabled = true;

@@ -30,9 +30,9 @@ currentAttack = 2;
 
 //setting up for the GUI for health and fullness
 fullness = 0; 
-fullnessMax = 10;
-fullnessBar_width = 630;
-fullnessBar_height = 26 ;
+fullnessMax = 1;
+fullnessBar_width = 320;
+fullnessBar_height = 13 ;
 //sets the original position of the fullness bar
 fullnessBar_X = 5;
 fullnessBar_Y = 5;
@@ -64,8 +64,9 @@ enum PLAYERSTATE {
 
 //setting up the sprites
 jump_sprite = s_MaoMaoJ;
-idle_sprite = s_MaoMaoIdle;
+idle_sprite = s_MaoMaoI;
 moving_sprite = s_MaoMaoWalk;
 attack_sprite = s_MaoMaoAttack;
 dead_sprite = s_MaoMaoDead;
 dead_idle_sprite = s_MaoMaoDeadIdle;
+eating_sprite = s_MaoMaoEating;
