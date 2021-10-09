@@ -1,11 +1,13 @@
 ///@desc HP and fullness bar
-
-
 //drawing fullness bar
-draw_sprite(s_fullnessBGSmall, 0 ,fullnessBar_X, fullnessBar_Y);
+//draw_sprite(s_fullnessBGSmall, 0 ,fullnessBar_X, fullnessBar_Y);
+
+draw_sprite_stretched(s_fullnessBGSmall, 0, fullnessBar_X, fullnessBar_Y, fullnessBar_width, fullnessBar_height);
 
 draw_sprite_stretched(s_unitFullness, 0 ,fullnessBar_X, fullnessBar_Y, (fullness/fullnessMax) * fullnessBar_width, fullnessBar_height); 
-draw_sprite(s_fullnessBarSmall, 0 ,fullnessBar_X, fullnessBar_Y);
+//draw_sprite(s_fullnessBar, 0 ,fullnessBar_X, fullnessBar_Y);
+
+draw_sprite_stretched(s_fullnessBar, 0, fullnessBar_X, fullnessBar_Y, fullnessBar_width, fullnessBar_height);
 
 
 //drawing hearts

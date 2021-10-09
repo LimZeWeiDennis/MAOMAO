@@ -112,10 +112,10 @@ switch (state)
 		if(sprite_index != attackSprite){
 			sprite_index = attackSprite;
 			mask_index = attackHBSprite;
-			image_speed = 0.1;
+			image_speed = 0.5;
 		}
 		
-		if(image_index >= 3){
+		if(image_index >= attack_last_index){
 			state = ENEMY_STATE.FREE;
 			mask_index = idleSprite;
 			attackCoolDown = maxAttackCoolDown;

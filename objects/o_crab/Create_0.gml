@@ -26,5 +26,6 @@ idleSprite = s_crab;
 deadObject = o_crabDead;
 attackSprite = s_crabAttack;
 attackHBSprite = s_crabAttackHB;
+attack_last_index = 6;
 
 state = ENEMY_STATE.FREE;

@@ -33,7 +33,7 @@ currentAttack = 2;
 //setting up for the GUI for health and fullness
 fullness = 0; 
 fullnessMax = 1;
-fullnessBar_width = 320;
+fullnessBar_width = 310 ;
 fullnessBar_height = 13 ;
 //sets the original position of the fullness bar
 fullnessBar_X = 5;

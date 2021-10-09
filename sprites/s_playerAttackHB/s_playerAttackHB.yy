@@ -151,8 +151,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "old",
-    "path": "folders/Sprites/MAOMAO/old.yy",
+    "name": "new",
+    "path": "folders/Sprites/MAOMAO/new.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_playerAttackHB",

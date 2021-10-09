@@ -181,7 +181,7 @@ switch (state)
 		
 	
 	// to check if the attack animation has stopped
-	if (image_index = 11){
+	if (image_index >= 16){
 		
 		mask_index = idle_sprite;
 		state = PLAYERSTATE.FREE;
@@ -270,6 +270,7 @@ switch (state)
 		flash = 25;
 	}
 	
+	show_debug_message(image_index);
 	if(image_index >= 25){
 		
 		currentSize ++;

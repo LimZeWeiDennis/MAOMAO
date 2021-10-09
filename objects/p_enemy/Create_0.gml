@@ -27,6 +27,7 @@ idleSprite = -1;
 attackSprite = -1;
 attackHBSprite = -1;
 deadObject = -1;
+attack_last_index = -1;
 
 state = ENEMY_STATE.FREE;
 
