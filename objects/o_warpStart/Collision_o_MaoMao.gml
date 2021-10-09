@@ -3,3 +3,5 @@
 
 targetRoom = Room1;
 room_goto(targetRoom);
+o_MaoMao.x = 184;
+o_MaoMao.y = 700;

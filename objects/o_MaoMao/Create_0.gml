@@ -2,8 +2,8 @@
 hsp = 0;
 vsp = 0;
 grav = 0.5 ;
-walk_spd = [3,3.5,4,4.5];
-jump_height = [9,10,11,12];
+walk_spd = [2,2,2,2];
+jump_height = [9,9,9,9];
 
 //how fast the player deccelerates
 drag = 0.8;
@@ -18,6 +18,8 @@ currentSlashingCD = 30;
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
 growthSize = [1,1.2,1.5,2,2.5, 3];
+
+is_white = false;
  
 
 //current state of maomao
@@ -30,9 +32,9 @@ currentAttack = 2;
 
 //setting up for the GUI for health and fullness
 fullness = 0; 
-fullnessMax = 10;
-fullnessBar_width = 630;
-fullnessBar_height = 26 ;
+fullnessMax = 1;
+fullnessBar_width = 320;
+fullnessBar_height = 13 ;
 //sets the original position of the fullness bar
 fullnessBar_X = 5;
 fullnessBar_Y = 5;
@@ -57,12 +59,16 @@ enum PLAYERSTATE {
 	ATTACK_STATE,
 	EAT_STATE,
 	DEAD_STATE, 
-	HIT_STATE
+	HIT_STATE,
+	DEAD_IDLE_STATE
 }
 
 
 //setting up the sprites
 jump_sprite = s_MaoMaoJ;
-idle_sprite = s_MaoMaoIdle;
-moving_sprite = s_player;
-attack_sprite = s_playerAttack;
+idle_sprite = s_MaoMaoI;
+moving_sprite = s_MaoMaoWalk;
+attack_sprite = s_MaoMaoAttack;
+dead_sprite = s_MaoMaoDead;
+dead_idle_sprite = s_MaoMaoDeadIdle;
+eating_sprite = s_MaoMaoEating;

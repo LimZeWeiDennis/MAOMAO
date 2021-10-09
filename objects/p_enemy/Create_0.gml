@@ -4,7 +4,7 @@
 hsp = 0;
 vsp = 0;
 grav = 0.5;
-walk_spd = 5;
+walk_spd = 100;
 drag = 0.9;
 facing = -1;
 

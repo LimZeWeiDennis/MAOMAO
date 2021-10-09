@@ -12,10 +12,7 @@ switch (state)
 	
 	
 		vsp += grav;
-		
-		show_debug_message("currently in free");
-		show_debug_message(vsp);
-		show_debug_message(place_meeting(x, y+sign(vsp), o_ground));
+	
 		
 		// enemy accelerates to the movement 
 		if(timeBeforeNextMovement <= 0){
@@ -54,7 +51,6 @@ switch (state)
 		{ 
 			while (!place_meeting(x, y+sign(vsp), o_ground))
 			{
-				show_debug_message("boy's coming down");
 				y += sign(vsp);
 			}
 			

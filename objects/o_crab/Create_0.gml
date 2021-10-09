@@ -18,6 +18,6 @@ flash = 0;
 timeBeforeNextMovement = 0;
  
 idleSprite = s_crab;
-deadObject = -1;
+deadObject = o_crabDead;
 
 state = ENEMY_STATE.FREE;

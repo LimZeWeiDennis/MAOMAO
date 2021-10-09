@@ -24,6 +24,7 @@ if(key_growth){
 if(key_restart) {
 	game_restart();
 }
+
 //this check if the key is pressed, doesnt allow holding
 //key_jump = keyboard_check_pressed(vk_space);	
 key_jump = keyboard_check(vk_space);
@@ -92,8 +93,9 @@ switch (state)
 		while (!place_meeting(x, y+sign(vsp), o_ground))
 		{
 			y += sign(vsp);
+			
 		}
-	
+		
 		vsp = 0; 
 	
 	}
@@ -107,18 +109,32 @@ switch (state)
 	if(!place_meeting(x,y+1,o_ground))
 	{
 		sprite_index = jump_sprite;
-		image_speed = 0.5;
+		image_speed = 0.6;
 		//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
 	} 
 	else
 	{
-		image_speed = 0.1;
-		sprite_index = idle_sprite;
+		//sprite_index =  moving_sprite;
+		//image_speed = 0.5;
+		
+		//// this parts need help... how to make the sprite not run while idle?
+
+		
+		if (move == 0) {
+			sprite_index = idle_sprite;
+			image_speed = 0.3;
+		
+	
+			
+		} else {
+			sprite_index = moving_sprite;
+		}
 	}
 
 	if(hsp != 0) {
 		facing = sign(hsp);
+		
 		
 		// need to scale in the opposite direction as well, hence * currentSize
 		image_xscale = sign(hsp) * growthSize[currentSize - 1 ];
@@ -137,8 +153,8 @@ switch (state)
 	slashingCD = currentSlashingCD;
 	
 	//checking if the player sprite is in the right one
-	if (sprite_index != s_playerAttack){
-		sprite_index = s_playerAttack; 
+	if (sprite_index != attack_sprite){
+		sprite_index = attack_sprite; 
 		image_index = 0;
 		image_speed = 1;
 		mask_index = s_playerAttackHB;
@@ -155,8 +171,6 @@ switch (state)
 	script_execute(checkHitBy, hitByNow, hits);
 	
 	
-	
-	
 	//checks if hits fishknight sprite
 	//var hits = instance_place_list(x, y, o_fishKnight, hitByNow, false);
 	
@@ -166,9 +180,8 @@ switch (state)
 	ds_list_destroy(hitByNow);
 		
 	
-	
 	// to check if the attack animation has stopped
-	if (image_index = 5 ){
+	if (image_index = 11){
 		
 		mask_index = idle_sprite;
 		state = PLAYERSTATE.FREE;
@@ -182,14 +195,14 @@ switch (state)
 	case PLAYERSTATE.EAT_STATE:
 	
 		// check if the player sprite is the correct one
-	if (sprite_index != s_playerEat){
-		sprite_index = s_playerEat;
+	if (sprite_index != eating_sprite){
+		sprite_index = eating_sprite;
 		image_index = 0;
 		image_speed = 0.5;
 	}
 	
 	// to check if the attack animation has stopped
-	if (image_index = 5 ){
+	if (image_index = 7 ){
 		
 		state = PLAYERSTATE.FREE;
 	}
@@ -199,20 +212,36 @@ switch (state)
 	case PLAYERSTATE.HIT_STATE:
 	
 	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
+	
+	
 	break;
 	
 	case PLAYERSTATE.DEAD_STATE:
 	
-    if ( sprite_index != s_playerDead)
+    if ( sprite_index != dead_sprite)
 	{
-		sprite_index = s_playerDead;
-		image_index = 1;
-		image_speed = 0;
+		sprite_index = dead_sprite;
+		image_index = 0;
+		image_speed = 0.5;
 	}
 	
-	room_goto(Dead1);
+	if (image_index == 14){
+		state = PLAYERSTATE.DEAD_IDLE_STATE
+		
+	}
+	break;
 	
-	 
+	//room_goto(Dead1);
+	
+	case PLAYERSTATE.DEAD_IDLE_STATE:
+	if (sprite_index != dead_idle_sprite){
+		
+		sprite_index = dead_idle_sprite;
+		image_index = 0;
+		image_speed = 0.5;
+	}
+	
+	break;
 	
 }
 

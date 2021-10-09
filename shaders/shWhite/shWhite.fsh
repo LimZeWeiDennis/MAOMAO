@@ -8,5 +8,6 @@ void main()
 {
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 	// sets the colours of all the pixel in the drawn object to white
+	//gl_FragColor = vec4(1.0,1.0,1.0,gl_FragColor.a);
 	gl_FragColor = vec4(1.0,1.0,1.0,gl_FragColor.a);
 }
