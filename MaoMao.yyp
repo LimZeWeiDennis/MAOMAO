@@ -4,6 +4,7 @@
     {"id":{"name":"s_fullnessBarSmall","path":"sprites/s_fullnessBarSmall/s_fullnessBarSmall.yy",},"order":4,},
     {"id":{"name":"s_fullnessBGSmall","path":"sprites/s_fullnessBGSmall/s_fullnessBGSmall.yy",},"order":5,},
     {"id":{"name":"o_candle","path":"objects/o_candle/o_candle.yy",},"order":1,},
+    {"id":{"name":"Sprite50","path":"sprites/Sprite50/Sprite50.yy",},"order":9,},
     {"id":{"name":"Win","path":"rooms/Win/Win.yy",},"order":2,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":6,},
     {"id":{"name":"s_playerDead","path":"sprites/s_playerDead/s_playerDead.yy",},"order":3,},
