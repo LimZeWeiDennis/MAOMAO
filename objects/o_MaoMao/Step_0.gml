@@ -266,10 +266,11 @@ switch (state)
 	
 	if(sprite_index != growing_sprite){
 		sprite_index = growing_sprite;
-		image_speed = 0.5;
+		image_speed = 0.6;
+		flash = 25;
 	}
 	
-	if(image_index >= 12){
+	if(image_index >= 25){
 		
 		currentSize ++;
 		fullness = fullness - fullnessMax;

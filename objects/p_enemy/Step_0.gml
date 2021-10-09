@@ -112,7 +112,7 @@ switch (state)
 		if(sprite_index != attackSprite){
 			sprite_index = attackSprite;
 			mask_index = attackHBSprite;
-			image_speed = 0.3;
+			image_speed = 0.1;
 		}
 		
 		if(image_index >= 3){
