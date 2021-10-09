@@ -31,10 +31,15 @@ key_jump = keyboard_check(vk_space);
 
 slashingCD --;
 
+show_debug_message("current state is");
+
+
 switch (state)
 {	
 	//case where the player is not attacking
 	case PLAYERSTATE.FREE: 
+	
+	show_debug_message("free");
 	
 	hitCoolDown --;
 	//to ensure that the player object does not move when both keys are pressed
@@ -149,6 +154,8 @@ switch (state)
 	//case where the player is attacking
 	case PLAYERSTATE.ATTACK_STATE:	
 	
+	show_debug_message("attack");
+	
 	//reset the cooldown
 	slashingCD = currentSlashingCD;
 	
@@ -194,6 +201,8 @@ switch (state)
 	// checks for the eating state
 	case PLAYERSTATE.EAT_STATE:
 	
+	show_debug_message("eat");
+	
 		// check if the player sprite is the correct one
 	if (sprite_index != eating_sprite){
 		sprite_index = eating_sprite;
@@ -211,12 +220,17 @@ switch (state)
 	
 	case PLAYERSTATE.HIT_STATE:
 	
+	show_debug_message("hit");
+	
 	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
+
 	
 	break;
 	
 	case PLAYERSTATE.DEAD_STATE:
+	
+	show_debug_message("dead");
 	
     if ( sprite_index != dead_sprite)
 	{
@@ -234,6 +248,9 @@ switch (state)
 	//room_goto(Dead1);
 	
 	case PLAYERSTATE.DEAD_IDLE_STATE:
+	
+	show_debug_message("dead idle");
+	
 	if (sprite_index != dead_idle_sprite){
 		
 		sprite_index = dead_idle_sprite;
