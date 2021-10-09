@@ -18,31 +18,7 @@ with(other)
 	}
 }
 	
-//checks if the fullness if reached
-// update the stats and resets the fullness to 0
-if (fullness >= fullnessMax)
-{
-	currentSize ++;
-	fullness = fullness - fullnessMax;
-	hpMax ++;
-		
-	//recovers MAOMAO to max health
-	hp = hpMax;
-	currentAttack ++;
-		
-	//walk_spd = 5 * currentSize;
-	//jump_height = -7 * currentSize;
-	currentSlashingCD -= 5;
-		
-	//not working too well
-	image_xscale = growthSize[currentSize - 1];
-	image_yscale = growthSize[currentSize - 1];
-	y -= sprite_height/3;
-}
-	 
-//fullness ++;
-	
-//sprite_index = s_player;
+
 
 //}
 

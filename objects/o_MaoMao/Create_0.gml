@@ -45,8 +45,6 @@ hp = hpMax;
 hp_start_X = 0;
 hp_start_Y = fullnessBar_height + 10;
 
-
-
 //to be deleted
 unlockRoom = false;
 
@@ -60,7 +58,8 @@ enum PLAYERSTATE {
 	EAT_STATE,
 	DEAD_STATE, 
 	HIT_STATE,
-	DEAD_IDLE_STATE
+	DEAD_IDLE_STATE,
+	GROWING_STATE
 }
 
 
@@ -72,3 +71,4 @@ attack_sprite = s_MaoMaoAttack;
 dead_sprite = s_MaoMaoDead;
 dead_idle_sprite = s_MaoMaoDeadIdle;
 eating_sprite = s_MaoMaoEating;
+growing_sprite = s_MaoMaoGrows;

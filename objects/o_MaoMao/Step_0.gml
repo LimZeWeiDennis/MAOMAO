@@ -7,16 +7,9 @@ key_restart = keyboard_check_pressed(ord("R"));
 
 //to test the growth
 key_growth = keyboard_check_pressed(ord("A"));
+
 if(key_growth){
-	if(currentSize < 4){
-		
-		currentSize++;
-	} else {
-		currentSize = 1;
-	}
-	image_xscale = growthSize[currentSize - 1];
-	image_yscale = growthSize[currentSize - 1];
-	y -= sprite_height/3;
+	state = PLAYERSTATE.GROWING_STATE;
 }
 
 
@@ -211,9 +204,16 @@ switch (state)
 	}
 	
 	// to check if the attack animation has stopped
-	if (image_index = 7 ){
+	if (image_index >= 7 ){
 		
-		state = PLAYERSTATE.FREE;
+				//checks if the fullness if reached
+		// update the stats and resets the fullness to 0
+		if (fullness >= fullnessMax)
+		{
+			state = PLAYERSTATE.GROWING_STATE;
+		} else {
+			state = PLAYERSTATE.FREE;
+		}
 	}
 	
 	break;
@@ -239,7 +239,7 @@ switch (state)
 		image_speed = 0.5;
 	}
 	
-	if (image_index == 14){
+	if (image_index >= 14){
 		state = PLAYERSTATE.DEAD_IDLE_STATE
 		
 	}
@@ -260,6 +260,39 @@ switch (state)
 	
 	break;
 	
+	case PLAYERSTATE.GROWING_STATE:
+	
+	show_debug_message("growing");
+	
+	if(sprite_index != growing_sprite){
+		sprite_index = growing_sprite;
+		image_speed = 0.5;
+	}
+	
+	if(image_index >= 12){
+		
+		currentSize ++;
+		fullness = fullness - fullnessMax;
+		hpMax ++;
+		
+		//recovers MAOMAO to max health
+		hp = hpMax;
+		currentAttack ++;
+		
+		//walk_spd = 5 * currentSize;
+		//jump_height = -7 * currentSize;
+		currentSlashingCD -= 5;
+		
+		//not working too well
+		image_xscale = growthSize[currentSize - 1];
+		image_yscale = growthSize[currentSize - 1];
+		y -= sprite_height/5;
+		
+		state = PLAYERSTATE.FREE;
+		
+	}
+	
+	break;
 }
 
 
