@@ -2,7 +2,7 @@
 hsp = 0;
 vsp = 0;
 grav = 0.5 ;
-walk_spd = [3,3,3,3];
+walk_spd = [2,2,2,2];
 jump_height = [9,9,9,9];
 
 //how fast the player deccelerates
@@ -18,6 +18,8 @@ currentSlashingCD = 30;
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
 growthSize = [1,1.2,1.5,2,2.5, 3];
+
+is_white = false;
  
 
 //current state of maomao

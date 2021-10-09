@@ -213,6 +213,7 @@ switch (state)
 	
 	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
+	
 	break;
 	
 	case PLAYERSTATE.DEAD_STATE:
