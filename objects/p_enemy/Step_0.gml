@@ -9,11 +9,14 @@ timeBeforeNextMovement --;
 switch (state) 
 {
 	case ENEMY_STATE.FREE:
-	
+		
+		if(hp < hpMax){
+			
+			attackCoolDown --;
+		}
 	
 		vsp += grav;
 	
-		
 		// enemy accelerates to the movement 
 		if(timeBeforeNextMovement <= 0){
 	
@@ -80,6 +83,10 @@ switch (state)
 
 
 		if(hsp != 0) image_xscale = sign(hsp); facing = sign(hsp);
+		
+		if(hp < hpMax && attackCoolDown <= 0){
+			state = ENEMY_STATE.ATTACK;
+		}
 	
 		break;
 	
@@ -96,6 +103,23 @@ switch (state)
 		instance_destroy();
 		break;
 	
+	
+	case(ENEMY_STATE.ATTACK):
+		
+		//face the player first
+		image_xscale = sign(o_MaoMao.x - x);
+		
+		if(sprite_index != attackSprite){
+			sprite_index = attackSprite;
+			mask_index = attackHBSprite;
+			image_speed = 0.3;
+		}
+		
+		if(image_index >= 3){
+			state = ENEMY_STATE.FREE;
+			mask_index = idleSprite;
+			attackCoolDown = maxAttackCoolDown;
+		}
 }
  
 

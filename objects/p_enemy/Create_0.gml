@@ -11,13 +11,21 @@ facing = -1;
 xMoved = 0;
 xToMove = 0;
 
-hp = 5;
+hpMax = 5;
+hp = hpMax;
+
+
+maxAttackCoolDown = 50;
+attackCoolDown = maxAttackCoolDown;
+
 flash = 0;
 
 //setting cooldown for movement
 timeBeforeNextMovement = 0;
  
 idleSprite = -1;
+attackSprite = -1;
+attackHBSprite = -1;
 deadObject = -1;
 
 state = ENEMY_STATE.FREE;
@@ -26,5 +34,5 @@ enum ENEMY_STATE {
 	FREE,
 	ATTACK,
 	HIT, 
-	DEAD_STATE
+	DEAD_STATE,
 } 

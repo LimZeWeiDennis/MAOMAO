@@ -11,7 +11,12 @@ facing = -1;
 xMoved = 0;
 xToMove = 0;
 
-hp = 3;
+hpMax = 5;
+hp = hpMax;
+
+attackCoolDown = 50;
+maxAttackCoolDown = 300;
+
 flash = 0;
 
 //setting cooldown for movement
@@ -19,5 +24,7 @@ timeBeforeNextMovement = 0;
  
 idleSprite = s_crab;
 deadObject = o_crabDead;
+attackSprite = s_crabAttack;
+attackHBSprite = s_crabAttackHB;
 
 state = ENEMY_STATE.FREE;
