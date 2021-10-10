@@ -178,7 +178,7 @@ switch (state)
 	var hitByNow = ds_list_create();
 	
 	//checks if hits fish sprite
-	var hits = instance_place_list(x, y, o_dummy, hitByNow, false);
+	var hits = instance_place_list(x, y, p_miniBoss, hitByNow, false);
 	
 	// script used to check the hits and converts into damage
 	script_execute(checkHitBy, hitByNow, hits);
