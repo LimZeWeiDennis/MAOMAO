@@ -18,6 +18,8 @@ hp = hpMax;
 maxAttackCoolDown = 50;
 attackCoolDown = maxAttackCoolDown;
 
+attack_range = 0;
+
 flash = 0;
 
 //setting cooldown for movement
@@ -28,6 +30,7 @@ attackSprite = -1;
 attackHBSprite = -1;
 deadObject = -1;
 attack_last_index = -1;
+walking_sprite = -1;
 
 state = ENEMY_STATE.FREE;
 

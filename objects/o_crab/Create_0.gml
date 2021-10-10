@@ -11,11 +11,13 @@ facing = -1;
 xMoved = 0;
 xToMove = 0;
 
-hpMax = 5;
+hpMax = 100;
 hp = hpMax;
 
 attackCoolDown = 50;
 maxAttackCoolDown = 300;
+
+attack_range = 50;
 
 flash = 0;
 
@@ -27,5 +29,6 @@ deadObject = o_crabDead;
 attackSprite = s_crabAttack;
 attackHBSprite = s_crabAttackHB;
 attack_last_index = 6;
+walking_sprite = s_crabWalk;
 
 state = ENEMY_STATE.FREE;

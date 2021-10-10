@@ -16,7 +16,7 @@ if (state == PLAYERSTATE.FREE && hitCoolDown <= 0) {
 		//for further experimentation on screen shake
 		//o_camera.shake = 3;
 	
-	if (hp > 1){
+	if (hp > 0){
 		
 		flash = 50;
 	

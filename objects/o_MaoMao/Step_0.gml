@@ -24,28 +24,28 @@ key_jump = keyboard_check(vk_space);
 
 slashingCD --;
 
-show_debug_message("current state is");
-
 
 switch (state)
 {	
 	//case where the player is not attacking
 	case PLAYERSTATE.FREE: 
 	
-	show_debug_message("free");
-	
 	hitCoolDown --;
 	//to ensure that the player object does not move when both keys are pressed
 	var move = key_right - key_left;
 	
-	
+	show_debug_message(hsp);
+	show_debug_message(vsp);
 	// if player releases the move buttons deccelerate 
 	if(move == 0) {
+		show_debug_message("movement is 0 now");
 		hsp = hsp * drag;
 		
 	// when the player is moving MAOMAO
 	// cases: moving , change direction
 	} else {
+		
+		show_debug_message("moving now");
 		
 		// checking if not moving initially or changing direction
 		if (hsp == 0 || sign(hsp) != sign(move))
@@ -66,7 +66,7 @@ switch (state)
 	vsp = vsp + grav;
 	//checking if the MaoMao object is already on the ground and the jump key is being pressed
 	if(place_meeting(x,y+1,o_ground) && key_jump)
-	{
+	{ 
 		vsp -= jump_height[currentSize - 1];	
 	}
 
@@ -86,7 +86,7 @@ switch (state)
 	x += hsp;
 
 	// checking for y collision
-	if(place_meeting(x , y+vsp, o_ground))
+ 	if(place_meeting(x , y+vsp, o_ground))
 	{
 		while (!place_meeting(x, y+sign(vsp), o_ground))
 		{
@@ -178,6 +178,14 @@ switch (state)
 	//script_execute(checkHitBy, hitByNow, hits);
 	
 	ds_list_destroy(hitByNow);
+	
+	var hitByNow = ds_list_create();
+	
+	//checks if hits fish sprite
+	var hits = instance_place_list(x, y, o_dummy, hitByNow, false);
+	
+	// script used to check the hits and converts into damage
+	script_execute(checkHitBy, hitByNow, hits);
 		
 	
 	// to check if the attack animation has stopped
@@ -223,8 +231,6 @@ switch (state)
 	show_debug_message("hit");
 	
 	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
-	
-
 	
 	break;
 	

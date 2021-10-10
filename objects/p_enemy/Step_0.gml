@@ -72,19 +72,28 @@ switch (state)
 		//Animation ------------
 
 		//if player object is off the ground
-		if(place_meeting(x,y+1,o_ground))
+		if(!place_meeting(x,y+1,o_ground))
 		{
-
-		
-			image_speed = 0.1;
 			sprite_index = idleSprite;
+			image_speed = 0.6;
+			//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
-		}  
+		} 
+		else
+		{
+			if (hsp != 0) {
+				sprite_index = walking_sprite;
+				image_speed = 0.5;
+			}
+
+		}
 
 
 		if(hsp != 0) image_xscale = sign(hsp); facing = sign(hsp);
 		
-		if(hp < hpMax && attackCoolDown <= 0){
+		
+		//only attacks if the hp is not max, attack has cooled down and maomao is within attack range1
+		if(hp < hpMax && attackCoolDown <= 0 && abs(o_MaoMao.x - x) <= attack_range){
 			state = ENEMY_STATE.ATTACK;
 		}
 	
