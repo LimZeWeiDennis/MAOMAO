@@ -4,7 +4,7 @@
 hsp = 0;
 vsp = 0;
 grav = 0.5;
-walk_spd = 5;
+walk_spd = 0.5;
 drag = 0.9;
 facing = -1;
 
@@ -14,15 +14,16 @@ xToMove = 0;
 hpMax = 100;
 hp = hpMax;
 
-attackCoolDown = 50;
-maxAttackCoolDown = 300;
+attackCoolDown = 0;
+maxAttackCoolDown = 180;
 
-attack_range = 50;
+attack_range = 30;
 
 flash = 0;
 
 //setting cooldown for movement
 timeBeforeNextMovement = 0;
+movementTime = 50;
  
 idleSprite = s_crab;
 deadObject = o_crabDead;

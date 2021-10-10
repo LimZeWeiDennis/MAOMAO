@@ -3,5 +3,5 @@
 
 targetRoom = Level1_scaledDown;
 room_goto(targetRoom);
-o_MaoMao.x = 55;
-o_MaoMao.y = 598;
+o_MaoMao.x = 349;
+o_MaoMao.y = 595;

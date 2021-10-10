@@ -34,18 +34,15 @@ switch (state)
 	//to ensure that the player object does not move when both keys are pressed
 	var move = key_right - key_left;
 	
-	show_debug_message(hsp);
-	show_debug_message(vsp);
 	// if player releases the move buttons deccelerate 
 	if(move == 0) {
-		show_debug_message("movement is 0 now");
+
 		hsp = hsp * drag;
 		
 	// when the player is moving MAOMAO
 	// cases: moving , change direction
 	} else {
 		
-		show_debug_message("moving now");
 		
 		// checking if not moving initially or changing direction
 		if (hsp == 0 || sign(hsp) != sign(move))
@@ -147,7 +144,6 @@ switch (state)
 	//case where the player is attacking
 	case PLAYERSTATE.ATTACK_STATE:	
 	
-	show_debug_message("attack");
 	
 	//reset the cooldown
 	slashingCD = currentSlashingCD;
@@ -202,7 +198,6 @@ switch (state)
 	// checks for the eating state
 	case PLAYERSTATE.EAT_STATE:
 	
-	show_debug_message("eat");
 	
 		// check if the player sprite is the correct one
 	if (sprite_index != eating_sprite){
@@ -228,15 +223,12 @@ switch (state)
 	
 	case PLAYERSTATE.HIT_STATE:
 	
-	show_debug_message("hit");
 	
 	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
 	break;
 	
 	case PLAYERSTATE.DEAD_STATE:
-	
-	show_debug_message("dead");
 	
     if ( sprite_index != dead_sprite)
 	{
@@ -255,7 +247,6 @@ switch (state)
 	
 	case PLAYERSTATE.DEAD_IDLE_STATE:
 	
-	show_debug_message("dead idle");
 	
 	if (sprite_index != dead_idle_sprite){
 		
@@ -267,8 +258,7 @@ switch (state)
 	break;
 	
 	case PLAYERSTATE.GROWING_STATE:
-	
-	show_debug_message("growing");
+
 	
 	if(sprite_index != growing_sprite){
 		sprite_index = growing_sprite;
@@ -276,7 +266,6 @@ switch (state)
 		flash = 25;
 	}
 	
-	show_debug_message(image_index);
 	if(image_index >= 25){
 		
 		currentSize ++;
