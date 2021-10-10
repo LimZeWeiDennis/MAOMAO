@@ -34,7 +34,7 @@ switch(state){
 	
 	if(rest_time <= 0){
 		state = TORCHSTATE.ACTIVATING;
-		rest_time = 200;
+		rest_time = 100;
 	}
 	
 	break;
@@ -67,7 +67,7 @@ switch(state){
 	if(active_time <= 0) {
 		state = TORCHSTATE.TRANSITION;
 		mask_index = inactive_sprite;
-		active_time = 1000;
+		active_time = 300;
 	}
 	
 	break;
