@@ -16,11 +16,13 @@ function checkHitBy(hitByNow, hits)
 				ds_list_add(hitByAttack, hitID);
 				with(hitID)
 				{
-					
-					hp -= o_MaoMao.currentAttack;
-					flash = 3; 
-					hsp += sign(o_MaoMao.hsp) * 3 ;
-					state = ENEMY_STATE.HIT;
+					if(state != ENEMY_STATE.ATTACK){
+						
+						hp -= o_MaoMao.currentAttack;
+						flash = 20;
+						hsp += sign(o_MaoMao.hsp) * 1 ;
+						state = ENEMY_STATE.HIT;
+					}
 				}
 			}
 		}

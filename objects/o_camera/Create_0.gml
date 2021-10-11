@@ -1,5 +1,5 @@
 //setting the resolution and scale of the camera
-RES_X = 320	;
+RES_X = 320;
 RES_Y = 160;
 RES_Scale = 4;
 

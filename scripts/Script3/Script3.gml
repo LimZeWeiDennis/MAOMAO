@@ -6,8 +6,7 @@ function hit_stateP(obj, freeState, deadState)
 	obj.hsp = obj.hsp * obj.drag;
 	obj.vsp = obj.vsp + obj.grav;
 	
-	show_debug_message("currently in hit state");
-	show_debug_message(vsp);
+	obj.hitCoolDown = 50;
 	
 	// checking for y collision
 	if(place_meeting(obj.x , obj.y + obj.vsp, o_ground)) 
@@ -17,30 +16,21 @@ function hit_stateP(obj, freeState, deadState)
 			obj.y += sign(obj.vsp);
 			
 		}
-	
-		obj.vsp = 0; 
-		show_debug_message(obj.hp);
 		
 		if( obj.hp >= 1) {
 			show_debug_message("still alive");
-		//changes the state back to free once the player hits the ground
-			if (obj.hitCoolDown < 0){
-				
-				//reset the hitCoolDown
-				obj.hitCoolDown = 50;
-				obj.state = freeState;
-				
-			}
-			
+			//changes the state back to free once the player hits the ground
+			obj.state = freeState;
 		}
 		else 
 		{
-			
 			// changes the state to dead state once the hp <= 0
 			obj.state = deadState ;
 			
 		}
 	
+		obj.vsp = 0; 
+		
 	}
 
 	// applying to x and y

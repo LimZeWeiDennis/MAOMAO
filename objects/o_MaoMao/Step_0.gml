@@ -7,16 +7,9 @@ key_restart = keyboard_check_pressed(ord("R"));
 
 //to test the growth
 key_growth = keyboard_check_pressed(ord("A"));
+
 if(key_growth){
-	if(currentSize < 4){
-		
-		currentSize++;
-	} else {
-		currentSize = 1;
-	}
-	image_xscale = growthSize[currentSize - 1];
-	image_yscale = growthSize[currentSize - 1];
-	y -= sprite_height/3;
+	state = PLAYERSTATE.GROWING_STATE;
 }
 
 
@@ -31,6 +24,7 @@ key_jump = keyboard_check(vk_space);
 
 slashingCD --;
 
+
 switch (state)
 {	
 	//case where the player is not attacking
@@ -40,14 +34,15 @@ switch (state)
 	//to ensure that the player object does not move when both keys are pressed
 	var move = key_right - key_left;
 	
-	
 	// if player releases the move buttons deccelerate 
 	if(move == 0) {
+
 		hsp = hsp * drag;
 		
 	// when the player is moving MAOMAO
 	// cases: moving , change direction
 	} else {
+		
 		
 		// checking if not moving initially or changing direction
 		if (hsp == 0 || sign(hsp) != sign(move))
@@ -68,7 +63,7 @@ switch (state)
 	vsp = vsp + grav;
 	//checking if the MaoMao object is already on the ground and the jump key is being pressed
 	if(place_meeting(x,y+1,o_ground) && key_jump)
-	{
+	{ 
 		vsp -= jump_height[currentSize - 1];	
 	}
 
@@ -88,7 +83,7 @@ switch (state)
 	x += hsp;
 
 	// checking for y collision
-	if(place_meeting(x , y+vsp, o_ground))
+ 	if(place_meeting(x , y+vsp, o_ground))
 	{
 		while (!place_meeting(x, y+sign(vsp), o_ground))
 		{
@@ -149,6 +144,7 @@ switch (state)
 	//case where the player is attacking
 	case PLAYERSTATE.ATTACK_STATE:	
 	
+	
 	//reset the cooldown
 	slashingCD = currentSlashingCD;
 	
@@ -178,10 +174,18 @@ switch (state)
 	//script_execute(checkHitBy, hitByNow, hits);
 	
 	ds_list_destroy(hitByNow);
+	
+	var hitByNow = ds_list_create();
+	
+	//checks if hits fish sprite
+	var hits = instance_place_list(x, y, p_miniBoss, hitByNow, false);
+	
+	// script used to check the hits and converts into damage
+	script_execute(checkHitBy, hitByNow, hits);
 		
 	
 	// to check if the attack animation has stopped
-	if (image_index = 11){
+	if (image_index >= 16){
 		
 		mask_index = idle_sprite;
 		state = PLAYERSTATE.FREE;
@@ -194,6 +198,7 @@ switch (state)
 	// checks for the eating state
 	case PLAYERSTATE.EAT_STATE:
 	
+	
 		// check if the player sprite is the correct one
 	if (sprite_index != eating_sprite){
 		sprite_index = eating_sprite;
@@ -202,17 +207,24 @@ switch (state)
 	}
 	
 	// to check if the attack animation has stopped
-	if (image_index = 7 ){
+	if (image_index >= 7 ){
 		
-		state = PLAYERSTATE.FREE;
+				//checks if the fullness if reached
+		// update the stats and resets the fullness to 0
+		if (fullness >= fullnessMax)
+		{
+			state = PLAYERSTATE.GROWING_STATE;
+		} else {
+			state = PLAYERSTATE.FREE;
+		}
 	}
 	
 	break;
 	
 	case PLAYERSTATE.HIT_STATE:
 	
-	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
+	hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
 	break;
 	
@@ -225,7 +237,7 @@ switch (state)
 		image_speed = 0.5;
 	}
 	
-	if (image_index == 14){
+	if (image_index >= 14){
 		state = PLAYERSTATE.DEAD_IDLE_STATE
 		
 	}
@@ -234,6 +246,8 @@ switch (state)
 	//room_goto(Dead1);
 	
 	case PLAYERSTATE.DEAD_IDLE_STATE:
+	
+	
 	if (sprite_index != dead_idle_sprite){
 		
 		sprite_index = dead_idle_sprite;
@@ -243,6 +257,39 @@ switch (state)
 	
 	break;
 	
+	case PLAYERSTATE.GROWING_STATE:
+
+	
+	if(sprite_index != growing_sprite){
+		sprite_index = growing_sprite;
+		image_speed = 0.6;
+		flash = 25;
+	}
+	
+	if(image_index >= 25){
+		
+		currentSize ++;
+		fullness = fullness - fullnessMax;
+		hpMax ++;
+		
+		//recovers MAOMAO to max health
+		hp = hpMax;
+		currentAttack ++;
+		
+		//walk_spd = 5 * currentSize;
+		//jump_height = -7 * currentSize;
+		currentSlashingCD -= 5;
+		
+		//not working too well
+		image_xscale = growthSize[currentSize - 1];
+		image_yscale = growthSize[currentSize - 1];
+		y -= sprite_height/5;
+		
+		state = PLAYERSTATE.FREE;
+		
+	}
+	
+	break;
 }
 
 
