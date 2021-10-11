@@ -4,31 +4,64 @@
 
 //applying gravity
 vsp = vsp + grav;
-timeBeforeNextMovement --;
+
 
 switch (state) 
 {
 	case ENEMY_STATE.FREE:
 	
-	
-		vsp += grav;
-	
+		//show_debug_message("timebefore");
+		//show_debug_message(timeBeforeNextMovement);
 		
+		//show_debug_message("movementTime");
+		//show_debug_message(movementTime);
+		
+		if(hp < hpMax){
+			
+			attackCoolDown --;
+		}
+	
+		//vsp += grav;
+		
+	
 		// enemy accelerates to the movement 
 		if(timeBeforeNextMovement <= 0){
-	
-			if( abs(xMoved) < abs(xToMove))
-			{
-				hsp = sign(xToMove) * walk_spd;
-				xMoved += sign(xToMove) * walk_spd;
-			} 
-			else { 
-				hsp = 0;
-				xMoved = 0;
-				xToMove = random_range(-10,10);
-	
-				timeBeforeNextMovement = 50;
+			
+			if(movementTime >= 0){
+				movementTime --;
+				// makes enemies move towards MAOMAO
+				if(abs(y - o_MaoMao.y) < 10 && hp < hpMax){
+					hsp = walk_spd * -sign(x - o_MaoMao.x);
+				} else {
+					
+					hsp = walk_spd * facing;
+
+				}
+				
+				
 			}
+			else {
+				
+				timeBeforeNextMovement = 100;
+				movementTime = 50;
+				
+			}
+	
+			//if( abs(xMoved) < abs(xToMove))
+			//{
+			//	hsp = sign(xToMove) * walk_spd;
+			//	xMoved += sign(xToMove) * walk_spd;
+			//}		
+			//else { 
+			//	hsp = 0;
+			//	xMoved = 0;
+			//	xToMove = random_range(-10,10);
+	
+			//	timeBeforeNextMovement = 50;
+			//}
+		} else {
+			hsp = 0;
+			timeBeforeNextMovement --;
 		}
 		
 
@@ -40,9 +73,23 @@ switch (state)
 				x += sign(hsp);
 			}
 	
-			hsp = 0; 
-	
+			hsp *= -1; 
 		}
+		
+		
+		//created new object to collide with enemies to prevent them from falling over
+		if(place_meeting(x+hsp , y, o_enemyCollider))
+		{ 
+			while (!place_meeting(x+sign(hsp), y, o_enemyCollider))
+			{
+				x += sign(hsp);
+			}
+	
+			hsp *= -1; 
+		}
+		
+		
+
  
 		x += hsp;
 
@@ -56,7 +103,18 @@ switch (state)
 			
 			// prevents the player from falling into the ground
 			vsp = 0; 
-	
+			
+			//if (!position_meeting(x + (sprite_width/2) * sign(hsp), y + (sprite_height/2) + 2, o_ground))
+			//{
+				
+			//	show_debug_message("fallling");
+			//	hsp *= -1;
+			//}
+			
+			//if(sign(hsp) < 0 && !position_meeting(x + (sprite_width/2) * sign(hsp), y + (sprite_height/2) + 2.5, o_ground))
+			//{
+			//	hsp *= -1;
+			//}
 		} 
 		
 		//accounts for the gravity when not in contact with the ground;
@@ -64,22 +122,39 @@ switch (state)
 		{
 			y += vsp;
 		}
-
+ 
 
 		//Animation ------------
 
 		//if player object is off the ground
-		if(place_meeting(x,y+1,o_ground))
+		if(!place_meeting(x,y+1,o_ground))
 		{
-
-		
-			image_speed = 0.1;
 			sprite_index = idleSprite;
+			image_speed = 0.6;
+			//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
-		}  
+		} 
+		else
+		{
+			if (hsp != 0) {
+				sprite_index = walking_sprite;
+				image_speed = 0.5;
+			} else {
+				sprite_index = idleSprite;
+			}
+
+		}
 
 
-		if(hsp != 0) image_xscale = sign(hsp); facing = sign(hsp);
+		if(hsp != 0){
+			image_xscale = sign(hsp); 
+			facing = sign(hsp);
+		}
+		
+		//only attacks if the hp is not max, attack has cooled down and maomao is within attack range1
+		if(hp < hpMax && attackCoolDown <= 0 && abs(o_MaoMao.x - x) <= attack_range){
+			state = ENEMY_STATE.ATTACK;
+		}
 	
 		break;
 	
@@ -96,6 +171,25 @@ switch (state)
 		instance_destroy();
 		break;
 	
+	
+	case(ENEMY_STATE.ATTACK):
+		
+		show_debug_message("attacking now")
+		
+		//face the player first
+		image_xscale = sign(o_MaoMao.x - x);
+		
+		if(sprite_index != attackSprite){
+			sprite_index = attackSprite;
+			mask_index = attackHBSprite;
+			image_speed = 0.5;
+		}
+		
+		if(image_index >= attack_last_index){
+			state = ENEMY_STATE.FREE;
+			mask_index = idleSprite;
+			attackCoolDown = maxAttackCoolDown;
+		}
 }
  
 

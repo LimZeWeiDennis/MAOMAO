@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "MAOMAO",
-    "path": "folders/Sprites/MAOMAO.yy",
+    "name": "old",
+    "path": "folders/Sprites/MAOMAO/old.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_player",

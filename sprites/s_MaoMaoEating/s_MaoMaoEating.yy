@@ -97,8 +97,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "MAOMAO",
-    "path": "folders/Sprites/MAOMAO.yy",
+    "name": "new",
+    "path": "folders/Sprites/MAOMAO/new.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_MaoMaoEating",

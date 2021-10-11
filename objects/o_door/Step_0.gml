@@ -16,8 +16,12 @@ switch(state)
 	break;
 	
 	case(DOOR_STATE.OPEN):
-	image_index = 1;
-	image_speed = 0;
+	
+	image_speed = 0.3;
+	
+	if(image_index >=4){
+		image_speed = 0;
+	}
 	
 	
 }
