@@ -1,6 +1,7 @@
 /// @description can be used for all enemy as parent
 // You can write your code in this editor
-if (state == PLAYERSTATE.FREE && hitCoolDown <= 0 && p_enemy.state == ENEMY_STATE.ATTACK) {
+if ((state == PLAYERSTATE.FREE || state == PLAYERSTATE.ATTACK_STATE) 
+&& hitCoolDown <= 0 && p_enemy.state == ENEMY_STATE.ATTACK) {
 	
 	// minus health when touched
 		hp --;
