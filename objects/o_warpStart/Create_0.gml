@@ -2,4 +2,4 @@
 // You can write your code in this editor
 
 // add in targetX and TargetY to maintain the state of maomao
-var targetRoom = Level1_scaledDown;
+targetRoom = Level1_scaledDown;
