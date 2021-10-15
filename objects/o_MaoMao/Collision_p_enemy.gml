@@ -9,7 +9,7 @@ if ((state == PLAYERSTATE.FREE || state == PLAYERSTATE.ATTACK_STATE)
 		state = PLAYERSTATE.HIT_STATE;
 	
 		hsp = facing * 5;
-		vsp = -4;
+		vsp = -2;
 	
 		x -= hsp;
 		y += vsp; 

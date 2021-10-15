@@ -60,13 +60,15 @@ switch (state)
 		
 	}
 
-	vsp = vsp + grav;
+	
 	//checking if the MaoMao object is already on the ground and the jump key is being pressed
 	if(place_meeting(x,y+1,o_ground) && key_jump)
 	{ 
+		
 		vsp -= jump_height[currentSize - 1];	
 	}
 
+	vsp = vsp + grav;
 
 	// checking for x collision
 	if(place_meeting(x+hsp , y, o_ground))
@@ -95,6 +97,9 @@ switch (state)
 	
 	}
 
+	// when space is pressed, vsp = initial speed, 
+	// as time passes, vsp = vsp - grav
+	// as vsp turns positive, cat falls, faster and faster
 	y += vsp;
 
 
