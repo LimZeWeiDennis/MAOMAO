@@ -1,15 +1,15 @@
 // basic physics set up
 hsp = 0;
 vsp = 0;
-grav = 0.5 ;
+grav = 0.15 ;
 walk_spd = [2,2,2,2];
-jump_height = [9,9,9,9];
+jump_height = [3,9,9,9];
 
 //how fast the player deccelerates
 drag = 0.8;
 facing = -1;
 
-acc = 0.1;
+acc = 0.05;
 starting_speed = 0; 
 
 //prevents maomao from attacking too fast, will adjust according to size(can change as growth)
