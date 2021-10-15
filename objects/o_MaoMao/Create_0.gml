@@ -1,11 +1,11 @@
 // basic physics set up
 hsp = 0;
 vsp = 0;
-grav = 0.5 ;
+grav = 0.4 ;
 walk_spd = [2,2,2,2];
-jump_height = [9,9,9,9];
+jump_height = [7,9,9,9];
 
-//how fast the player deccelerates
+//how fast the player dec	celerates
 drag = 0.8;
 facing = -1;
 

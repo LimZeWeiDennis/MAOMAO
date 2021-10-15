@@ -2,5 +2,5 @@
 // You can write your code in this editor
 
 room_goto(targetRoom);
-o_MaoMao.x = 77;
-o_MaoMao.y = 577;
+o_MaoMao.x = 12;
+o_MaoMao.y = 178;
