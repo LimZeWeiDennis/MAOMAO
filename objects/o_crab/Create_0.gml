@@ -11,7 +11,7 @@ facing = -1;
 xMoved = 0;
 xToMove = 0;
 
-hpMax = 3;
+hpMax = 6;
 hp = hpMax;
 
 attackCoolDown = 0;

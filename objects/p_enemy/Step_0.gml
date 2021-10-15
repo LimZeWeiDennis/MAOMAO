@@ -16,10 +16,10 @@ switch (state)
 		//show_debug_message("movementTime");
 		//show_debug_message(movementTime);
 		
-		if(hp < hpMax){
+		//if(hp < hpMax){
 			
-			attackCoolDown --;
-		}
+		attackCoolDown --;
+		//}
 	
 		//vsp += grav;
 		
@@ -152,7 +152,7 @@ switch (state)
 		}
 		
 		//only attacks if the hp is not max, attack has cooled down and maomao is within attack range1
-		if(hp < hpMax && attackCoolDown <= 0 && abs(o_MaoMao.x - x) <= attack_range){
+		if(attackCoolDown <= 0 && abs(o_MaoMao.x - x) <= attack_range){
 			state = ENEMY_STATE.ATTACK;
 		}
 	

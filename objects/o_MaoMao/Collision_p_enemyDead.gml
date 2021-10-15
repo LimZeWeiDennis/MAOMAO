@@ -12,6 +12,7 @@ with(other)
 {
 	if(trulyDead)
 	{
+		
 		instance_destroy();
 		o_MaoMao.state = PLAYERSTATE.EAT_STATE;
 		o_MaoMao.fullness += fullness_amount;
