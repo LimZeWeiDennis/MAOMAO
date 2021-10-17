@@ -1,15 +1,15 @@
 // basic physics set up
 hsp = 0;
 vsp = 0;
-grav = 0.4 ;
-walk_spd = [2,2,2,2];
-jump_height = [7,9,9,9];
+grav = 0.2 ;
+walk_spd = [2,2];
+jump_height = [4,2];
 
-//how fast the player dec	celerates
+//how fast the player deccelerates
 drag = 0.8;
 facing = -1;
 
-acc = 0.1;
+acc = 0.05;
 starting_speed = 0; 
 
 //prevents maomao from attacking too fast, will adjust according to size(can change as growth)
@@ -17,7 +17,7 @@ currentSlashingCD = 30;
 
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
-growthSize = [1,1.2,1.5,2,2.5, 3];
+growthSize = [1,4];
 
 is_white = false;
  
@@ -53,13 +53,13 @@ flash = 3;
 hitCoolDown = 0;
  
 enum PLAYERSTATE {
-	FREE,
-	ATTACK_STATE,
-	EAT_STATE,
-	DEAD_STATE, 
-	HIT_STATE,
-	DEAD_IDLE_STATE,
-	GROWING_STATE
+  FREE,
+  ATTACK_STATE,
+  EAT_STATE,
+  DEAD_STATE, 
+  HIT_STATE,
+  DEAD_IDLE_STATE,
+  GROWING_STATE
 }
 
 
