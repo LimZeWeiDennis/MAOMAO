@@ -1,13 +1,17 @@
 // basic physics set up
 hsp = 0;
 vsp = 0;
-grav = 0.15 ;
-walk_spd = [2,2,2,2];
-jump_height = [3,9,9,9];
+grav = 0.2 ;
+walk_spd = [2,2];
+jump_height = [4,4];
+yprev = y;
+xprev = x;
 
 //how fast the player deccelerates
 drag = 0.8;
 facing = -1;
+
+grounded = false;
 
 acc = 0.05;
 starting_speed = 0; 
@@ -17,7 +21,7 @@ currentSlashingCD = 30;
 
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
-growthSize = [1,1.2,1.5,2,2.5, 3];
+growthSize = [1,4];
 
 is_white = false;
  
@@ -56,6 +60,7 @@ enum PLAYERSTATE {
 	FREE,
 	ATTACK_STATE,
 	EAT_STATE,
+	LANDING_STATE,
 	DEAD_STATE, 
 	HIT_STATE,
 	DEAD_IDLE_STATE,

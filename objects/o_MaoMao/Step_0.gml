@@ -6,12 +6,7 @@ key_eat = keyboard_check_pressed(ord("Z"));
 key_restart = keyboard_check_pressed(ord("R"));
 
 //to test the growth
-key_growth = keyboard_check_pressed(ord("A"));
-
-if(key_growth){
-	state = PLAYERSTATE.GROWING_STATE;
-}
-
+key_growth = keyboard_check_pressed(ord("X"));
 
 
 if(key_restart) {
@@ -29,6 +24,10 @@ switch (state)
 {	
 	//case where the player is not attacking
 	case PLAYERSTATE.FREE: 
+	
+	if(key_growth && hp > 0){
+		state = PLAYERSTATE.GROWING_STATE;
+	}	
 	
 	hitCoolDown --;
 	//to ensure that the player object does not move when both keys are pressed
@@ -61,15 +60,6 @@ switch (state)
 	}
 
 	
-	//checking if the MaoMao object is already on the ground and the jump key is being pressed
-	if(place_meeting(x,y+1,o_ground) && key_jump)
-	{ 
-		
-		vsp -= jump_height[currentSize - 1];	
-	}
-
-	vsp = vsp + grav;
-
 	// checking for x collision
 	if(place_meeting(x+hsp , y, o_ground))
 	{  
@@ -83,6 +73,18 @@ switch (state)
 	}
 
 	x += hsp;
+	
+	
+	//checking if the MaoMao object is already on the ground and the jump key is being pressed
+	if(place_meeting(x,y+1,o_ground) && key_jump)
+	{ 
+		grounded = false;
+		vsp -= jump_height[currentSize - 1];	
+	}
+
+	vsp = vsp + grav;
+	
+
 
 	// checking for y collision
  	if(place_meeting(x , y+vsp, o_ground))
@@ -91,11 +93,43 @@ switch (state)
 		{
 			y += sign(vsp);
 			
+			
 		}
 		
-		vsp = 0; 
-	
+		if(vsp > 2 && !grounded) {
+			
+			grounded = true
+			vsp = 0;
+			state = PLAYERSTATE.LANDING_STATE;
+		}
+		
+		vsp = 0;
+		
 	}
+	
+	if(place_meeting(x, y+1, o_breakableGround) && !grounded )
+	{
+		show_debug_message("breaking grounds!");
+		
+		var ground_id = instance_place(x, y+1, o_breakableGround);
+		
+		with(ground_id){
+			hp --;
+		}
+		
+		//var hitByNow = ds_list_create();
+	
+		//var hits = ds_list_create();
+		////checks if hits fish sprite
+		//hits = instance_place_list(x, y + 1, o_breakableGround, hitByNow, false);
+	
+		//// script used to check the hits and converts into damage
+		//script_execute(checkHitWall, hitByNow, hits);
+		
+		//ds_list_destroy(hitByNow);
+		//ds_list_destroy(hits);
+	}
+	
 
 	// when space is pressed, vsp = initial speed, 
 	// as time passes, vsp = vsp - grav
@@ -110,6 +144,7 @@ switch (state)
 	{
 		sprite_index = jump_sprite;
 		image_speed = 0.6;
+		grounded = false;
 		//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
 	} 
@@ -188,6 +223,18 @@ switch (state)
 	// script used to check the hits and converts into damage
 	script_execute(checkHitBy, hitByNow, hits);
 		
+	ds_list_destroy(hitByNow);
+	
+	
+	// check hits on the breakable wall only when maomao is big
+	if(o_MaoMao.currentSize == 2){
+		var hitByNow = ds_list_create();
+		//checks if hits fish sprite
+		var hits = instance_place_list(x, y, o_breakableWall, hitByNow, false);
+		// script used to check the hits and converts into damage
+		script_execute(checkHitWall, hitByNow, hits);
+		ds_list_destroy(hitByNow);
+	}
 	
 	// to check if the attack animation has stopped
 	if (image_index >= 16){
@@ -201,6 +248,8 @@ switch (state)
 	
 	
 	// checks for the eating state
+	// eating no longer helps with growth
+	/// kiv might just remove it
 	case PLAYERSTATE.EAT_STATE:
 	
 	
@@ -214,14 +263,7 @@ switch (state)
 	// to check if the attack animation has stopped
 	if (image_index >= 7 ){
 		
-				//checks if the fullness if reached
-		// update the stats and resets the fullness to 0
-		if (fullness >= fullnessMax)
-		{
-			state = PLAYERSTATE.GROWING_STATE;
-		} else {
-			state = PLAYERSTATE.FREE;
-		}
+		state = PLAYERSTATE.FREE;
 	}
 	
 	break;
@@ -263,35 +305,69 @@ switch (state)
 	break;
 	
 	case PLAYERSTATE.GROWING_STATE:
-
+	
+	show_debug_message("Entered growing state");
 	
 	if(sprite_index != growing_sprite){
-		sprite_index = growing_sprite;
-		image_speed = 0.6;
-		flash = 25;
+			sprite_index = growing_sprite;
+			image_speed = 0.6;
+			
+			if(currentSize == 1){	
+				mask_index = growing_sprite;
+			}
 	}
+	
+
+
 	
 	if(image_index >= 25){
 		
-		currentSize ++;
-		fullness = fullness - fullnessMax;
-		hpMax ++;
+		show_debug_message("tried to grow");
+		if(place_meeting(x, y ,o_ground) && currentSize == 1){
 		
-		//recovers MAOMAO to max health
-		hp = hpMax;
-		currentAttack ++;
+			show_debug_message("cannot grow");
+		}
+		else if(!place_meeting(x, y ,o_ground) && currentSize == 1){
+			show_debug_message("can grow");
 		
-		//walk_spd = 5 * currentSize;
-		//jump_height = -7 * currentSize;
-		currentSlashingCD -= 5;
+			currentSize = 2;
+	
+			image_xscale = growthSize[currentSize - 1];
+			image_yscale = growthSize[currentSize - 1];
 		
-		//not working too well
-		image_xscale = growthSize[currentSize - 1];
-		image_yscale = growthSize[currentSize - 1];
-		y -= sprite_height/5;
+		} else if( currentSize == 2){
+			currentSize = 1;
+			
+			image_xscale = growthSize[currentSize - 1];
+			image_yscale = growthSize[currentSize - 1];
 		
+		}
+		
+		// checking for upper y- collision?
+		// if place_meeting is true then means got collision with the ground
+		// hence growth should only happen if there is no collision. hence there should be !place_meeting 
+		// if the growth wannt to happen`
+	 	//if(!place_meeting(x + 5*x , y + 5*y, o_ground)) {
+		
+		//}
+		mask_index = s_MaoMaoIdle;
 		state = PLAYERSTATE.FREE;
-		
+	}
+	
+
+	break;
+	
+	case PLAYERSTATE.LANDING_STATE:
+	
+	show_debug_message("landing");
+	
+	if (sprite_index != s_MaoMaoLanding){
+		sprite_index = s_MaoMaoLanding;
+		image_speed = 0.5;
+	}
+	
+	if (image_index >= 2){
+		state = PLAYERSTATE.FREE;
 	}
 	
 	break;

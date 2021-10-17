@@ -9,12 +9,7 @@ vsp = vsp + grav;
 switch (state) 
 {
 	case ENEMY_STATE.FREE:
-	
-		//show_debug_message("timebefore");
-		//show_debug_message(timeBeforeNextMovement);
-		
-		//show_debug_message("movementTime");
-		//show_debug_message(movementTime);
+
 		
 		//if(hp < hpMax){
 			
@@ -173,8 +168,6 @@ switch (state)
 	
 	
 	case(ENEMY_STATE.ATTACK):
-		
-		show_debug_message("attacking now")
 		
 		//face the player first
 		image_xscale = sign(o_MaoMao.x - x);
