@@ -8,7 +8,6 @@ key_restart = keyboard_check_pressed(ord("R"));
 //to test the growth
 key_growth = keyboard_check_pressed(ord("X"));
 
-
 if(key_restart) {
   game_restart();
 }
@@ -21,6 +20,7 @@ slashingCD --;
 
 
 switch (state)
+
 
 {	
 	//case where the player is not attacking
@@ -129,7 +129,6 @@ switch (state)
 		//sprite_index =  moving_sprite;
 		//image_speed = 0.5;
 		
-
     if (move == 0) {
       sprite_index = idle_sprite;
       image_speed = 0.3;

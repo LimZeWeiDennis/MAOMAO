@@ -5,8 +5,6 @@ grav = 0.2 ;
 walk_spd = [2,2];
 
 jump_height = [4,4];
-yprev = y;
-xprev = x;
 
 
 //how fast the player deccelerates
@@ -68,6 +66,7 @@ enum PLAYERSTATE {
 	HIT_STATE,
 	DEAD_IDLE_STATE,
 	GROWING_STATE
+
 }
 
 
