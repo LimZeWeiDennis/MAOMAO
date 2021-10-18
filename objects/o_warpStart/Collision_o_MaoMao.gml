@@ -6,5 +6,5 @@ room_goto(targetRoom);
 o_MaoMao.x = 44;
 o_MaoMao.y = 140;
 
-//o_MaoMao.x = 77;
-//o_MaoMao.y = 443;
+//o_MaoMao.x = 2026;
+//o_MaoMao.y = 62;
