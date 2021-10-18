@@ -7,17 +7,21 @@
 
 
 //sprite_index = s_playerEat;
-	
-with(other)
-{
-	if(trulyDead)
+if(hp < hpMax){
+	with(other)
 	{
+		if(trulyDead)
+		{
 		
-		instance_destroy();
-		o_MaoMao.state = PLAYERSTATE.EAT_STATE;
-		o_MaoMao.fullness += fullness_amount;
+			instance_destroy();
+			o_MaoMao.state = PLAYERSTATE.EAT_STATE;
+			o_MaoMao.hp ++;
+		}
 	}
 }
+
+
+
 	
 
 
