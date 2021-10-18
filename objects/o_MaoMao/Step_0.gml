@@ -37,7 +37,7 @@ switch (state)
 	// if player releases the move buttons deccelerate 
 	if(move == 0) {
 
-
+ 
     hsp = hsp * drag;
     
   // when the player is moving MAOMAO
@@ -256,6 +256,10 @@ switch (state)
 		sprite_index = dead_sprite;
 		image_index = 0;
 		image_speed = 0.5;
+		
+		currentSize = 1;
+		image_xscale = growthSize[currentSize - 1];
+		image_yscale = growthSize[currentSize - 1];
 	}
 	
 	if (image_index >= 14){
@@ -269,6 +273,7 @@ switch (state)
 	case PLAYERSTATE.DEAD_IDLE_STATE:
 	
 	
+	
 	if (sprite_index != dead_idle_sprite){
 		
 		sprite_index = dead_idle_sprite;
@@ -279,54 +284,54 @@ switch (state)
 	break;
 	
 	case PLAYERSTATE.GROWING_STATE:
+	if(currentSize == 1){
+		
+		show_debug_message("Entered growing state");
 	
-	show_debug_message("Entered growing state");
-	
-	if(sprite_index != growing_sprite){
-			sprite_index = growing_sprite;
-			image_speed = 0.6;
-			
-			if(currentSize == 1){	
+		if(sprite_index != growing_sprite){
+				sprite_index = growing_sprite;
+				image_speed = 0.6;
 				mask_index = growing_sprite;
+
+		}
+	
+		if(image_index >= 10){
+		
+			show_debug_message("tried to grow");
+			if(place_meeting(x, y ,o_ground)){
+		
+				show_debug_message("cannot grow");
 			}
-	}
-	
-
-
-	
-	if(image_index >= 25){
+			else {
+				show_debug_message("can grow");
 		
-		show_debug_message("tried to grow");
-		if(place_meeting(x, y ,o_ground) && currentSize == 1){
+				currentSize = 2;
+	
+				image_xscale = growthSize[currentSize - 1];
+				image_yscale = growthSize[currentSize - 1];
 		
-			show_debug_message("cannot grow");
+			} 
+			mask_index = s_MaoMaoIdle;
+			state = PLAYERSTATE.FREE;
 		}
-		else if(!place_meeting(x, y ,o_ground) && currentSize == 1){
-			show_debug_message("can grow");
 		
-			currentSize = 2;
+	} else {
 	
-			image_xscale = growthSize[currentSize - 1];
-			image_yscale = growthSize[currentSize - 1];
-		
-		} else if( currentSize == 2){
-			currentSize = 1;
+		if(sprite_index != shrinking_sprite){
+				sprite_index = shrinking_sprite;
+				image_speed = 0.6;
+
+		}
+	
+		if(image_index >= 7){
+				currentSize = 1;
+				image_xscale = growthSize[currentSize - 1];
+				image_yscale = growthSize[currentSize - 1];
 			
-			image_xscale = growthSize[currentSize - 1];
-			image_yscale = growthSize[currentSize - 1];
-		
+			state = PLAYERSTATE.FREE;
 		}
-		
-		// checking for upper y- collision?
-		// if place_meeting is true then means got collision with the ground
-		// hence growth should only happen if there is no collision. hence there should be !place_meeting 
-		// if the growth wannt to happen`
-	 	//if(!place_meeting(x + 5*x , y + 5*y, o_ground)) {
-		
-		//}
-		mask_index = s_MaoMaoIdle;
-		state = PLAYERSTATE.FREE;
 	}
+	
 	
 
 	break;
@@ -357,44 +362,4 @@ switch (state)
 	}
 	
 	break;
-}
-
-
-  
-  if(sprite_index != growing_sprite){
-    sprite_index = growing_sprite;
-    image_speed = 0.6;
-    flash = 25;
-  }
-  
-  if(image_index >= 25){
-    
-    if(currentSize == 1){
-      
-      currentSize = 2;
-    } else {
-      currentSize = 1;
-    }
-    
-    //fullness = fullness - fullnessMax;
-    //hpMax ++;
-    
-    ////recovers MAOMAO to max health
-    //hp = hpMax;
-    //currentAttack ++;
-    
-    //walk_spd = 5 * currentSize;
-    //jump_height = -7 * currentSize;
-    //currentSlashingCD -= 5;
-    
-    //not working too well
-    image_xscale = growthSize[currentSize - 1];
-    image_yscale = growthSize[currentSize - 1];
-    y -= sprite_height/5;
-    
-    state = PLAYERSTATE.FREE;
-    
-  }
-  
-  break;
 }

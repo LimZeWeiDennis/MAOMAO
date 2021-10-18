@@ -6,7 +6,7 @@ function hit_stateP(obj, freeState, deadState)
 	obj.hsp = obj.hsp * obj.drag;
 	obj.vsp = obj.vsp + obj.grav;
 	
-	obj.hitCoolDown = 50;
+	obj.hitCoolDown = 90;
 	
 	// checking for y collision
 	if(place_meeting(obj.x , obj.y + obj.vsp, o_ground)) 

@@ -10,7 +10,7 @@ switch(state)
 	image_index = 0;
 	image_speed = 0;
 	
-	if (o_MaoMao.unlockRoom){
+	if (unlockedDoor){
 		state = DOOR_STATE.OPEN;
 	};
 	break;

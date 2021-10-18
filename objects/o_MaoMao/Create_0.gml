@@ -21,7 +21,7 @@ currentSlashingCD = 30;
 
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
-growthSize = [1,4];
+growthSize = [1,3];
 
 is_white = false;
  
@@ -47,7 +47,7 @@ hpMax = 5;
 hp = hpMax;
 //sets the original position of the hearts
 hp_start_X = 0;
-hp_start_Y = fullnessBar_height + 10;
+hp_start_Y = 10;
 
 //to be deleted
 unlockRoom = false;
@@ -79,3 +79,4 @@ dead_sprite = s_MaoMaoDead;
 dead_idle_sprite = s_MaoMaoDeadIdle;
 eating_sprite = s_MaoMaoEating;
 growing_sprite = s_MaoMaoGrows;
+shrinking_sprite = s_MaoMaoShrinks;
