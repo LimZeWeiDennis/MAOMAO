@@ -10,11 +10,5 @@ inactive_sprite = s_torchInactive;
 active_sprite = s_torchActive;
 activating_sprite = s_torchActivating;
 
-enum TORCHSTATE {
-	ACTIVE,
-	TRANSITION,
-	INACTIVE,
-	ACTIVATING
-}
 
-state = TORCHSTATE.INACTIVE;
+state = ENVIRONMENTSTATE.INACTIVE;
