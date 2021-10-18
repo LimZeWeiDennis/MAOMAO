@@ -70,6 +70,9 @@ enum PLAYERSTATE {
 }
 
 
+last_cleared_stage = -1;
+
+
 //setting up the sprites
 jump_sprite = s_MaoMaoJ;
 idle_sprite = s_MaoMaoI;

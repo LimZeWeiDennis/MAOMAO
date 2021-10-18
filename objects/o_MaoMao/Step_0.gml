@@ -8,8 +8,15 @@ key_restart = keyboard_check_pressed(ord("R"));
 //to test the growth
 key_growth = keyboard_check_pressed(ord("X"));
 
+
 if(key_restart) {
-  game_restart();
+	hp = hpMax;
+	state = PLAYERSTATE.FREE;
+	
+	room_goto(Start_Room);
+	x = 1124;
+	y = 693;
+
 }
 
 //this check if the key is pressed, doesnt allow holding
@@ -20,7 +27,7 @@ slashingCD --;
 
 
 switch (state)
-
+ 
 
 {	
 	//case where the player is not attacking
@@ -99,11 +106,18 @@ switch (state)
 			
 		}
 		
-		if(vsp > 2 && !grounded) {
-			
+		if(vsp > 0 && !grounded && currentSize == 2) {
+		//if(currentSize == 2) {
+		
 			grounded = true
 			vsp = 0;
-			state = PLAYERSTATE.LANDING_STATE;
+			
+			var ground_id = instance_place(x, y+1, o_breakableGround);
+		
+			with(ground_id){
+				hp --;
+			}
+			
 		}
 		
 		vsp = 0;
@@ -181,24 +195,9 @@ switch (state)
 	script_execute(checkHitBy, hitByNow, hits);
 	
 	
-	//checks if hits fishknight sprite
-	//var hits = instance_place_list(x, y, o_fishKnight, hitByNow, false);
-	
-	// script used to check the hits and converts into damage
-	//script_execute(checkHitBy, hitByNow, hits);
-	
 	ds_list_destroy(hitByNow);
 	
-	var hitByNow = ds_list_create();
-	
-	//checks if hits fish sprite
-	var hits = instance_place_list(x, y, p_miniBoss, hitByNow, false);
-	
-	// script used to check the hits and converts into damage
-	script_execute(checkHitBy, hitByNow, hits);
-		
-	ds_list_destroy(hitByNow);
-	
+
 	
 	// check hits on the breakable wall only when maomao is big
 	if(o_MaoMao.currentSize == 2){
@@ -215,6 +214,7 @@ switch (state)
 		
 		mask_index = idle_sprite;
 		state = PLAYERSTATE.FREE;
+		image_speed =  0.3;
 	}
 	
 	break;
@@ -238,6 +238,7 @@ switch (state)
 	if (image_index >= 7 ){
 		
 		state = PLAYERSTATE.FREE;
+		image_speed = 0.3
 	}
 	
 	break;
@@ -295,7 +296,7 @@ switch (state)
 
 		}
 	
-		if(image_index >= 10){
+		if(image_index >= 7){
 		
 			show_debug_message("tried to grow");
 			if(place_meeting(x, y ,o_ground)){
@@ -309,10 +310,12 @@ switch (state)
 	
 				image_xscale = growthSize[currentSize - 1];
 				image_yscale = growthSize[currentSize - 1];
+				image_xscale = sign(hsp) * growthSize[currentSize - 1];
 		
 			} 
 			mask_index = s_MaoMaoIdle;
 			state = PLAYERSTATE.FREE;
+			image_speed = 0.3;
 		}
 		
 	} else {
@@ -323,10 +326,11 @@ switch (state)
 
 		}
 	
-		if(image_index >= 7){
+		if(image_index >= 8){
 				currentSize = 1;
 				image_xscale = growthSize[currentSize - 1];
 				image_yscale = growthSize[currentSize - 1];
+				image_xscale = sign(hsp) * growthSize[currentSize - 1];
 			
 			state = PLAYERSTATE.FREE;
 		}
@@ -336,30 +340,31 @@ switch (state)
 
 	break;
 	
-	case PLAYERSTATE.LANDING_STATE:
+	//case PLAYERSTATE.LANDING_STATE:
 	
-	show_debug_message("landing");
+	//show_debug_message("landing");
 	
-	if (sprite_index != s_MaoMaoLanding){
-		sprite_index = s_MaoMaoLanding;
-		image_speed = 0.5;
-	}
+	//if (sprite_index != s_MaoMaoLanding){
+	//	sprite_index = s_MaoMaoLanding;
+	//	image_speed = 0.5;
+	//}
 	
-	if(currentSize == 2){
+	////if(currentSize == 2){
 		
-		show_debug_message("breaking grounds!");
+	////	show_debug_message("breaking grounds!");
 		
-		var ground_id = instance_place(x, y+1, o_breakableGround);
+	////	var ground_id = instance_place(x, y+1, o_breakableGround);
 		
-		with(ground_id){
-			hp --;
-		}
-	}
+	////	with(ground_id){
+	////		hp --;
+	////	}
+	////}
 
 	
-	if (image_index >= 2){
-		state = PLAYERSTATE.FREE;
-	}
+	//if (image_index >= 2){
+	//	state = PLAYERSTATE.FREE;
+	//	image_speed = 0.2;
+	//}
 	
-	break;
+	//break;
 }

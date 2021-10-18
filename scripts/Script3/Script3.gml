@@ -8,6 +8,15 @@ function hit_stateP(obj, freeState, deadState)
 	
 	obj.hitCoolDown = 90;
 	
+	//checking for x collision
+	if(place_meeting(obj.x + obj.hsp , obj.y, o_ground)) 
+	{
+
+	
+		obj.hsp = 0; 
+		
+	}
+	
 	// checking for y collision
 	if(place_meeting(obj.x , obj.y + obj.vsp, o_ground)) 
 	{
@@ -32,6 +41,9 @@ function hit_stateP(obj, freeState, deadState)
 		obj.vsp = 0; 
 		
 	}
+	
+	
+
 
 	// applying to x and y
 	obj.x -= obj.hsp;

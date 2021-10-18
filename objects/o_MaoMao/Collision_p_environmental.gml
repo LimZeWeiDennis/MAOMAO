@@ -1,9 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 // checks if the player is in attack mode before dealing damage
-if (p_environmental.state == ENVIRONMENTSTATE.ACTIVE 
-&& (state == PLAYERSTATE.FREE || state = PLAYERSTATE.LANDING_STATE) 
-&& hitCoolDown <= 0) 
+if (p_environmental.state == ENVIRONMENTSTATE.ACTIVE && state == PLAYERSTATE.FREE && hitCoolDown <= 0) 
 {
 
 	// minus health when touched

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 state = DOOR_STATE.CLOSE;
-targettedRoom = Win;
+targettedRoom = Finalboss_big;
 
 
 unlockedDoor = false;   
