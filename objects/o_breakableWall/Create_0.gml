@@ -2,6 +2,8 @@
 // You can write your code in this editor
 hp = 3;
 
+shake = 0;
+
 image_index = 0;
 image_speed = 0;
 

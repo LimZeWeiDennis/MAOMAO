@@ -104,36 +104,9 @@ switch (state)
 		}
 		
 		vsp = 0;
-		
-	}
-	
-	if(place_meeting(x, y+1, o_breakableGround) && !grounded )
-	{
-		show_debug_message("breaking grounds!");
-		
-		var ground_id = instance_place(x, y+1, o_breakableGround);
-		
-		with(ground_id){
-			hp --;
-		}
-		
-		//var hitByNow = ds_list_create();
-	
-		//var hits = ds_list_create();
-		////checks if hits fish sprite
-		//hits = instance_place_list(x, y + 1, o_breakableGround, hitByNow, false);
-	
-		//// script used to check the hits and converts into damage
-		//script_execute(checkHitWall, hitByNow, hits);
-		
-		//ds_list_destroy(hitByNow);
-		//ds_list_destroy(hits);
-	}
-	
 
-	// when space is pressed, vsp = initial speed, 
-	// as time passes, vsp = vsp - grav
-	// as vsp turns positive, cat falls, faster and faster
+	}
+	
 	y += vsp;
 
 
@@ -365,6 +338,18 @@ switch (state)
 		sprite_index = s_MaoMaoLanding;
 		image_speed = 0.5;
 	}
+	
+	if(currentSize == 2){
+		
+		show_debug_message("breaking grounds!");
+		
+		var ground_id = instance_place(x, y+1, o_breakableGround);
+		
+		with(ground_id){
+			hp --;
+		}
+	}
+
 	
 	if (image_index >= 2){
 		state = PLAYERSTATE.FREE;

@@ -47,6 +47,7 @@ function checkHitWall(hitByNow, hits)
 				{
 					show_debug_message(hp);
 					hp --;
+					shake = 10;
 				}
 			}
 		}
