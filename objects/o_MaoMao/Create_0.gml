@@ -3,11 +3,15 @@ hsp = 0;
 vsp = 0;
 grav = 0.2 ;
 walk_spd = [2,2];
-jump_height = [4,2];
+
+jump_height = [4,4];
+
 
 //how fast the player deccelerates
 drag = 0.8;
 facing = -1;
+
+grounded = false;
 
 acc = 0.05;
 starting_speed = 0; 
@@ -53,13 +57,16 @@ flash = 3;
 hitCoolDown = 0;
  
 enum PLAYERSTATE {
-  FREE,
-  ATTACK_STATE,
-  EAT_STATE,
-  DEAD_STATE, 
-  HIT_STATE,
-  DEAD_IDLE_STATE,
-  GROWING_STATE
+
+	FREE,
+	ATTACK_STATE,
+	EAT_STATE,
+	LANDING_STATE,
+	DEAD_STATE, 
+	HIT_STATE,
+	DEAD_IDLE_STATE,
+	GROWING_STATE
+
 }
 
 

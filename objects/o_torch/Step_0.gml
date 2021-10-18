@@ -20,7 +20,7 @@ if(!place_meeting(x , y , o_ground))
 }
  
 switch(state){
-	case(TORCHSTATE.INACTIVE):
+	case(ENVIRONMENTSTATE.INACTIVE):
 	
 	if(sprite_index != inactive_sprite){
 		sprite_index = inactive_sprite
@@ -33,13 +33,13 @@ switch(state){
 	rest_time --;
 	
 	if(rest_time <= 0){
-		state = TORCHSTATE.ACTIVATING;
+		state = ENVIRONMENTSTATE.ACTIVATING;
 		rest_time = 100;
 	}
 	
 	break;
 	
-	case(TORCHSTATE.TRANSITION):
+	case(ENVIRONMENTSTATE.TRANSITION):
 	
 	
 	if(sprite_index != inactive_sprite){
@@ -48,12 +48,12 @@ switch(state){
 	}
 	
 	if (image_index = 7){
-		state = TORCHSTATE.INACTIVE;
+		state = ENVIRONMENTSTATE.INACTIVE;
 	}
 	
 	break;
 	
-	case(TORCHSTATE.ACTIVE):
+	case(ENVIRONMENTSTATE.ACTIVE):
 
 	
 	if(sprite_index != active_sprite){
@@ -65,14 +65,14 @@ switch(state){
 	active_time --;
 	
 	if(active_time <= 0) {
-		state = TORCHSTATE.TRANSITION;
+		state = ENVIRONMENTSTATE.TRANSITION;
 		mask_index = inactive_sprite;
 		active_time = 300;
 	}
 	
 	break;
 	
-	case (TORCHSTATE.ACTIVATING):
+	case (ENVIRONMENTSTATE.ACTIVATING):
 	
 	if(sprite_index != activating_sprite){
 		sprite_index = activating_sprite;
@@ -81,7 +81,7 @@ switch(state){
 	} 
 	
 	if (image_index = 7){
-		state = TORCHSTATE.ACTIVE;
+		state = ENVIRONMENTSTATE.ACTIVE;
 	}
 	
 	break;
