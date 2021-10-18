@@ -6,7 +6,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Script4",
+  "name": "Script8",
   "tags": [],
   "resourceType": "GMScript",
 }
