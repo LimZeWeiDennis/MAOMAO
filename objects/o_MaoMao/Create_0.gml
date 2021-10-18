@@ -4,7 +4,7 @@ vsp = 0;
 grav = 0.2 ;
 walk_spd = [2,2];
 
-jump_height = [4,4];
+jump_height = [4,2];
 
 
 //how fast the player deccelerates
