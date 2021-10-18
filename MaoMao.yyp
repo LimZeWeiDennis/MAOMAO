@@ -70,7 +70,7 @@
     {"id":{"name":"s_unitFullness","path":"sprites/s_unitFullness/s_unitFullness.yy",},"order":3,},
     {"id":{"name":"o_warpWin","path":"objects/o_warpWin/o_warpWin.yy",},"order":7,},
     {"id":{"name":"o_warpStart","path":"objects/o_warpStart/o_warpStart.yy",},"order":6,},
-    {"id":{"name":"Room6","path":"rooms/Room6/Room6.yy",},"order":5,},
+    {"id":{"name":"Level1_new","path":"rooms/Level1_new/Level1_new.yy",},"order":5,},
     {"id":{"name":"Level1_scaledDown","path":"rooms/Level1_scaledDown/Level1_scaledDown.yy",},"order":4,},
     {"id":{"name":"s_fishKnightDead","path":"sprites/s_fishKnightDead/s_fishKnightDead.yy",},"order":6,},
     {"id":{"name":"s_MaoMaoDead","path":"sprites/s_MaoMaoDead/s_MaoMaoDead.yy",},"order":1,},
@@ -122,7 +122,7 @@
     {"roomId":{"name":"Win","path":"rooms/Win/Win.yy",},},
     {"roomId":{"name":"Dead1","path":"rooms/Dead1/Dead1.yy",},},
     {"roomId":{"name":"Level1_scaledDown","path":"rooms/Level1_scaledDown/Level1_scaledDown.yy",},},
-    {"roomId":{"name":"Room6","path":"rooms/Room6/Room6.yy",},},
+    {"roomId":{"name":"Level1_new","path":"rooms/Level1_new/Level1_new.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

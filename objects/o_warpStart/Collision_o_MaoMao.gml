@@ -3,4 +3,4 @@
 
 room_goto(targetRoom);
 o_MaoMao.x = 77;
-o_MaoMao.y = 577;
+o_MaoMao.y =445 ;

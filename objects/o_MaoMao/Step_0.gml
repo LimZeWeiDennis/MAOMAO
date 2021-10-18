@@ -10,17 +10,18 @@ key_growth = keyboard_check_pressed(ord("X"));
 
 
 if(key_restart) {
-	game_restart();
+  game_restart();
 }
 
 //this check if the key is pressed, doesnt allow holding
-//key_jump = keyboard_check_pressed(vk_space);	
+//key_jump = keyboard_check_pressed(vk_space);  
 key_jump = keyboard_check(vk_space);
 
 slashingCD --;
 
 
 switch (state)
+
 {	
 	//case where the player is not attacking
 	case PLAYERSTATE.FREE: 
@@ -36,28 +37,30 @@ switch (state)
 	// if player releases the move buttons deccelerate 
 	if(move == 0) {
 
-		hsp = hsp * drag;
-		
-	// when the player is moving MAOMAO
-	// cases: moving , change direction
-	} else {
-		
-		
-		// checking if not moving initially or changing direction
-		if (hsp == 0 || sign(hsp) != sign(move))
-		{
-			hsp = starting_speed + move;
-		}
-		else
-		{
-			if(abs(hsp) <= walk_spd[currentSize - 1])
-			{
-				//hsp gradually increases using acc until the absolute value of the speed is the max speed
-				hsp += move * acc;
-			}
-		}
-		
-	}
+
+    hsp = hsp * drag;
+    
+  // when the player is moving MAOMAO
+  // cases: moving , change direction
+  } else {
+    
+    
+    // checking if not moving initially or changing direction
+    if (hsp == 0 || sign(hsp) != sign(move))
+    {
+      hsp = starting_speed + move;
+    }
+    else
+    {
+      if(abs(hsp) <= walk_spd[currentSize - 1])
+      {
+        //hsp gradually increases using acc until the absolute value of the speed is the max speed
+        hsp += move * acc;
+      }
+    }
+    
+  }
+
 
 	
 	// checking for x collision
@@ -110,7 +113,7 @@ switch (state)
 	y += vsp;
 
 
-	//Animation ------------
+  //Animation ------------
 
 	//if player object is off the ground
 	if(!place_meeting(x,y+1,o_ground))
@@ -126,19 +129,18 @@ switch (state)
 		//sprite_index =  moving_sprite;
 		//image_speed = 0.5;
 		
-		//// this parts need help... how to make the sprite not run while idle?
 
-		
-		if (move == 0) {
-			sprite_index = idle_sprite;
-			image_speed = 0.3;
-		
-	
-			
-		} else {
-			sprite_index = moving_sprite;
-		}
-	}
+    if (move == 0) {
+      sprite_index = idle_sprite;
+      image_speed = 0.3;
+    
+  
+      
+    } else {
+      sprite_index = moving_sprite;
+    }
+  }
+
 
 	if(hsp != 0) {
 		facing = sign(hsp);
@@ -359,4 +361,41 @@ switch (state)
 }
 
 
-                
+  
+  if(sprite_index != growing_sprite){
+    sprite_index = growing_sprite;
+    image_speed = 0.6;
+    flash = 25;
+  }
+  
+  if(image_index >= 25){
+    
+    if(currentSize == 1){
+      
+      currentSize = 2;
+    } else {
+      currentSize = 1;
+    }
+    
+    //fullness = fullness - fullnessMax;
+    //hpMax ++;
+    
+    ////recovers MAOMAO to max health
+    //hp = hpMax;
+    //currentAttack ++;
+    
+    //walk_spd = 5 * currentSize;
+    //jump_height = -7 * currentSize;
+    //currentSlashingCD -= 5;
+    
+    //not working too well
+    image_xscale = growthSize[currentSize - 1];
+    image_yscale = growthSize[currentSize - 1];
+    y -= sprite_height/5;
+    
+    state = PLAYERSTATE.FREE;
+    
+  }
+  
+  break;
+}
