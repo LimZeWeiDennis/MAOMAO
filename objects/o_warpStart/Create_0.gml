@@ -3,5 +3,5 @@
 
 // add in targetX and TargetY to maintain the state of maomao
 
-targetRoom = Tutorial;
+targetRoom = Level1_new;
 

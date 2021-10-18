@@ -23,6 +23,7 @@
     {"id":{"name":"s_warp","path":"sprites/s_warp/s_warp.yy",},"order":3,},
     {"id":{"name":"s_fish_attack","path":"sprites/s_fish_attack/s_fish_attack.yy",},"order":1,},
     {"id":{"name":"s_floor","path":"sprites/s_floor/s_floor.yy",},"order":1,},
+    {"id":{"name":"Final_v2","path":"rooms/Final_v2/Final_v2.yy",},"order":6,},
     {"id":{"name":"o_warpToLevel1","path":"objects/o_warpToLevel1/o_warpToLevel1.yy",},"order":9,},
     {"id":{"name":"s_playerAttackHB","path":"sprites/s_playerAttackHB/s_playerAttackHB.yy",},"order":9,},
     {"id":{"name":"o_enemyCollider","path":"objects/o_enemyCollider/o_enemyCollider.yy",},"order":3,},
@@ -131,7 +132,9 @@
     {"roomId":{"name":"Level1_scaledDown","path":"rooms/Level1_scaledDown/Level1_scaledDown.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Level1_new","path":"rooms/Level1_new/Level1_new.yy",},},
+    {"roomId":{"name":"Final_v2","path":"rooms/Final_v2/Final_v2.yy",},},
     {"roomId":{"name":"Finalboss_big","path":"rooms/Finalboss_big/Finalboss_big.yy",},},
+
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
