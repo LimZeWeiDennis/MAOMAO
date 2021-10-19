@@ -18,9 +18,16 @@ switch (o_MaoMao.last_cleared_stage){
 		
 	case(Level1_new):
 		
+		
+	room_goto(Final_v2);
+	o_MaoMao.x = 2016;
+	o_MaoMao.y = 37;
+	break;
+	
+	case(Final_v2):
+	
 	room_goto(Finalboss_big);
 	o_MaoMao.x = 1900;
 	o_MaoMao.y = 216;
-		
-	
+	break;
 }

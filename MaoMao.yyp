@@ -45,6 +45,7 @@
     {"id":{"name":"Dead1","path":"rooms/Dead1/Dead1.yy",},"order":3,},
     {"id":{"name":"Script3","path":"scripts/Script3/Script3.yy",},"order":2,},
     {"id":{"name":"p_miniBoss","path":"objects/p_miniBoss/p_miniBoss.yy",},"order":0,},
+    {"id":{"name":"o_doorLvl2","path":"objects/o_doorLvl2/o_doorLvl2.yy",},"order":1,},
     {"id":{"name":"Finalboss_big","path":"rooms/Finalboss_big/Finalboss_big.yy",},"order":8,},
     {"id":{"name":"o_MaoMao","path":"objects/o_MaoMao/o_MaoMao.yy",},"order":0,},
     {"id":{"name":"p_environmental","path":"objects/p_environmental/p_environmental.yy",},"order":5,},
