@@ -13,7 +13,7 @@ facing = -1;
 
 grounded = false;
 
-acc = 0.05;
+acc = 0.1;
 starting_speed = 0; 
 
 //prevents maomao from attacking too fast, will adjust according to size(can change as growth)
@@ -70,7 +70,7 @@ enum PLAYERSTATE {
 }
 
 
-last_cleared_stage = Level1_new;
+last_cleared_stage = -1;
 
 
 //setting up the sprites

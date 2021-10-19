@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 hsp = 0;
-walk_spd = 2.2;
+walk_spd = 2.5;
 drag = 0.9;
 facing = -1;
 
