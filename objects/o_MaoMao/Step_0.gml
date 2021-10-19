@@ -10,12 +10,15 @@ key_growth = keyboard_check_pressed(ord("X"));
 
 
 if(key_restart) {
+	hsp = 0
+	vsp = 0
 	hp = hpMax;
 	state = PLAYERSTATE.FREE;
 	
 	room_goto(Start_Room);
 	x = 1124;
-	y = 679;
+	y = 677;
+
 
 }
 
@@ -310,7 +313,7 @@ switch (state)
 	
 				image_xscale = growthSize[currentSize - 1];
 				image_yscale = growthSize[currentSize - 1];
-				image_xscale = sign(hsp) * growthSize[currentSize - 1];
+				image_xscale = facing * growthSize[currentSize - 1];
 		
 			} 
 			mask_index = s_MaoMaoIdle;
@@ -330,7 +333,7 @@ switch (state)
 				currentSize = 1;
 				image_xscale = growthSize[currentSize - 1];
 				image_yscale = growthSize[currentSize - 1];
-				image_xscale = sign(hsp) * growthSize[currentSize - 1];
+				image_xscale = facing * growthSize[currentSize - 1];
 			
 			state = PLAYERSTATE.FREE;
 		}

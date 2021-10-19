@@ -33,8 +33,8 @@ switch (state)
 			}
 			else {
 				
-				timeBeforeNextMovement = 120;
-				movementTime = 50;
+				timeBeforeNextMovement = 110;
+				movementTime = 60;
 				
 			}
 	
