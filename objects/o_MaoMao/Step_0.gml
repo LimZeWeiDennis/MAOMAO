@@ -19,6 +19,7 @@ if(key_restart) {
 	x = 1124;
 	y = 677;
 
+
 }
 
 //this check if the key is pressed, doesnt allow holding
@@ -108,8 +109,8 @@ switch (state)
 			
 		}
 		
-		if(vsp > 0 && !grounded && currentSize == 2) {
-		//if(currentSize == 2) {
+		//if(vsp > 0 && !grounded && currentSize == 2) {
+		if(currentSize == 2) {
 		
 			grounded = true
 			vsp = 0;
