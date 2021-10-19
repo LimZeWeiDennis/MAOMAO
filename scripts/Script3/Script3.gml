@@ -53,8 +53,8 @@ function hit_stateP(obj, freeState, deadState)
 function hit_stateE(obj, freeState, deadState) 
 {
 	// push back when damaged
-	obj.hsp = obj.hsp * obj.drag;
-	obj.vsp = obj.vsp + obj.grav;
+	//obj.hsp = obj.hsp * obj.drag;
+	//obj.vsp = obj.vsp + obj.grav;
 	
 	
 	// checking for y collision
@@ -83,7 +83,7 @@ function hit_stateE(obj, freeState, deadState)
 	
 	}
 
-	// applying to x and y
-	obj.x -= obj.hsp;
-	obj.y += obj.vsp;
+	//// applying to x and y
+	//obj.x -= obj.hsp;
+	//obj.y += obj.vsp;
 }

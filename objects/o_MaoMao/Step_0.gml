@@ -19,6 +19,7 @@ if(key_restart) {
 	x = 1124;
 	y = 677;
 
+
 }
 
 //this check if the key is pressed, doesnt allow holding
@@ -34,6 +35,8 @@ switch (state)
 {	
 	//case where the player is not attacking
 	case PLAYERSTATE.FREE: 
+	
+	show_debug_message("free state");
 	
 	if(key_growth && hp > 0){
 		state = PLAYERSTATE.GROWING_STATE;
@@ -108,8 +111,8 @@ switch (state)
 			
 		}
 		
-		if(vsp > 0 && !grounded && currentSize == 2) {
-		//if(currentSize == 2) {
+		//if(vsp > 0 && !grounded && currentSize == 2) {
+		if(currentSize == 2) {
 		
 			grounded = true
 			vsp = 0;
@@ -173,6 +176,8 @@ switch (state)
 	
 	//case where the player is attacking
 	case PLAYERSTATE.ATTACK_STATE:	
+	
+	show_debug_message("attack state");
 	
 	
 	//reset the cooldown
@@ -287,9 +292,9 @@ switch (state)
 	break;
 	
 	case PLAYERSTATE.GROWING_STATE:
+	show_debug_message("growing state");
+	
 	if(currentSize == 1){
-		
-		show_debug_message("Entered growing state");
 	
 		if(sprite_index != growing_sprite){
 				sprite_index = growing_sprite;
@@ -299,11 +304,8 @@ switch (state)
 		}
 	
 		if(image_index >= 7){
-		
-			show_debug_message("tried to grow");
 			if(place_meeting(x, y ,o_ground)){
 		
-				show_debug_message("cannot grow");
 			}
 			else {
 				show_debug_message("can grow");
