@@ -15,7 +15,7 @@ if(key_restart) {
 	
 	room_goto(Start_Room);
 	x = 1124;
-	y = 693;
+	y = 679;
 
 }
 
@@ -106,8 +106,8 @@ switch (state)
 			
 		}
 		
-		if(vsp > 0 && !grounded && currentSize == 2) {
-		//if(currentSize == 2) {
+		//if(vsp > 0 && !grounded && currentSize == 2) {
+		if(currentSize == 2) {
 		
 			grounded = true
 			vsp = 0;
