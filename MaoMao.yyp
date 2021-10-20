@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"s_crabDead","path":"sprites/s_crabDead/s_crabDead.yy",},"order":2,},
+    {"id":{"name":"s_bg1","path":"sprites/s_bg1/s_bg1.yy",},"order":21,},
     {"id":{"name":"MovableBlockInteractions","path":"scripts/MovableBlockInteractions/MovableBlockInteractions.yy",},"order":4,},
     {"id":{"name":"o_spike","path":"objects/o_spike/o_spike.yy",},"order":4,},
     {"id":{"name":"s_fullnessBarSmall","path":"sprites/s_fullnessBarSmall/s_fullnessBarSmall.yy",},"order":4,},
@@ -65,6 +66,7 @@
     {"id":{"name":"s_fishKnightAttack","path":"sprites/s_fishKnightAttack/s_fishKnightAttack.yy",},"order":5,},
     {"id":{"name":"o_movableBlock","path":"objects/o_movableBlock/o_movableBlock.yy",},"order":13,},
     {"id":{"name":"o_ground","path":"objects/o_ground/o_ground.yy",},"order":11,},
+    {"id":{"name":"TileSet4","path":"tilesets/TileSet4/TileSet4.yy",},"order":3,},
     {"id":{"name":"t_bgWall","path":"tilesets/t_bgWall/t_bgWall.yy",},"order":1,},
     {"id":{"name":"s_torchActivating","path":"sprites/s_torchActivating/s_torchActivating.yy",},"order":8,},
     {"id":{"name":"s_candle","path":"sprites/s_candle/s_candle.yy",},"order":21,},
@@ -87,6 +89,7 @@
     {"id":{"name":"s_fishKnightDead","path":"sprites/s_fishKnightDead/s_fishKnightDead.yy",},"order":6,},
     {"id":{"name":"s_MaoMaoDead","path":"sprites/s_MaoMaoDead/s_MaoMaoDead.yy",},"order":1,},
     {"id":{"name":"Start_Room","path":"rooms/Start_Room/Start_Room.yy",},"order":1,},
+    {"id":{"name":"s_ground2","path":"sprites/s_ground2/s_ground2.yy",},"order":18,},
     {"id":{"name":"s_MaoMaoI","path":"sprites/s_MaoMaoI/s_MaoMaoI.yy",},"order":5,},
     {"id":{"name":"s_cage","path":"sprites/s_cage/s_cage.yy",},"order":17,},
     {"id":{"name":"o_cage","path":"objects/o_cage/o_cage.yy",},"order":14,},
@@ -100,6 +103,7 @@
     {"id":{"name":"s_breakableGround","path":"sprites/s_breakableGround/s_breakableGround.yy",},"order":13,},
     {"id":{"name":"Finalboss_big","path":"rooms/Finalboss_big/Finalboss_big.yy",},"order":10,},
     {"id":{"name":"s_movableBlock","path":"sprites/s_movableBlock/s_movableBlock.yy",},"order":15,},
+    {"id":{"name":"s_ground4","path":"sprites/s_ground4/s_ground4.yy",},"order":20,},
     {"id":{"name":"s_enemyCollider","path":"sprites/s_enemyCollider/s_enemyCollider.yy",},"order":10,},
     {"id":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"order":2,},
     {"id":{"name":"s_groundFked","path":"sprites/s_groundFked/s_groundFked.yy",},"order":14,},
@@ -113,6 +117,7 @@
     {"id":{"name":"s_MaoMaoShrinks","path":"sprites/s_MaoMaoShrinks/s_MaoMaoShrinks.yy",},"order":11,},
     {"id":{"name":"s_fullnessBar","path":"sprites/s_fullnessBar/s_fullnessBar.yy",},"order":0,},
     {"id":{"name":"o_dummy","path":"objects/o_dummy/o_dummy.yy",},"order":4,},
+    {"id":{"name":"s_ground3","path":"sprites/s_ground3/s_ground3.yy",},"order":19,},
     {"id":{"name":"o_miniBoss1","path":"objects/o_miniBoss1/o_miniBoss1.yy",},"order":1,},
     {"id":{"name":"s_MaoMaoIdle","path":"sprites/s_MaoMaoIdle/s_MaoMaoIdle.yy",},"order":6,},
     {"id":{"name":"o_BigBoss","path":"objects/o_BigBoss/o_BigBoss.yy",},"order":1,},
@@ -192,7 +197,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.5.589",
+    "IDEVersion": "2.3.4.580",
   },
   "resourceVersion": "1.4",
   "name": "MaoMao",
