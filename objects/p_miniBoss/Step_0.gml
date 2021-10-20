@@ -30,7 +30,7 @@ switch (state)
 		// enemy accelerates to the movement 
 		if(timeBeforeNextMovement <= 0){
 			
-			if(movementTime >= 0 && hp < hpMax){
+			if(movementTime >= 0){
 				movementTime --;
 				// makes enemies move towards MAOMAO
 				if(abs(y - o_MaoMao.y) < 10 ){

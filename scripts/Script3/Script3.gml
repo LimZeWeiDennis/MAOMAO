@@ -6,7 +6,16 @@ function hit_stateP(obj, freeState, deadState)
 	obj.hsp = obj.hsp * obj.drag;
 	obj.vsp = obj.vsp + obj.grav;
 	
-	obj.hitCoolDown = 50;
+	obj.hitCoolDown = 90;
+	
+	//checking for x collision
+	if(place_meeting(obj.x + obj.hsp , obj.y, o_ground)) 
+	{
+
+	
+		obj.hsp = 0; 
+		
+	}
 	
 	// checking for y collision
 	if(place_meeting(obj.x , obj.y + obj.vsp, o_ground)) 
@@ -32,6 +41,9 @@ function hit_stateP(obj, freeState, deadState)
 		obj.vsp = 0; 
 		
 	}
+	
+	
+
 
 	// applying to x and y
 	obj.x -= obj.hsp;
@@ -41,8 +53,8 @@ function hit_stateP(obj, freeState, deadState)
 function hit_stateE(obj, freeState, deadState) 
 {
 	// push back when damaged
-	obj.hsp = obj.hsp * obj.drag;
-	obj.vsp = obj.vsp + obj.grav;
+	//obj.hsp = obj.hsp * obj.drag;
+	//obj.vsp = obj.vsp + obj.grav;
 	
 	
 	// checking for y collision
@@ -71,7 +83,7 @@ function hit_stateE(obj, freeState, deadState)
 	
 	}
 
-	// applying to x and y
-	obj.x -= obj.hsp;
-	obj.y += obj.vsp;
+	//// applying to x and y
+	//obj.x -= obj.hsp;
+	//obj.y += obj.vsp;
 }

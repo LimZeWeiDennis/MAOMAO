@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Objects/Enemy.yy",
+    "name": "MaoMao",
+    "path": "MaoMao.yyp",
   },
   "resourceVersion": "1.0",
   "name": "o_fish",

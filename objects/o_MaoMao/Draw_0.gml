@@ -1,12 +1,11 @@
 ///@desc initiate damaged animation
 draw_self();
 
-if(flash > 0 && !is_white)
-{
+if(flash > 0 && !is_white){
 
 	
 	flash --;
-	shader_set(shWhite);
+	shader_set(shRed);
 	draw_self();
 	shader_reset();
 	
