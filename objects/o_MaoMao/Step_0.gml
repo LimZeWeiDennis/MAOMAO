@@ -196,7 +196,7 @@ switch (state)
 	if (sprite_index != eating_sprite){
 		sprite_index = eating_sprite;
 		image_index = 0;
-		image_speed = 0.5;
+		image_speed = 1;
 	}
 	
 	// to check if the attack animation has stopped
