@@ -91,7 +91,7 @@ function checkPlayerGroundCollision(o_player) {
 }
 
 function checkPlayerEnvironmental(o_player){
-	var check = instance_place(x,y,p_environmental);
+	var check = instance_place(o_player.x , o_player.y , p_environmental);
 	if(check != noone){
 		if (check.state == ENVIRONMENTSTATE.ACTIVE
 		&& o_player.state == PLAYERSTATE.FREE 
@@ -117,4 +117,17 @@ function checkPlayerEnvironmental(o_player){
 
 		}
 	}
+}
+
+function checkPlayerMovableBlockCollision(o_player){
+	var check = instance_place(o_player.x + sign(o_player.hsp), o_player.y,  o_movableBlock);
+	if(check != noone){
+		if(o_player.currentSize == 2){
+			
+			check.hsp = o_player.hsp * 3;
+		}
+		
+    }
+	
+	
 }

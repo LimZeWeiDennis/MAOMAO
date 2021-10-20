@@ -4,9 +4,11 @@
 switch (o_MaoMao.last_cleared_stage){
 	case(-1):
 	
-	room_goto(Tutorial);
-	o_MaoMao.x = 76;
-	o_MaoMao.y = 213;
+	room_goto(Level1_scaledDown);
+	//o_MaoMao.x = 76;
+	//o_MaoMao.y = 213;
+	o_MaoMao.x = 106;
+	o_MaoMao.y = 539;
 	break;
 		
 	case(Tutorial):

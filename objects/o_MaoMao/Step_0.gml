@@ -73,14 +73,12 @@ switch (state)
     
 	}
 
-
-	
+	checkPlayerMovableBlockCollision(o_MaoMao);
 	checkPlayerGroundCollision(o_MaoMao);
-	
-
 	// checking for enemy collision
 	checkPlayerHit(o_MaoMao, p_enemy);
 	checkPlayerEnvironmental(o_MaoMao);
+	
 	
 
 
