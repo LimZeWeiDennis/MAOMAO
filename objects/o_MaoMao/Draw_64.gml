@@ -1,4 +1,4 @@
-///@desc HP and fullness bar
+ ///@desc HP and fullness bar
 //drawing fullness bar
 //draw_sprite(s_fullnessBGSmall, 0 ,fullnessBar_X, fullnessBar_Y);
 

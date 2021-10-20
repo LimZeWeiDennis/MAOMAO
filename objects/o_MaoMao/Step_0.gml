@@ -8,6 +8,8 @@ key_restart = keyboard_check_pressed(ord("R"));
 //to test the growth
 key_growth = keyboard_check_pressed(ord("X"));
 
+jumpCD --;
+growthCD --;
 
 if(key_restart) {
 	hsp = 0
@@ -36,8 +38,11 @@ switch (state)
 	//case where the player is not attacking
 	case PLAYERSTATE.FREE: 
 	
-	if(key_growth && hp > 0){
+	show_debug_message("free state");
+	
+	if(key_growth && hp > 0 && growthCD <= 0){
 		state = PLAYERSTATE.GROWING_STATE;
+		growthCD = 60;
 	}	
 	
 	hitCoolDown --;
@@ -50,84 +55,34 @@ switch (state)
  
     hsp = hsp * drag;
     
-  // when the player is moving MAOMAO
-  // cases: moving , change direction
-  } else {
+	// when the player is moving MAOMAO
+	// cases: moving , change direction
+	} else {
     
     
-    // checking if not moving initially or changing direction
-    if (hsp == 0 || sign(hsp) != sign(move))
-    {
-      hsp = starting_speed + move;
-    }
-    else
-    {
-      if(abs(hsp) <= walk_spd[currentSize - 1])
-      {
-        //hsp gradually increases using acc until the absolute value of the speed is the max speed
-        hsp += move * acc;
-      }
-    }
-    
-  }
-
-
-	
-	// checking for x collision
-	if(place_meeting(x+hsp , y, o_ground))
-	{  
-		while (!place_meeting(x+sign(hsp), y, o_ground))
+		// checking if not moving initially or changing direction
+		if (hsp == 0 || sign(hsp) != sign(move))
 		{
-			x += sign(hsp);
+		    hsp = starting_speed + move;
 		}
-	
-		hsp = 0; 
-	
-	}
-
-	x += hsp;
-	
-	
-	//checking if the MaoMao object is already on the ground and the jump key is being pressed
-	if(place_meeting(x,y+1,o_ground) && key_jump)
-	{ 
-		grounded = false;
-		vsp -= jump_height[currentSize - 1];	
-	}
-
-	vsp = vsp + grav;
-	
-
-
-	// checking for y collision
- 	if(place_meeting(x , y+vsp, o_ground))
-	{
-		while (!place_meeting(x, y+sign(vsp), o_ground))
+		else
 		{
-			y += sign(vsp);
-			
-			
+		    if(abs(hsp) <= walk_spd[currentSize - 1])
+		    {
+			    //hsp gradually increases using acc until the absolute value of the speed is the max speed
+			    hsp += move * acc;
+		    }
 		}
-		
-		//if(vsp > 0 && !grounded && currentSize == 2) {
-		if(currentSize == 2) {
-		
-			grounded = true
-			vsp = 0;
-			
-			var ground_id = instance_place(x, y+1, o_breakableGround);
-		
-			with(ground_id){
-				hp --;
-			}
-			
-		}
-		
-		vsp = 0;
-
+    
 	}
+
+	checkPlayerMovableBlockCollision(o_MaoMao);
+	checkPlayerGroundCollision(o_MaoMao);
+	// checking for enemy collision
+	checkPlayerHit(o_MaoMao, p_enemy);
+	checkPlayerEnvironmental(o_MaoMao);
 	
-	y += vsp;
+	
 
 
   //Animation ------------
@@ -175,6 +130,8 @@ switch (state)
 	//case where the player is attacking
 	case PLAYERSTATE.ATTACK_STATE:	
 	
+	show_debug_message("attack state");
+	
 	
 	//reset the cooldown
 	slashingCD = currentSlashingCD;
@@ -210,6 +167,11 @@ switch (state)
 		// script used to check the hits and converts into damage
 		script_execute(checkHitWall, hitByNow, hits);
 		ds_list_destroy(hitByNow);
+		
+		var cageHit = instance_place(x ,y ,o_cage);
+		if(cageHit != noone && cageHit.state == CAGESTATE.CLOSED){
+			cageHit.state = CAGESTATE.OPEN;
+		}
 	}
 	
 	// to check if the attack animation has stopped
@@ -234,7 +196,7 @@ switch (state)
 	if (sprite_index != eating_sprite){
 		sprite_index = eating_sprite;
 		image_index = 0;
-		image_speed = 0.5;
+		image_speed = 1;
 	}
 	
 	// to check if the attack animation has stopped
@@ -288,9 +250,9 @@ switch (state)
 	break;
 	
 	case PLAYERSTATE.GROWING_STATE:
+	show_debug_message("growing state");
+	
 	if(currentSize == 1){
-		
-		show_debug_message("Entered growing state");
 	
 		if(sprite_index != growing_sprite){
 				sprite_index = growing_sprite;
@@ -300,11 +262,8 @@ switch (state)
 		}
 	
 		if(image_index >= 7){
-		
-			show_debug_message("tried to grow");
 			if(place_meeting(x, y ,o_ground)){
 		
-				show_debug_message("cannot grow");
 			}
 			else {
 				show_debug_message("can grow");
