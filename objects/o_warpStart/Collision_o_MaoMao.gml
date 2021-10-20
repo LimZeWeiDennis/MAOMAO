@@ -7,6 +7,7 @@ switch (o_MaoMao.last_cleared_stage){
 	room_goto(Tutorial);
 	o_MaoMao.x = 76;
 	o_MaoMao.y = 213;
+	
 	break;
 		
 	case(Tutorial):
@@ -27,7 +28,7 @@ switch (o_MaoMao.last_cleared_stage){
 	case(Final_v2):
 	
 	room_goto(Finalboss_big);
-	o_MaoMao.x = 1900;
-	o_MaoMao.y = 216;
+	o_MaoMao.x = 3034;
+	o_MaoMao.y = 240;
 	break;
 }
