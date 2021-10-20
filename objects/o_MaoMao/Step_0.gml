@@ -52,84 +52,36 @@ switch (state)
  
     hsp = hsp * drag;
     
-  // when the player is moving MAOMAO
-  // cases: moving , change direction
-  } else {
+	// when the player is moving MAOMAO
+	// cases: moving , change direction
+	} else {
     
     
-    // checking if not moving initially or changing direction
-    if (hsp == 0 || sign(hsp) != sign(move))
-    {
-      hsp = starting_speed + move;
-    }
-    else
-    {
-      if(abs(hsp) <= walk_spd[currentSize - 1])
-      {
-        //hsp gradually increases using acc until the absolute value of the speed is the max speed
-        hsp += move * acc;
-      }
-    }
-    
-  }
-
-
-	
-	// checking for x collision
-	if(place_meeting(x+hsp , y, o_ground))
-	{  
-		while (!place_meeting(x+sign(hsp), y, o_ground))
+		// checking if not moving initially or changing direction
+		if (hsp == 0 || sign(hsp) != sign(move))
 		{
-			x += sign(hsp);
+		    hsp = starting_speed + move;
 		}
-	
-		hsp = 0; 
-	
-	}
-
-	x += hsp;
-	
-	
-	//checking if the MaoMao object is already on the ground and the jump key is being pressed
-	if(place_meeting(x,y+1,o_ground) && key_jump)
-	{ 
-		grounded = false;
-		vsp -= jump_height[currentSize - 1];	
-	}
-
-	vsp = vsp + grav;
-	
-
-
-	// checking for y collision
- 	if(place_meeting(x , y+vsp, o_ground))
-	{
-		while (!place_meeting(x, y+sign(vsp), o_ground))
+		else
 		{
-			y += sign(vsp);
-			
-			
+		    if(abs(hsp) <= walk_spd[currentSize - 1])
+		    {
+			    //hsp gradually increases using acc until the absolute value of the speed is the max speed
+			    hsp += move * acc;
+		    }
 		}
-		
-		//if(vsp > 0 && !grounded && currentSize == 2) {
-		if(currentSize == 2) {
-		
-			grounded = true
-			vsp = 0;
-			
-			var ground_id = instance_place(x, y+1, o_breakableGround);
-		
-			with(ground_id){
-				hp --;
-			}
-			
-		}
-		
-		vsp = 0;
-
+    
 	}
+
+
 	
-	y += vsp;
+	checkPlayerGroundCollision(o_MaoMao);
+	
+
+	// checking for enemy collision
+	checkPlayerHit(o_MaoMao, p_enemy);
+	checkPlayerEnvironmental(o_MaoMao);
+	
 
 
   //Animation ------------
