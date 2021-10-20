@@ -7,6 +7,7 @@ switch (o_MaoMao.last_cleared_stage){
 	room_goto(Tutorial);
 	o_MaoMao.x = 76;
 	o_MaoMao.y = 213;
+
 	break;
 		
 	case(Tutorial):
