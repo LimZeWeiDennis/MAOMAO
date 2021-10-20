@@ -88,6 +88,8 @@
     {"id":{"name":"s_MaoMaoDead","path":"sprites/s_MaoMaoDead/s_MaoMaoDead.yy",},"order":1,},
     {"id":{"name":"Start_Room","path":"rooms/Start_Room/Start_Room.yy",},"order":1,},
     {"id":{"name":"s_MaoMaoI","path":"sprites/s_MaoMaoI/s_MaoMaoI.yy",},"order":5,},
+    {"id":{"name":"s_cage","path":"sprites/s_cage/s_cage.yy",},"order":17,},
+    {"id":{"name":"o_cage","path":"objects/o_cage/o_cage.yy",},"order":14,},
     {"id":{"name":"s_fishKnightR","path":"sprites/s_fishKnightR/s_fishKnightR.yy",},"order":7,},
     {"id":{"name":"s_door","path":"sprites/s_door/s_door.yy",},"order":0,},
     {"id":{"name":"o_fishKnight","path":"objects/o_fishKnight/o_fishKnight.yy",},"order":1,},

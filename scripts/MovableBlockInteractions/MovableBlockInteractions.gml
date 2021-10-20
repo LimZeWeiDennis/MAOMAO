@@ -20,8 +20,6 @@ function blockCollisions(o_block){
 
 	o_block.vsp =  o_block.vsp + o_block.grav;
 	
-
-
 	// checking for y collision onto ground
 	if(place_meeting( o_block.x ,  o_block.y + o_block.vsp, o_ground))
 	{

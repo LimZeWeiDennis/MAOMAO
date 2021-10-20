@@ -164,6 +164,11 @@ switch (state)
 		// script used to check the hits and converts into damage
 		script_execute(checkHitWall, hitByNow, hits);
 		ds_list_destroy(hitByNow);
+		
+		var cageHit = instance_place(x ,y ,o_cage);
+		if(cageHit != noone && cageHit.state == CAGESTATE.CLOSED){
+			cageHit.state = CAGESTATE.OPEN;
+		}
 	}
 	
 	// to check if the attack animation has stopped
