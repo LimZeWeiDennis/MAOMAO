@@ -39,34 +39,35 @@ function checkPlayerGroundCollision(o_player) {
 	{  
 		while (!place_meeting( o_player.x + sign( o_player.hsp),  o_player.y, o_ground))
 		{
-			 o_player.x += sign( o_player.hsp);
+				o_player.x += sign( o_player.hsp);
 		}
 	
-		 o_player.hsp = 0; 
+			o_player.hsp = 0; 
 	
 	}
 
-	 o_player.x +=  o_player.hsp;
+
+	o_player.x +=  o_player.hsp;
 	
 	
 	//checking if the MaoMao object is already on the ground and the jump key is being pressed
 	if((place_meeting( o_player.x ,  o_player.y + 1, o_ground) || o_player.jumpCD <= 0)
 	&& key_jump)
 	{ 
-		 o_player.jumpCD = 40;
-		 o_player.vsp -=  o_player.jump_height[ o_player.currentSize - 1];	
+			o_player.jumpCD = 40;
+			o_player.vsp -=  o_player.jump_height[ o_player.currentSize - 1];	
 	}
 
-	 o_player.vsp =  o_player.vsp +  o_player.grav;
+		o_player.vsp =  o_player.vsp +  o_player.grav;
 	
 
 
 	// checking for y collision
- 	if(place_meeting( o_player.x ,  o_player.y + vsp, o_ground))
+	if(place_meeting( o_player.x ,  o_player.y + vsp, o_ground))
 	{
 		while (!place_meeting( o_player.x,  o_player.y+sign(vsp), o_ground))
 		{
-			 o_player.y += sign( o_player.vsp);
+				o_player.y += sign( o_player.vsp);
 			
 			
 		}
@@ -75,17 +76,18 @@ function checkPlayerGroundCollision(o_player) {
 		if( o_player.currentSize == 2) {
 		
 			o_player.vsp = 0;
-      		var ground_id = instance_place( o_player.x,  o_player.y + 1, o_breakableGround);
+	      	var ground_id = instance_place( o_player.x,  o_player.y + 1, o_breakableGround);
 		
 			with(ground_id){
-				 hp --;
+					hp --;
 			}
 			
 		}
 		
-		 o_player.vsp = 0;
+			o_player.vsp = 0;
 
 	}
+	
 	
 	 o_player.y +=  o_player.vsp;
 }
