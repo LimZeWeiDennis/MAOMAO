@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_breakableGround",
-    "path": "sprites/s_breakableGround/s_breakableGround.yy",
+    "name": "s_ground5",
+    "path": "sprites/s_ground5/s_ground5.yy",
   },
   "solid": false,
   "visible": true,
