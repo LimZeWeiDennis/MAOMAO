@@ -11,7 +11,7 @@ jump_height = [4,2];
 drag = 0.8;
 facing = -1;
 
-grounded = false;
+jumpCD = 0;
 
 acc = 0.1;
 starting_speed = 0; 
@@ -22,6 +22,7 @@ currentSlashingCD = 30;
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
 growthSize = [1,3];
+growthCD = 0;
 
 is_white = false;
  

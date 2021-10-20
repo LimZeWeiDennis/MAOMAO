@@ -8,6 +8,8 @@ key_restart = keyboard_check_pressed(ord("R"));
 //to test the growth
 key_growth = keyboard_check_pressed(ord("X"));
 
+jumpCD --;
+growthCD --;
 
 if(key_restart) {
 	hsp = 0
@@ -38,8 +40,9 @@ switch (state)
 	
 	show_debug_message("free state");
 	
-	if(key_growth && hp > 0){
+	if(key_growth && hp > 0 && growthCD <= 0){
 		state = PLAYERSTATE.GROWING_STATE;
+		growthCD = 60;
 	}	
 	
 	hitCoolDown --;

@@ -50,9 +50,10 @@ function checkPlayerGroundCollision(o_player) {
 	
 	
 	//checking if the MaoMao object is already on the ground and the jump key is being pressed
-	if(place_meeting( o_player.x ,  o_player.y + 1, o_ground) && key_jump)
+	if((place_meeting( o_player.x ,  o_player.y + 1, o_ground) || o_player.jumpCD <= 0)
+	&& key_jump)
 	{ 
-		 o_player.grounded = false;
+		 o_player.jumpCD = 40;
 		 o_player.vsp -=  o_player.jump_height[ o_player.currentSize - 1];	
 	}
 
@@ -73,8 +74,7 @@ function checkPlayerGroundCollision(o_player) {
 		//if(vsp > 0 && !grounded && currentSize == 2) {
 		if( o_player.currentSize == 2) {
 		
-			 o_player.grounded = true
-			 o_player.vsp = 0;
+			o_player.vsp = 0;
       		var ground_id = instance_place( o_player.x,  o_player.y + 1, o_breakableGround);
 		
 			with(ground_id){
