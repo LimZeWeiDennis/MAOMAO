@@ -33,7 +33,7 @@
     "path": "folders/Objects/Environment/Text.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_floorbreaktut",
+  "name": "o_wallbreaktut",
   "tags": [],
   "resourceType": "GMObject",
 }
