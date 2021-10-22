@@ -37,6 +37,7 @@
     {"id":{"name":"o_enemyCollider","path":"objects/o_enemyCollider/o_enemyCollider.yy",},"order":3,},
     {"id":{"name":"t_bg","path":"tilesets/t_bg/t_bg.yy",},"order":2,},
     {"id":{"name":"o_breakableGround","path":"objects/o_breakableGround/o_breakableGround.yy",},"order":7,},
+    {"id":{"name":"s_newCage","path":"sprites/s_newCage/s_newCage.yy",},"order":27,},
     {"id":{"name":"s_MaoMaoLanding","path":"sprites/s_MaoMaoLanding/s_MaoMaoLanding.yy",},"order":10,},
     {"id":{"name":"s_playerJ","path":"sprites/s_playerJ/s_playerJ.yy",},"order":5,},
     {"id":{"name":"s_torch","path":"sprites/s_torch/s_torch.yy",},"order":7,},
