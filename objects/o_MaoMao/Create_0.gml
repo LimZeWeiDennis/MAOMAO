@@ -11,9 +11,9 @@ jump_height = [4,2];
 drag = 0.8;
 facing = -1;
 
-jumpCD = 0;
+grounded = false;
 
-acc = 0.1;
+acc = 0.05;
 starting_speed = 0; 
 
 //prevents maomao from attacking too fast, will adjust according to size(can change as growth)
@@ -22,7 +22,6 @@ currentSlashingCD = 30;
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
 growthSize = [1,3];
-growthCD = 0;
 
 is_white = false;
  
@@ -35,6 +34,14 @@ hitByAttack = ds_list_create();
 slashingCD = currentSlashingCD;
 currentAttack = 2;
 
+//setting up for the GUI for health and fullness
+fullness = 0; 
+fullnessMax = 5;
+fullnessBar_width = 310 ;
+fullnessBar_height = 13 ;
+//sets the original position of the fullness bar
+fullnessBar_X = 5;
+fullnessBar_Y = 5;
 
 hpMax = 5;
 hp = hpMax;
