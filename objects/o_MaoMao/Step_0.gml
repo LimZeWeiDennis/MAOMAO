@@ -8,6 +8,8 @@ key_restart = keyboard_check_pressed(ord("R"));
 //to test the growth
 key_growth = keyboard_check_pressed(ord("X"));
 
+jumpCD --;
+growthCD --;
 
 if(key_restart) {
 	hsp = 0
@@ -38,8 +40,9 @@ switch (state)
 	
 	show_debug_message("free state");
 	
-	if(key_growth && hp > 0){
+	if(key_growth && hp > 0 && growthCD <= 0){
 		state = PLAYERSTATE.GROWING_STATE;
+		growthCD = 60;
 	}	
 	
 	hitCoolDown --;
@@ -164,6 +167,11 @@ switch (state)
 		// script used to check the hits and converts into damage
 		script_execute(checkHitWall, hitByNow, hits);
 		ds_list_destroy(hitByNow);
+		
+		var cageHit = instance_place(x ,y ,o_cage);
+		if(cageHit != noone && cageHit.state == CAGESTATE.CLOSED){
+			cageHit.state = CAGESTATE.OPEN;
+		}
 	}
 	
 	// to check if the attack animation has stopped
@@ -188,7 +196,7 @@ switch (state)
 	if (sprite_index != eating_sprite){
 		sprite_index = eating_sprite;
 		image_index = 0;
-		image_speed = 0.5;
+		image_speed = 1;
 	}
 	
 	// to check if the attack animation has stopped
