@@ -1,8 +1,7 @@
 //checks if the left key/right key is being pressed --> press and hold is allowed
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
-key_attack = keyboard_check_pressed(ord("C"));
-key_eat = keyboard_check_pressed(ord("Z"));
+key_attack = keyboard_check(ord("C"));
 key_restart = keyboard_check_pressed(ord("R"));
 
 //to test the growth
@@ -26,7 +25,7 @@ if(key_restart) {
 
 //this check if the key is pressed, doesnt allow holding
 //key_jump = keyboard_check_pressed(vk_space);  
-key_jump = keyboard_check(vk_space);
+key_jump = keyboard_check_pressed(vk_space);
 
 slashingCD --;
 
