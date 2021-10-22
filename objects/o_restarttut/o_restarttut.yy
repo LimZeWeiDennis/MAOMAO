@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "s_tutor",
-    "path": "sprites/s_tutor/s_tutor.yy",
+    "name": "s_warp",
+    "path": "sprites/s_warp/s_warp.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_floorbreaktut",
-    "path": "objects/o_floorbreaktut/o_floorbreaktut.yy",
+    "name": "o_howtogrowtut",
+    "path": "objects/o_howtogrowtut/o_howtogrowtut.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

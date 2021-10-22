@@ -11,7 +11,5 @@ if (showtext == 1)
 {
 	draw_set_halign(fa_center);
 	draw_set_font(fnt_default);
-	draw_text(x+25,y-25,"Press C to attack Crab");
+	draw_text(x+25,y-25,"Press X to grow Big");
 }
-
-//when crab dies, tell player that they will heal 

@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "s_warp",
-    "path": "sprites/s_warp/s_warp.yy",
+    "name": "s_tutoridle",
+    "path": "sprites/s_tutoridle/s_tutoridle.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "o_howtogrowtut",
-    "path": "objects/o_howtogrowtut/o_howtogrowtut.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,7 +21,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +31,7 @@
     "path": "folders/Objects/Environment/Text.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_floorbreaktut",
+  "name": "o_followcat",
   "tags": [],
   "resourceType": "GMObject",
 }
