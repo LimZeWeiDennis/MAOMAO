@@ -12,14 +12,14 @@ switch(state)
 	case(CAGESTATE.OPEN):
 	image_speed = 0.5;
 	
-	if(image_index >= 15){
+	if(image_index >= 7){
 		state = CAGESTATE.OPENED;
 	}
 	
 	break;
 	
 	case(CAGESTATE.OPENED):
-	image_index = 15;
+	image_index = 7;
 	image_speed = 0;
 	break;
 }
