@@ -13,6 +13,6 @@ if(state == DOOR_STATE.OPEN && key_go){
 	o_MaoMao.last_cleared_stage = Level1_new;
 	room_goto(targettedRoom);
 	o_MaoMao.x = 80;
-	o_MaoMao.y = 49;
+	o_MaoMao.y = 129;
 }
  
