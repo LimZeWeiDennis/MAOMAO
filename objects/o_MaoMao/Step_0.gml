@@ -10,15 +10,18 @@ key_growth = keyboard_check_pressed(ord("X"));
 jumpCD --;
 growthCD --;
 
+
+show_debug_message(last_cleared_stage);
+
 if(key_restart) {
 	hsp = 0
 	vsp = 0
 	hp = hpMax;
 	state = PLAYERSTATE.FREE;
 	
-	room_goto(Start_Room);
-	x = 1124;
-	y = 677;
+	room_goto(Main_Menu);
+	x = 676;
+	y = 192;
 
 
 }
