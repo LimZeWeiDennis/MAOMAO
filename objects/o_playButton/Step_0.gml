@@ -7,7 +7,9 @@ if(key_enter){
 	switch (o_MaoMao.last_cleared_stage){
 	case(-1):
 	
-	room_goto(StoryLine);
+	
+	TransitionStart(StoryLine, sq_RoomTFadeIn, sq_RoomTFadeOut);
+	//room_goto(StoryLine);
 	o_MaoMao.x = 1219;
 	o_MaoMao.y = 41;
 	
