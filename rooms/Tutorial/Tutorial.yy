@@ -14,7 +14,6 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"o_followcat","path":"objects/o_followcat/o_followcat.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":54.0,"y":295.0,"resourceVersion":"1.0","name":"inst_2C24D7AB","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_movetut","path":"objects/o_movetut/o_movetut.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.25,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":131.0,"y":269.25,"resourceVersion":"1.0","name":"inst_68DF46A2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_restarttut","path":"objects/o_restarttut/o_restarttut.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.39062488,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":264.5,"y":281.0,"resourceVersion":"1.0","name":"inst_4C7ED10D","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_jumptut","path":"objects/o_jumptut/o_jumptut.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.15625,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":392.0,"y":281.0,"resourceVersion":"1.0","name":"inst_6CD93AB6","tags":[],"resourceType":"GMRInstance",},
@@ -1569,7 +1568,6 @@
     {"name":"inst_3F68CFD2","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_12585D37","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_3447E931","path":"rooms/Tutorial/Tutorial.yy",},
-    {"name":"inst_2C24D7AB","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_68DF46A2","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_4C7ED10D","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_6CD93AB6","path":"rooms/Tutorial/Tutorial.yy",},
