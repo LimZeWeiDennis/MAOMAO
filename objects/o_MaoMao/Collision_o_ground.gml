@@ -3,8 +3,11 @@
 
 
 // to solve gettting stuck in the ground issue
-with(other){
+if(state != PLAYERSTATE.ATTACK_STATE){
 	
-	o_MaoMao.x -= sign(x - o_MaoMao.x);
-	o_MaoMao.y -= sign(y - o_MaoMao.y);
-} 
+	with(other){
+	
+		o_MaoMao.x -= sign(x - o_MaoMao.x);
+		o_MaoMao.y -= sign(y - o_MaoMao.y);
+	} 
+}

@@ -42,18 +42,6 @@ switch (state)
 				
 			}
 	
-			//if( abs(xMoved) < abs(xToMove))
-			//{
-			//	hsp = sign(xToMove) * walk_spd;
-			//	xMoved += sign(xToMove) * walk_spd;
-			//}		
-			//else { 
-			//	hsp = 0;
-			//	xMoved = 0;
-			//	xToMove = random_range(-10,10);
-	
-			//	timeBeforeNextMovement = 50;
-			//}
 		} else {
 			hsp = 0;
 			timeBeforeNextMovement --;
