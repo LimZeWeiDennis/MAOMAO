@@ -1,8 +1,7 @@
 //checks if the left key/right key is being pressed --> press and hold is allowed
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
-key_attack = keyboard_check_pressed(ord("C"));
-key_eat = keyboard_check_pressed(ord("Z"));
+key_attack = keyboard_check(ord("C"));
 key_restart = keyboard_check_pressed(ord("R"));
 
 //to test the growth
@@ -11,22 +10,25 @@ key_growth = keyboard_check_pressed(ord("X"));
 jumpCD --;
 growthCD --;
 
+
+show_debug_message(last_cleared_stage);
+
 if(key_restart) {
 	hsp = 0
 	vsp = 0
 	hp = hpMax;
 	state = PLAYERSTATE.FREE;
 	
-	room_goto(Start_Room);
-	x = 1124;
-	y = 677;
+	room_goto(Main_Menu);
+	x = 676;
+	y = 192;
 
 
 }
 
 //this check if the key is pressed, doesnt allow holding
 //key_jump = keyboard_check_pressed(vk_space);  
-key_jump = keyboard_check(vk_space);
+key_jump = keyboard_check_pressed(vk_space);
 
 slashingCD --;
 
@@ -39,6 +41,7 @@ switch (state)
 	case PLAYERSTATE.FREE: 
 	
 	show_debug_message("free state");
+
 	
 	if(key_growth && hp > 0 && growthCD <= 0){
 		state = PLAYERSTATE.GROWING_STATE;
@@ -82,6 +85,7 @@ switch (state)
 	checkPlayerHit(o_MaoMao, p_enemy);
 	checkPlayerEnvironmental(o_MaoMao);
 	
+
 	
 
 
@@ -251,6 +255,7 @@ switch (state)
 	
 	case PLAYERSTATE.GROWING_STATE:
 	show_debug_message("growing state");
+	
 	
 	if(currentSize == 1){
 	
