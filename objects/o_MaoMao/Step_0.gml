@@ -38,6 +38,7 @@ switch (state)
 	case PLAYERSTATE.FREE: 
 	
 	show_debug_message("free state");
+
 	
 	if(key_growth && hp > 0 && growthCD <= 0){
 		state = PLAYERSTATE.GROWING_STATE;
@@ -81,6 +82,7 @@ switch (state)
 	checkPlayerHit(o_MaoMao, p_enemy);
 	checkPlayerEnvironmental(o_MaoMao);
 	
+
 	
 
 
@@ -250,6 +252,7 @@ switch (state)
 	
 	case PLAYERSTATE.GROWING_STATE:
 	show_debug_message("growing state");
+	
 	
 	if(currentSize == 1){
 	
