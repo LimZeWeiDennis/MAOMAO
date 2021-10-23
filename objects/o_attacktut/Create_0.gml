@@ -3,3 +3,4 @@
 
 showtext = 0;
 phrasetoshow = "Press C to attack Crab";
+
