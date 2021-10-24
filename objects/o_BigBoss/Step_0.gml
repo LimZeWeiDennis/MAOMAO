@@ -1,7 +1,7 @@
  /// @description Enemy Movement
 // You can write your code in this editor
 
-if(!global.game_pause){
+if(!global.game_pause && !global.midTransition){
 	
 	show_debug_message(abs(x - o_MaoMao.x));
 	switch (state) 

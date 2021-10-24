@@ -10,7 +10,8 @@ jumpCD --;
 growthCD --;
 
 
-show_debug_message(last_cleared_stage);
+show_debug_message(x);
+show_debug_message(y);
 
 //if(key_restart) {
 //	hsp = 0
@@ -31,7 +32,7 @@ show_debug_message(last_cleared_stage);
 
 slashingCD --;
 
-if(!global.game_pause){
+if(!global.game_pause && !global.midTransition){
 	switch (state)
  
 

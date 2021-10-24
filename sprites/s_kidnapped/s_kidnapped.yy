@@ -425,7 +425,7 @@
     "spriteId": {"name":"s_kidnapped","path":"sprites/s_kidnapped/s_kidnapped.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 60.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

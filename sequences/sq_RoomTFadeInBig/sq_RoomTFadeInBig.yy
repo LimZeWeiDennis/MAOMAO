@@ -14,7 +14,7 @@
   },
   "moments": {
     "Keyframes": [
-      {"id":"b4e82102-e09b-45c8-979e-885f97b43055","Key":50.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+      {"id":"407d7f31-9cec-4833-b05f-c9079a1ff95a","Key":49.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
               "TransitionChangeRoom",
             ],"resourceVersion":"1.0","resourceType":"MomentsEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MomentsEventKeyframe>",},
     ],
@@ -68,16 +68,16 @@
   ],
   "visibleRange": null,
   "lockOrigin": false,
-  "showBackdrop": true,
+  "showBackdrop": false,
   "showBackdropImage": false,
   "backdropImagePath": "",
   "backdropImageOpacity": 0.5,
-  "backdropWidth": 1280,
+  "backdropWidth": 3200,
   "backdropHeight": 600,
   "backdropXOffset": 0.0,
   "backdropYOffset": 0.0,
-  "xorigin": -640,
-  "yorigin": -300,
+  "xorigin": -636,
+  "yorigin": -286,
   "eventToFunction": {},
   "eventStubScript": null,
   "parent": {
@@ -85,7 +85,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.3",
-  "name": "sq_RoomTFadeIn",
+  "name": "sq_RoomTFadeInBig",
   "tags": [],
   "resourceType": "GMSequence",
 }
