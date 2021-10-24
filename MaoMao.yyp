@@ -84,6 +84,7 @@
     {"id":{"name":"p_enemyDead","path":"objects/p_enemyDead/p_enemyDead.yy",},"order":2,},
     {"id":{"name":"s_fish_moving","path":"sprites/s_fish_moving/s_fish_moving.yy",},"order":2,},
     {"id":{"name":"s_title","path":"sprites/s_title/s_title.yy",},"order":1,},
+    {"id":{"name":"o_followcandletut","path":"objects/o_followcandletut/o_followcandletut.yy",},"order":10,},
     {"id":{"name":"s_BigBossWalk","path":"sprites/s_BigBossWalk/s_BigBossWalk.yy",},"order":2,},
     {"id":{"name":"s_crabAttackHB","path":"sprites/s_crabAttackHB/s_crabAttackHB.yy",},"order":4,},
     {"id":{"name":"s_swordUp","path":"sprites/s_swordUp/s_swordUp.yy",},"order":5,},
