@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+key_ff = keyboard_check(vk_space);
+
 switch(state) {
 	case (INTROSTATE.STARTING):
 	if(sprite_index != s_starting){
@@ -19,6 +21,10 @@ switch(state) {
 		sprite_index = s_kidnapped;
 	}
 	
+	if(key_ff){
+		image_speed = 2;
+	}
+	
 	if(image_index >= 131){
 		state = INTROSTATE.END;
 	}
@@ -27,8 +33,6 @@ switch(state) {
 	
 	case(INTROSTATE.END):
 	
-	TransitionStart(Tutorial, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 76;
-	o_MaoMao.y = 213;
+	TransitionInto(Tutorial, 76, 213);
 	break;
 }

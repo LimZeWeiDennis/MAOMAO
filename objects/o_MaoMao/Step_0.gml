@@ -9,10 +9,6 @@ key_jump = keyboard_check_pressed(vk_space);
 jumpCD --;
 growthCD --;
 
-
-show_debug_message(x);
-show_debug_message(y);
-
 //if(key_restart) {
 //	hsp = 0
 //	vsp = 0
@@ -32,7 +28,7 @@ show_debug_message(y);
 
 slashingCD --;
 
-if(!global.game_pause && !global.midTransition){
+if(!global.game_pause){
 	switch (state)
  
 
@@ -268,7 +264,7 @@ if(!global.game_pause && !global.midTransition){
 	
 			if(image_index >= 7){
 				if(place_meeting(x, y ,o_ground)){
-		
+						
 				}
 				else {
 					show_debug_message("can grow");
@@ -302,7 +298,7 @@ if(!global.game_pause && !global.midTransition){
 				state = PLAYERSTATE.FREE;
 			}
 		}
-	
+		
 	
 
 		break;

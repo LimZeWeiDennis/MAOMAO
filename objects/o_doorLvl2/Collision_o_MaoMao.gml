@@ -1,11 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-show_debug_message("door leh");
-
 unlockedDoor = true;
-
-show_debug_message(state == DOOR_STATE.OPEN);
 
 if(state == DOOR_STATE.OPEN && key_go){
 	
