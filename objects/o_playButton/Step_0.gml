@@ -5,44 +5,43 @@ key_enter = keyboard_check_pressed(vk_enter);
 if(key_enter){
 	
 	switch (o_MaoMao.last_cleared_stage){
-	case(-1):
+		case(-1):
+
+		TransitionInto(StoryLine, 755, 239);	
+		//o_MaoMao.x = 755;
+		//o_MaoMao.y = 239;
 	
-	
-	TransitionStart(StoryLine, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	//room_goto(StoryLine);
-	o_MaoMao.x = 755;
-	o_MaoMao.y = 239;
-	
-	break;
+		break;
 		
-	// after the restart in tutorial is pressed
-	case("reset tutorial"):
-	
-	TransitionStart(Tutorial, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 375;
-	o_MaoMao.y =213;
-	
-	break;
-	case(Tutorial):
+		// after the restart in tutorial is pressed
+		case("reset tutorial"):
 		
-	TransitionStart(Level1_new, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 88;
-	o_MaoMao.y = 283;
-	break;
-		
-	case(Level1_new):
-		
-		
-	TransitionStart(Final_v2, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 80;
-	o_MaoMao.y = 129;
-	break;
+		TransitionInto(Tutorial, 375, 213);
+		//o_MaoMao.x = 375;
+		//o_MaoMao.y =213;
 	
-	case(Final_v2):
+		break;
+
+		case(Tutorial):
+
+		TransitionInto(Level1_new, 88, 283);
+		//o_MaoMao.x = 88;
+		//o_MaoMao.y = 283;
+		break;
+		
+		case(Level1_new):
+		TransitionInto(Final_v2, 80, 129);
 	
-	TransitionStart(Finalboss_big, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 3034;
-	o_MaoMao.y = 240;
-	break;
+		//o_MaoMao.x = 80;
+		//o_MaoMao.y = 129;
+		break;
+	
+		case(Final_v2):
+		TransitionInto(Finalboss_big, 3034, 240);
+	
+		o_BigBoss.x = 3315;
+		o_BigBoss.y = 211;
+
+		break;
 	}
 }

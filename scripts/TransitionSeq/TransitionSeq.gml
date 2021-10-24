@@ -9,13 +9,15 @@ function TransitionSeq(_type){
 	layer_sequence_create(_lay, 0, 0 ,_type);
 }
 
-function TransitionStart (_roomTarget, _typeOut, _typeIn)
+function TransitionStart (_roomTarget, _typeOut, _typeIn, _playerX, _playerY)
 {
 	if(!global.midTransition)
 	{
 		global.midTransition = true;
 		global.roomTarget = _roomTarget;
 		TransitionSeq(_typeOut);
+		o_MaoMao.x = _playerX;
+		o_MaoMao.y = _playerY;
 		layer_set_target_room(_roomTarget);
 		TransitionSeq(_typeIn);
 		layer_reset_target_room();
@@ -37,5 +39,14 @@ function TransitionFinished(){
 	
 	layer_sequence_destroy(self.elementID);
 	global.midTransition = false;
+	
+}
+
+function TransitionInto(targetRoom, targetX, targetY){
+	o_transition.state = TRANS_MODE.NEXT;
+	o_transition.targetRoom = targetRoom;
+		
+	o_transition.targetX = targetX;
+	o_transition.targetY = targetY;
 	
 }

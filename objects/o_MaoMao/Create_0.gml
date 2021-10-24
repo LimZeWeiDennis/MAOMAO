@@ -42,6 +42,10 @@ hp = hpMax;
 hp_start_X = 0;
 hp_start_Y = 10;
 
+note_start_x = 88;
+note_start_y = 25;
+
+
 //to be deleted
 unlockRoom = false;
 
@@ -63,7 +67,7 @@ enum PLAYERSTATE {
 }
 
 
-last_cleared_stage = Final_v2;
+last_cleared_stage = -1;
 
 
 //setting up the sprites

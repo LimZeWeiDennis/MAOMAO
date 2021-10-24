@@ -26,8 +26,6 @@ switch(state) {
 	
 	case(INTROSTATE.END):
 	
-	TransitionStart(Tutorial, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 76;
-	o_MaoMao.y = 213;
+	TransitionInto(Tutorial, 76, 213);
 	break;
 }
