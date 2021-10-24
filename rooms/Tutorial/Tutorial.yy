@@ -2019,6 +2019,7 @@
     {"name":"inst_375E2BA4","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_608A7894","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_727ACF84","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_87B803","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
