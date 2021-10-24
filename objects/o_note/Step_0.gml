@@ -11,8 +11,12 @@ switch(state) {
 	
 	case(NOTESTATE.READ):
 	
+	show_debug_message("note read");
+	
+	
 	if(!place_meeting(x,y, o_MaoMao)){
-		state = NOTESTATE.READ;
+		
+		state = NOTESTATE.NOT_READ;
 	}
 	
 	break;

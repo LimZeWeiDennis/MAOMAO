@@ -13,6 +13,6 @@ if(state == DOOR_STATE.OPEN && key_go){
 		o_MaoMao.state = PLAYERSTATE.GROWING_STATE;
 	}
 	
-	TransitionStart(targettedRoom, sq_RoomTFadeInBig, sq_RoomTFadeOutBig, targetX, targetY);
+	TransitionInto(targettedRoom, targetX, targetY);
 
 }

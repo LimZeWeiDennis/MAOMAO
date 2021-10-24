@@ -3,33 +3,33 @@
 global.midTransition = false;
 global.roomTarget = -1;
 
-function TransitionSeq(_type){
-	if (layer_exists("transition")) layer_destroy("transition");
-	var _lay = layer_create(-9999, "transition");
-	layer_sequence_create(_lay, 0, 0 ,_type);
-}
+//function TransitionSeq(_type){
+//	if (layer_exists("transition")) layer_destroy("transition");
+//	var _lay = layer_create(-9999, "transition");
+//	layer_sequence_create(_lay, 0, 0 ,_type);
+//}
 
-function TransitionStart (_roomTarget, _typeOut, _typeIn, _playerX, _playerY)
-{
-	if(!global.midTransition)
-	{
-		global.midTransition = true;
-		global.roomTarget = _roomTarget;
-		TransitionSeq(_typeOut);
-		o_MaoMao.x = _playerX;
-		o_MaoMao.y = _playerY;
-		layer_set_target_room(_roomTarget);
-		TransitionSeq(_typeIn);
-		layer_reset_target_room();
-		return true; 
-	}
+//function TransitionStart (_roomTarget, _typeOut, _typeIn, _playerX, _playerY)
+//{
+//	if(!global.midTransition)
+//	{
+//		global.midTransition = true;
+//		global.roomTarget = _roomTarget;
+//		TransitionSeq(_typeOut);
+//		o_MaoMao.x = _playerX;
+//		o_MaoMao.y = _playerY;
+//		layer_set_target_room(_roomTarget);
+//		TransitionSeq(_typeIn);
+//		layer_reset_target_room();
+//		return true; 
+//	}
 	
-	else {
+//	else {
 		
-		return false;
-	}
+//		return false;
+//	}
 		
-}
+//}
 
 function TransitionChangeRoom(){
 	room_goto(global.roomTarget);

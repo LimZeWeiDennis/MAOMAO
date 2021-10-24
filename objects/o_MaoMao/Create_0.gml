@@ -21,6 +21,7 @@ currentSlashingCD = 30;
 
 //current size settings (Works as a multiplier to the stats and scaling)
 currentSize = 1;
+
 growthSize = [1,3];
 growthCD = 0;
 
@@ -42,8 +43,8 @@ hp = hpMax;
 hp_start_X = 0;
 hp_start_Y = 10;
 
-note_start_x = 88;
-note_start_y = 25;
+note_start_x = 150;
+note_start_y = 10;
 
 
 //to be deleted

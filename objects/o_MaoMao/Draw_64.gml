@@ -39,3 +39,4 @@ else {
 	
 }
 hp_start_X = 10;
+
