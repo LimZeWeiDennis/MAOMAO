@@ -6,6 +6,7 @@ switch(state) {
 	if(sprite_index != s_starting){
 		sprite_index = s_starting;
 	}
+	image_speed = 0.3 //initialise to 0.3
 	
 	if(image_index >= 15){
 		state = INTROSTATE.KIDNAP;
@@ -21,7 +22,7 @@ switch(state) {
 	if(image_index >= 131){
 		state = INTROSTATE.END;
 	}
-	
+
 	break;
 	
 	case(INTROSTATE.END):

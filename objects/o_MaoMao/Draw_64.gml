@@ -11,12 +11,15 @@
 
 
 //drawing hearts
-for (var i = 0; i < hp; i ++) 
-{
-	draw_sprite(s_healthPoint, 0, hp_start_X, hp_start_Y);
-	hp_start_X += 20;
+
+if (room != Main_Menu && room!= StoryLine){
+	for (var i = 0; i < hp; i ++) 
+	{
+		draw_sprite(s_healthPoint, 0, hp_start_X, hp_start_Y);
+		hp_start_X += 20;
 	
-}	
+	}
+}
 
 if(hp >=0) {
 	
