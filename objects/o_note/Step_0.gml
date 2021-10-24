@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+check_c = keyboard_check_pressed(ord("C"));
+
 switch(state) {
 	case(NOTESTATE.NOT_READ):
 	
@@ -13,11 +16,19 @@ switch(state) {
 	
 	show_debug_message("note read");
 	
+	if(check_c) {
+		state = NOTESTATE.DESTROYED;
+	}
+	
 	
 	if(!place_meeting(x,y, o_MaoMao)){
 		
-		state = NOTESTATE.NOT_READ;
+		state = NOTESTATE.READ;
 	}
 	
 	break;
+	
+	case(NOTESTATE.DESTROYED):
+	o_MaoMao.notes ++;
+	instance_destroy(); 
 }

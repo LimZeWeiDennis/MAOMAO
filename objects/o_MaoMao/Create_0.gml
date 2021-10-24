@@ -43,8 +43,9 @@ hp = hpMax;
 hp_start_X = 0;
 hp_start_Y = 10;
 
-note_start_x = 150;
-note_start_y = 10;
+note_start_x = 0;
+note_start_y = 0;
+notes = 0;
 
 
 //to be deleted

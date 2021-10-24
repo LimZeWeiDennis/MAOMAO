@@ -30,8 +30,8 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"o_leavingdoortut","path":"objects/o_leavingdoortut/o_leavingdoortut.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.390625,"scaleY":1.43385458,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1760.0,"y":269.8172,"resourceVersion":"1.0","name":"inst_727ACF84","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"text","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"o_note","path":"objects/o_note/o_note.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2023.0,"y":294.0,"resourceVersion":"1.0","name":"inst_87B803","tags":[],"resourceType":"GMRInstance",},
-      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"letter","tags":[],"resourceType":"GMRInstanceLayer",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_noteGrey","path":"objects/o_noteGrey/o_noteGrey.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2024.0,"y":296.0,"resourceVersion":"1.0","name":"inst_6BD133E8","tags":[],"resourceType":"GMRInstance",},
+      ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"letter","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"o_crab","path":"objects/o_crab/o_crab.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1073.0,"y":159.9375,"resourceVersion":"1.0","name":"inst_21B43E7A","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyCollider","path":"objects/o_enemyCollider/o_enemyCollider.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1165.0,"y":154.9375,"resourceVersion":"1.0","name":"inst_1ADC3AE1","tags":[],"resourceType":"GMRInstance",},
@@ -2017,9 +2017,8 @@
     {"name":"inst_5963607C","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_4023EB7E","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_375E2BA4","path":"rooms/Tutorial/Tutorial.yy",},
-    {"name":"inst_608A7894","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_727ACF84","path":"rooms/Tutorial/Tutorial.yy",},
-    {"name":"inst_87B803","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_6BD133E8","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
