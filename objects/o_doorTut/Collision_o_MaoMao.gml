@@ -9,7 +9,7 @@ if(state == DOOR_STATE.OPEN && key_go){
 		o_MaoMao.state = PLAYERSTATE.GROWING_STATE;
 	}
 	
-	room_goto(targettedRoom);
+	TransitionStart(targettedRoom, sq_RoomTFadeIn, sq_RoomTFadeOut);
 	o_MaoMao.x = 88;
 	o_MaoMao.y = 193;
 }

@@ -18,7 +18,7 @@ if(state == DOOR_STATE.OPEN && key_go){
 	
 	
 	
-	room_goto(targettedRoom);
+	TransitionStart(targettedRoom, sq_RoomTFadeInBig, sq_RoomTFadeOutBig);
 	o_MaoMao.x = 3034;
 	o_MaoMao.y = 240;
 }
