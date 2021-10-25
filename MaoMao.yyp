@@ -105,6 +105,7 @@
     {"id":{"name":"o_noteGrey","path":"objects/o_noteGrey/o_noteGrey.yy",},"order":5,},
     {"id":{"name":"s_pixel","path":"sprites/s_pixel/s_pixel.yy",},"order":5,},
     {"id":{"name":"s_quit","path":"sprites/s_quit/s_quit.yy",},"order":3,},
+    {"id":{"name":"o_jumpattack","path":"objects/o_jumpattack/o_jumpattack.yy",},"order":13,},
     {"id":{"name":"s_noteSmall","path":"sprites/s_noteSmall/s_noteSmall.yy",},"order":1,},
     {"id":{"name":"s_movableBlockSingle","path":"sprites/s_movableBlockSingle/s_movableBlockSingle.yy",},"order":16,},
     {"id":{"name":"o_howtogrowtut","path":"objects/o_howtogrowtut/o_howtogrowtut.yy",},"order":0,},
