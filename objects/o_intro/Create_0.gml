@@ -4,6 +4,7 @@
 enum INTROSTATE {
 	STARTING,
 	KIDNAP,
+	ANGRY,
 	END
 }
 

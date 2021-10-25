@@ -1,10 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-key_enter = keyboard_check_pressed(vk_enter);
 
-if(key_enter){
-	
-	switch (o_MaoMao.last_cleared_stage){
+if collision_point(mouse_x, mouse_y, id, true, false) { //Arguments are (x, y, obj, prec, notme)
+        switch (o_MaoMao.last_cleared_stage){
 		case(-1):
 
 		TransitionInto(StoryLine, 755, 239);	
@@ -44,4 +42,4 @@ if(key_enter){
 
 		break;
 	}
-}
+ }

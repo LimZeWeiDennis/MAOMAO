@@ -50,6 +50,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"o_candle","path":"objects/o_candle/o_candle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.54,"scaleY":0.6,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1751.0,"y":130.0,"resourceVersion":"1.0","name":"inst_25351B4F","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_candle","path":"objects/o_candle/o_candle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.54,"scaleY":0.6,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":538.0,"y":260.0,"resourceVersion":"1.0","name":"inst_4B9E7C7B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_candle","path":"objects/o_candle/o_candle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.54,"scaleY":0.6,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":772.0,"y":130.0,"resourceVersion":"1.0","name":"inst_5963607C","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_candle","path":"objects/o_candle/o_candle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.54,"scaleY":0.6,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2016.0,"y":256.0,"resourceVersion":"1.0","name":"inst_23A742E4","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"torchbg","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"o_ground","path":"objects/o_ground/o_ground.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":314.0,"resourceVersion":"1.0","name":"inst_2C0CAA4C","tags":[],"resourceType":"GMRInstance",},
@@ -2019,6 +2020,7 @@
     {"name":"inst_375E2BA4","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_727ACF84","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_6BD133E8","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_23A742E4","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

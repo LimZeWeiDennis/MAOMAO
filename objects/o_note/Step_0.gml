@@ -11,20 +11,22 @@ switch(state) {
 	}
 	
 	break;
-	
+	 
 	case(NOTESTATE.READ):
 	
 	show_debug_message("note read");
-	
+	global.game_pause = true;
+
 	if(check_c) {
 		state = NOTESTATE.DESTROYED;
+		global.game_pause = false;
 	}
 	
 	
-	if(!place_meeting(x,y, o_MaoMao)){
+	//if(!place_meeting(x,y, o_MaoMao)){
 		
-		state = NOTESTATE.READ;
-	}
+	//	state = NOTESTATE.READ;
+	//}
 	
 	break;
 	
