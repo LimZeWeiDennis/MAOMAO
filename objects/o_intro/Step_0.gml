@@ -20,6 +20,17 @@ switch(state) {
 	}
 	
 	if(image_index >= 131){
+		state = INTROSTATE.ANGRY;
+	}
+
+	break;
+	
+	case(INTROSTATE.ANGRY):
+	if(sprite_index != s_angryMao){
+		sprite_index = s_angryMao;
+	}
+	
+	if(image_index >= 59){
 		state = INTROSTATE.END;
 	}
 

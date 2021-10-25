@@ -16,7 +16,7 @@ switch(state)
 	image_speed = 0.3;
 	
 	if(image_index >= 3) {
-		
+		audio_play_sound(sound_breakableGround, 1000, false);
 		instance_destroy();
 	}
 	
