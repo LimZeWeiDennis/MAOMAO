@@ -32,4 +32,6 @@ attackHBSprite = s_crabAttackHB;
 attack_last_index = 6;
 walking_sprite = s_crabWalk;
 
+attack_sound = sound_crabHitMao;
+
 state = ENEMY_STATE.FREE;
