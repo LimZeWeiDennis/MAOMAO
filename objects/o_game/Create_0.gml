@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 global.game_pause = false;
+show_pause_menu = false;
+
 
 with(all){
 			

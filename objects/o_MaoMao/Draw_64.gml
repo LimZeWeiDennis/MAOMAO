@@ -12,34 +12,36 @@
 
 //drawing hearts
 
-if (room != Main_Menu && room!= StoryLine){
+if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions){
 	for (var i = 0; i < hp; i ++) 
 	{
 		draw_sprite(s_healthPoint, 0, hp_start_X, hp_start_Y);
 		hp_start_X += 20;
 	
 	}
+
+
+	if(hp >=0) {
+	
+		for (var i = 0; i < (hpMax - hp); i ++) 
+		{
+			draw_sprite(s_healthPoint, 1, hp_start_X, hp_start_Y);
+			hp_start_X += 20;
+	
+		}	
+
+	}
+
+	else {
+		for (var i = 0; i < hpMax; i ++) 
+		{
+			draw_sprite(s_healthPoint, 1, hp_start_X, hp_start_Y);
+			hp_start_X += 20;
+	
+		}	
+	
+	}
+	hp_start_X = 10;
 }
 
-if(hp >=0) {
-	
-	for (var i = 0; i < (hpMax - hp); i ++) 
-	{
-		draw_sprite(s_healthPoint, 1, hp_start_X, hp_start_Y);
-		hp_start_X += 20;
-	
-	}	
-
-}
-
-else {
-	for (var i = 0; i < hpMax; i ++) 
-	{
-		draw_sprite(s_healthPoint, 1, hp_start_X, hp_start_Y);
-		hp_start_X += 20;
-	
-	}	
-	
-}
-hp_start_X = 10;
 

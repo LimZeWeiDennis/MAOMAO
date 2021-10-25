@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "s_instructions",
-    "path": "sprites/s_instructions/s_instructions.yy",
+    "name": "s_quitButton",
+    "path": "sprites/s_quitButton/s_quitButton.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_button",
+    "path": "objects/o_button/o_button.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -30,7 +33,7 @@
     "path": "folders/Objects/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_instrutions",
+  "name": "o_quitButtonPause",
   "tags": [],
   "resourceType": "GMObject",
 }

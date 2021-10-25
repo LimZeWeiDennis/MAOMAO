@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_instructions",
-    "path": "sprites/s_instructions/s_instructions.yy",
+    "name": "s_resumeButton",
+    "path": "sprites/s_resumeButton/s_resumeButton.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,9 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -30,7 +28,7 @@
     "path": "folders/Objects/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_instrutions",
+  "name": "o_resumeButton",
   "tags": [],
   "resourceType": "GMObject",
 }
