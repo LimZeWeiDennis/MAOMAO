@@ -6,6 +6,7 @@ switch(state) {
 	if(sprite_index != s_starting){
 		sprite_index = s_starting;
 	}
+	image_speed = 0.3 //initialise to 0.3
 	
 	if(image_index >= 15){
 		state = INTROSTATE.KIDNAP;
@@ -19,15 +20,25 @@ switch(state) {
 	}
 	
 	if(image_index >= 131){
-		state = INTROSTATE.END;
+		state = INTROSTATE.ANGRY;
+	}
+
+	break;
+	
+	case(INTROSTATE.ANGRY):
+	if(sprite_index != s_angryMao){
+		sprite_index = s_angryMao;
 	}
 	
+	if(image_index >= 59){
+		state = INTROSTATE.END;
+	}
+
 	break;
 	
 	case(INTROSTATE.END):
+	blink = false;
 	
-	TransitionStart(Tutorial, sq_RoomTFadeIn, sq_RoomTFadeOut);
-	o_MaoMao.x = 76;
-	o_MaoMao.y = 213;
+	TransitionInto(Tutorial, 76, 213);
 	break;
 }

@@ -15,7 +15,8 @@ switch(state)
 	image_speed = 0.5;
 	
 	if(image_index >= 6){
-			instance_destroy();
+		audio_play_sound(sound_BreakWall, 1000, false);
+		instance_destroy();
 	
 	}
 
