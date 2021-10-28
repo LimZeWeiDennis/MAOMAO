@@ -39,7 +39,7 @@ if (room != Main_Menu && room!= StoryLine && room != Quit_Menu){
 		break;
 	
 		case(Final_v2):
-		TransitionInto(Finalboss_big, 3034, 240);
+		TransitionInto(Finalboss_big, 3118, 240);
 	
 		o_BigBoss.x = 3315;
 		o_BigBoss.y = 211;
