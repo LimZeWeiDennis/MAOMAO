@@ -5,7 +5,8 @@ if(keyboard_check_pressed(vk_escape)
 	&& room != Main_Menu 
 	&& room != StoryLine 
 	&& room != Quit_Menu
-	&& room != Instructions){
+	&& room != Instructions
+	&& (!instance_exists(o_transition))){
 	global.game_pause = !global.game_pause;
 	
 	if(global.game_pause){

@@ -137,6 +137,7 @@
     {"id":{"name":"s_resumeButton","path":"sprites/s_resumeButton/s_resumeButton.yy",},"order":9,},
     {"id":{"name":"s_notePurple","path":"sprites/s_notePurple/s_notePurple.yy",},"order":3,},
     {"id":{"name":"t_bgWall","path":"tilesets/t_bgWall/t_bgWall.yy",},"order":1,},
+    {"id":{"name":"o_UI","path":"objects/o_UI/o_UI.yy",},"order":16,},
     {"id":{"name":"Quit_Menu","path":"rooms/Quit_Menu/Quit_Menu.yy",},"order":1,},
     {"id":{"name":"s_torchActivating","path":"sprites/s_torchActivating/s_torchActivating.yy",},"order":8,},
     {"id":{"name":"s_candle","path":"sprites/s_candle/s_candle.yy",},"order":21,},
