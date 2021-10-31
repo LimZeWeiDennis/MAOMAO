@@ -35,6 +35,7 @@ function hit_stateP(obj, freeState, deadState)
 		{
 			// changes the state to dead state once the hp <= 0
 			obj.state = deadState ;
+			global.numDeath ++;
 			
 		}
 	

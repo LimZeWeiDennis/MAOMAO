@@ -8,24 +8,6 @@ key_jump = keyboard_check_pressed(vk_space);
 
 jumpCD --;
 growthCD --;
-
-//if(key_restart) {
-//	hsp = 0
-//	vsp = 0
-//	hp = hpMax;
-//	state = PLAYERSTATE.FREE;
-	
-//	room_goto(Main_Menu);
-//	x = 676;
-//	y = 192;
-
-
-//}
-
-//this check if the key is pressed, doesnt allow holding
-//key_jump = keyboard_check_pressed(vk_space);  
-
-
 slashingCD --;
 
 if(!global.gamePaused){
@@ -43,6 +25,10 @@ if(!global.gamePaused){
 			state = PLAYERSTATE.GROWING_STATE;
 			growthCD = 60;
 		}	
+		
+		if(global.hp < 0){
+			state = PLAYERSTATE.DEAD_STATE;
+		}
 	
 		hitCoolDown --;
 		//to ensure that the player object does not move when both keys are pressed
@@ -171,6 +157,7 @@ if(!global.gamePaused){
 			var cageHit = instance_place(x ,y ,o_cage);
 			if(cageHit != noone && cageHit.state == CAGESTATE.CLOSED){
 				cageHit.state = CAGESTATE.OPEN;
+				global.numFriendSave ++;
 			}
 		}
 	
@@ -303,32 +290,5 @@ if(!global.gamePaused){
 
 		break;
 	
-		//case PLAYERSTATE.LANDING_STATE:
-	
-		//show_debug_message("landing");
-	
-		//if (sprite_index != s_MaoMaoLanding){
-		//	sprite_index = s_MaoMaoLanding;
-		//	image_speed = 0.5;
-		//}
-	
-		////if(currentSize == 2){
-		
-		////	show_debug_message("breaking grounds!");
-		
-		////	var ground_id = instance_place(x, y+1, o_breakableGround);
-		
-		////	with(ground_id){
-		////		hp --;
-		////	}
-		////}
-
-	
-		//if (image_index >= 2){
-		//	state = PLAYERSTATE.FREE;
-		//	image_speed = 0.2;
-		//}
-	
-		//break;
 	}
 }

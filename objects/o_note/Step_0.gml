@@ -8,6 +8,7 @@ switch(state) {
 	
 	if(place_meeting(x,y, o_MaoMao)){
 		state = NOTESTATE.READ;
+		global.readNote = true;
 	}
 	
 	break;
