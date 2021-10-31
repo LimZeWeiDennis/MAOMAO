@@ -102,7 +102,7 @@
   "nineSlice": null,
   "parent": {
     "name": "BigBoss",
-    "path": "folders/Sprites/Enemy/crab/BigBoss.yy",
+    "path": "folders/Sprites/Enemy - crab/BigBoss.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_BigBossAttackHB",

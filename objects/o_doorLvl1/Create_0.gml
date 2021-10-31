@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 state = DOOR_STATE.CLOSE;
-targettedRoom = Final_v2;
+targettedRoom = Level2;
 
-last_room = Level1_new;
+last_room = Level1;
 targetX = 80;
 targetY = 129;
 

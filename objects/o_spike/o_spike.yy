@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "name": "Non-interactables",
+    "path": "folders/Objects/Environment/Non-interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_spike",

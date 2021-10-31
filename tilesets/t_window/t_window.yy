@@ -68,8 +68,8 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Delete",
+    "path": "folders/Sprites/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "t_window",

@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Delete",
+    "path": "folders/Objects/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_sword",

@@ -39,6 +39,6 @@ switch(state) {
 	case(INTROSTATE.END):
 	blink = false;
 	
-	TransitionInto(Tutorial, 76, 213);
+	TransitionInto(Tutorial, 76, 260);
 	break;
 }

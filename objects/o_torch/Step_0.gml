@@ -3,7 +3,7 @@
 
 // checking for y collision in the next step
 
-if(!global.game_pause){
+if(!global.gamePaused){
 	
 	if(place_meeting(x , y + grav, o_ground))
 	{ 

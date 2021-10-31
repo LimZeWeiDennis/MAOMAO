@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Environment",
-    "path": "folders/Sprites/Environment.yy",
+    "name": "Ground",
+    "path": "folders/Sprites/Environment/Ground.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_groundFked",

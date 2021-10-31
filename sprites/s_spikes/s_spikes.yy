@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Environment",
-    "path": "folders/Sprites/Environment.yy",
+    "name": "Non-Interactables",
+    "path": "folders/Sprites/Environment/Non-Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_spikes",

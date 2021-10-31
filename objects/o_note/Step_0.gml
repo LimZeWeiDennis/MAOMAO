@@ -15,11 +15,11 @@ switch(state) {
 	case(NOTESTATE.READ):
 	
 	show_debug_message("note read");
-	global.game_pause = true;
+	global.gamePaused = true;
 
 	if(check_c) {
 		state = NOTESTATE.DESTROYED;
-		global.game_pause = false;
+		global.gamePaused = false;
 	}
 	
 	

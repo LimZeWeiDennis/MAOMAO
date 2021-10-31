@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "crab",
-    "path": "folders/Sprites/Enemy/crab.yy",
+    "name": "smallCrab",
+    "path": "folders/Sprites/Enemy - crab/smallCrab.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_crab",

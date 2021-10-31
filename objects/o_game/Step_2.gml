@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Esc key to pause
 // You can write your code in this editor
 
 if(keyboard_check_pressed(vk_escape) 
@@ -6,26 +6,28 @@ if(keyboard_check_pressed(vk_escape)
 	&& room != StoryLine 
 	&& room != Quit_Menu
 	&& room != Instructions
-	&& (!instance_exists(o_transition))){
-	global.game_pause = !global.game_pause;
+	)
+{
+	global.gamePaused = !global.gamePaused;
+	global.instruction = false;
+	global.show_pause_menu = true;
+	global.menuLevel = 0;
 	
-	if(global.game_pause){
+	if (global.gamePaused){
 
 		with(all){ 
 			
 			show_debug_message("HUH?");
 			// stores all the current image_speed of all isntances
-			game_paused_image_speed = image_speed;
+			gamePausedImageSpeed = image_speed;
 			image_speed = 0;
 		}
 		
-		show_pause_menu = true;
-		show_debug_message("game paused");
 	}
 	else {
-		show_pause_menu = false;
+		//show_pause_menu = false;
 		with(all){
-			image_speed = game_paused_image_speed;
+			image_speed = gamePausedImageSpeed;
 		}
 	}
 }
