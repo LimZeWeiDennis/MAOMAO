@@ -1,3 +1,3 @@
-//@desc restarts the game
+///@desc restarts the game
 
 RestartScript();

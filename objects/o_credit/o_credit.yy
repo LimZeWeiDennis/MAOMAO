@@ -28,7 +28,7 @@
     "path": "folders/Objects/Menu.yy",
   },
   "resourceVersion": "1.0",
-  "name": "credit",
+  "name": "o_credit",
   "tags": [],
   "resourceType": "GMObject",
 }
