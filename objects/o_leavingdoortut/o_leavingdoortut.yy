@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Text",
-    "path": "folders/Objects/Environment/Text.yy",
+    "path": "folders/Objects/Environment/Tutorial/Text.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_leavingdoortut",

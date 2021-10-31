@@ -14,7 +14,7 @@ if collision_point(mouse_x, mouse_y, id, true, false) { //Arguments are (x, y, o
 		// after the restart in tutorial is pressed
 		case("reset tutorial"):
 		
-		TransitionInto(Tutorial, 375, 213);
+		TransitionInto(Tutorial, 375, 260);
 		//o_MaoMao.x = 375;
 		//o_MaoMao.y =213;
 	
@@ -22,23 +22,23 @@ if collision_point(mouse_x, mouse_y, id, true, false) { //Arguments are (x, y, o
 
 		case(Tutorial):
 
-		TransitionInto(Level1_new, 88, 283);
+		TransitionInto(Level1, 88, 283);
 		//o_MaoMao.x = 88;
 		//o_MaoMao.y = 283;
 		break;
 		
-		case(Level1_new):
-		TransitionInto(Final_v2, 80, 129);
+		case(Level1):
+		TransitionInto(Level2, 80, 129);
 	
 		//o_MaoMao.x = 80;
 		//o_MaoMao.y = 129;
 		break;
 	
-		case(Final_v2):
-		TransitionInto(Finalboss_big, 3034, 240);
-	
-		o_BigBoss.x = 3315;
+		case(Level2):
+		
+		o_BigBoss.x = 3453;
 		o_BigBoss.y = 211;
+		TransitionInto(Final, 3105, 240);
 
 		break;
 	}

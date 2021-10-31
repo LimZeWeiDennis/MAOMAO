@@ -1,7 +1,7 @@
  /// @description Enemy Movement
 // You can write your code in this editor
 
-if(!global.game_pause){
+if(!global.gamePaused){
 	
 	//applying gravity
 	vsp = vsp + grav;

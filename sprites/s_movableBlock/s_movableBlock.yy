@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Environment",
-    "path": "folders/Sprites/Environment.yy",
+    "name": "Delete",
+    "path": "folders/Sprites/Collectible/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_movableBlock",

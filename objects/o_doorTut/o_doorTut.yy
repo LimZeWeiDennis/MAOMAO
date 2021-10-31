@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "tutorial",
-    "path": "folders/Objects/Environment/tutorial.yy",
+    "name": "Doors",
+    "path": "folders/Objects/Environment/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_doorTut",

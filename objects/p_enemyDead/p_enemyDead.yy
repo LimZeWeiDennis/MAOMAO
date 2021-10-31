@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy Dead",
-    "path": "folders/Objects/Enemy Dead.yy",
+    "name": "Dead",
+    "path": "folders/Objects/Crabs/Dead.yy",
   },
   "resourceVersion": "1.0",
   "name": "p_enemyDead",

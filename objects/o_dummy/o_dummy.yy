@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Objects/Enemy.yy",
+    "name": "Delete",
+    "path": "folders/Objects/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_dummy",

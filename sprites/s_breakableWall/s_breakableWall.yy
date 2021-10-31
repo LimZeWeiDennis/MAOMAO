@@ -93,8 +93,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Environment",
-    "path": "folders/Sprites/Environment.yy",
+    "name": "Interactables",
+    "path": "folders/Sprites/Environment/Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_breakableWall",

@@ -17,8 +17,8 @@ if(state == PLAYERSTATE.FREE){
 			instance_destroy();
 			o_MaoMao.state = PLAYERSTATE.EAT_STATE;
 		
-			if(o_MaoMao.hp < o_MaoMao.hpMax){
-				o_MaoMao.hp ++;
+			if(global.hp < global.hpMax){
+				global.hp ++;
 			}
 		}
 	}

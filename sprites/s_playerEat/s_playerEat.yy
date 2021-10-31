@@ -68,7 +68,7 @@
             {"id":"1608f4d6-49de-4b5a-a61d-6255d6596392","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"49a6c7b0-f3c2-41d7-8cf1-9073a14f6f33","path":"sprites/s_playerEat/s_playerEat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5f513d01-09d3-4f5c-928e-a102a1f64d82","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"782b8028-7ad2-4b1d-81aa-93ddf82c4d59","path":"sprites/s_playerEat/s_playerEat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"cf32a05c-0b47-47fc-8007-58b6e9129dc4","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"933ebd93-a1d5-4051-a671-23d6f76fe77d","path":"sprites/s_playerEat/s_playerEat.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -97,7 +97,7 @@
   "nineSlice": null,
   "parent": {
     "name": "old",
-    "path": "folders/Sprites/MAOMAO/old.yy",
+    "path": "folders/Sprites/Collectible/Delete/old.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_playerEat",

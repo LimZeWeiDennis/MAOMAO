@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy Dead",
-    "path": "folders/Objects/Enemy Dead.yy",
+    "name": "Delete",
+    "path": "folders/Objects/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fishKnightDead",

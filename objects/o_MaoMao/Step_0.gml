@@ -28,7 +28,7 @@ growthCD --;
 
 slashingCD --;
 
-if(!global.game_pause){
+if(!global.gamePaused){
 	switch (state)
  
 
@@ -39,7 +39,7 @@ if(!global.game_pause){
 		show_debug_message("free state");
 
 	
-		if(key_growth && hp > 0 && growthCD <= 0){
+		if(key_growth && global.hp > 0 && growthCD <= 0){
 			state = PLAYERSTATE.GROWING_STATE;
 			growthCD = 60;
 		}	

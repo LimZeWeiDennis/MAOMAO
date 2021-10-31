@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Level 1",
-    "path": "folders/Objects/Environment/Level 1.yy",
+    "name": "Doors",
+    "path": "folders/Objects/Environment/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_doorLvl1",

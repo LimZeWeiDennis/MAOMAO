@@ -3,7 +3,7 @@
 if (state == PLAYERSTATE.FREE && hitCoolDown <= 0 &&  p_miniBoss.state == ENEMY_STATE.ATTACK) {
 	
 	// minus health when touched
-		hp --;
+		global.hp --;
 	
 		state = PLAYERSTATE.HIT_STATE;
 	
@@ -16,7 +16,7 @@ if (state == PLAYERSTATE.FREE && hitCoolDown <= 0 &&  p_miniBoss.state == ENEMY_
 		//for further experimentation on screen shake
 		//o_camera.shake = 3;
 	
-	if (hp > 0){
+	if (global.hp > 0){
 		
 		flash = 50;
 	
