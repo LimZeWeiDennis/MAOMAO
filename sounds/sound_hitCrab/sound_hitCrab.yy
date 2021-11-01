@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sound_hitCrab.wav",
-  "duration": 1.197755,
+  "soundFile": "sound_hitCrab.mp3",
+  "duration": 0.998375,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

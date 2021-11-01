@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Interactables",
-    "path": "folders/Objects/Environment/Interactables.yy",
+    "name": "Friends",
+    "path": "folders/Objects/Friends.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_cage",
