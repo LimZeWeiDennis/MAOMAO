@@ -31,7 +31,6 @@
     {"id":{"name":"s_bigBoss1","path":"sprites/s_bigBoss1/s_bigBoss1.yy",},"order":4,},
     {"id":{"name":"o_compliment","path":"objects/o_compliment/o_compliment.yy",},"order":8,},
     {"id":{"name":"s_crabWalk","path":"sprites/s_crabWalk/s_crabWalk.yy",},"order":3,},
-    {"id":{"name":"o_mainmenu","path":"objects/o_mainmenu/o_mainmenu.yy",},"order":3,},
     {"id":{"name":"s_BigBossAttackHB","path":"sprites/s_BigBossAttackHB/s_BigBossAttackHB.yy",},"order":1,},
     {"id":{"name":"s_torchInactive","path":"sprites/s_torchInactive/s_torchInactive.yy",},"order":3,},
     {"id":{"name":"s_fish","path":"sprites/s_fish/s_fish.yy",},"order":0,},
@@ -314,6 +313,7 @@
     {"folderPath":"folders/Rooms/Levels.yy","order":15,"resourceVersion":"1.0","name":"Levels","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Environment/Non-Interactables.yy","order":4,"resourceVersion":"1.0","name":"Non-Interactables","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Environment/Interactables.yy","order":5,"resourceVersion":"1.0","name":"Interactables","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Collectible/Delete.yy","order":0,"resourceVersion":"1.0","name":"Delete","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

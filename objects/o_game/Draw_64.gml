@@ -36,6 +36,30 @@ if (room != Main_Menu && room != StoryLine && room != Instructions)
 	draw_text(10, 30, "'Esc': Pause Menu ");
 }
 
+//Draw main menu
+if (room == Main_Menu){
+	//Options
+	draw_set_color(c_white);
+	draw_set_font(fnt_default);
+	for (var i = 0; i < mm_op_length; i++)
+	{
+		var _print = "";
+		
+		if (i == mainOptionSelected)
+		{
+			_print += "> " + mainOption[mainMenuLevel,i] + " <";
+		}
+		else
+		{
+			_print += mainOption[mainMenuLevel,i];
+			draw_set_alpha(0.7);
+		}
+		
+		draw_text(1280 * 0.5, 600*0.45 + 18 + (i*12), _print);
+		draw_set_alpha(1.0);
+	}
+}
+
 //Draw death screen
 if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 	BlackOverlay();
@@ -71,8 +95,8 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 	}
 }	
 	
-//Draw Pause menu
-if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDLE_STATE){
+//Draw pause menu
+if (global.gamePaused && o_MaoMao.state != PLAYERSTATE.DEAD_IDLE_STATE){
 	BlackOverlay();
 	
 	//Header
@@ -107,12 +131,19 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 	}
 }
 	
-//Draw instructions for in game menu
+//Draw instructions
 if(instructions){
-	draw_sprite(s_instructionsIG, 0, 0, 0);
+	o_camera.RES_Scale = 1; 
+	draw_sprite(s_instructions, 0, 0, 0);
 	draw_set_font(fnt_default);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_right);
 	draw_text(40,307, "> Back <") 
+}
+
+//Draw Credits
+if (credits){
+	o_camera.RES_Scale = 1; 
+	draw_sprite(s_credit, 0, 0, 0);
 }
