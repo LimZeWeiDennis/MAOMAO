@@ -46,7 +46,6 @@ function checkHitWall(hitByNow, hits)
 				with(hitID)
 				{
 					show_debug_message(hp);
-					audio_play_sound(sound_hitCrab, 1000, false);
 					hp --;
 					shake = 10;
 				}

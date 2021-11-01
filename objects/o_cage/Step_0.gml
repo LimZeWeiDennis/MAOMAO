@@ -5,15 +5,17 @@ switch(state)
 {
 	case(CAGESTATE.CLOSED):
 
-	image_speed = 0.5;
+	image_speed = 0.3;
 	
 	break;
 	
 	case(CAGESTATE.OPEN):
+	
+
 	if(sprite_index != open_sprite){
 		sprite_index = open_sprite;
 		image_index = 0;
-		image_speed = 0.5;
+		image_speed = 0.3;
 	}
 	
 	if(image_index >= last_index){

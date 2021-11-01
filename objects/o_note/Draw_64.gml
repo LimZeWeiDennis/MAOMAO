@@ -6,6 +6,6 @@ if(state == NOTESTATE.READ){
 	//draw_set_halign(fa_center);
 	draw_set_color(c_black);
 	draw_set_font(fnt_default);
-	draw_text(320, 290, "Press 'C' to exit Note!");
+	draw_text(300, 290, "Press 'C' to exit Note!");
 	draw_set_color(c_white);
 }                  

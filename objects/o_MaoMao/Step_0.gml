@@ -106,7 +106,11 @@ if(!global.gamePaused){
 			image_xscale = sign(hsp) * growthSize[currentSize - 1 ];
 		}
 	
-		if(key_attack && slashingCD <= 0) { state = PLAYERSTATE.ATTACK_STATE;}
+		if(key_attack && slashingCD <= 0) {
+			state = PLAYERSTATE.ATTACK_STATE;
+			audio_play_sound(sound_maomaoAttacks, 1000 ,false);
+		}
+			
 
 		//draw_sprite_ext(noone, 0, x,   y, move*facing, 1, 0, $FFFFF F & $ffffff, 1);
 		break;
@@ -120,7 +124,7 @@ if(!global.gamePaused){
 	
 		//reset the cooldown
 		slashingCD = currentSlashingCD;
-	
+		
 		//checking if the player sprite is in the right one
 		if (sprite_index != attack_sprite){
 			sprite_index = attack_sprite; 
@@ -156,6 +160,8 @@ if(!global.gamePaused){
 			var cageHit = instance_place(x ,y ,o_cage);
 			if(cageHit != noone && cageHit.state == CAGESTATE.CLOSED){
 				cageHit.state = CAGESTATE.OPEN;
+				audio_play_sound(sound_cageOpen, 1000, false);
+				audio_play_sound(sound_friendSaved, 1000, false);
 				global.numFriendSave ++;
 			}
 		}
@@ -196,7 +202,7 @@ if(!global.gamePaused){
 	
 		case PLAYERSTATE.HIT_STATE:
 	
-		audio_play_sound(sound_maomaoHit, 1000, false);
+		
 		hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
 		break;
