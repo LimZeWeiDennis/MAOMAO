@@ -1,5 +1,9 @@
 /// @description create UI
 
+global.numReset = 0;
+global.numDeath = 0;
+global.numFriendSave = 0;
+
 //Health
 hp_start_X = 0;
 hp_start_Y = 10;
@@ -25,6 +29,7 @@ d_op_length = 0;
 
 //Pause Menu
 global.gamePaused = false;
+global.readNote = false;
 showPauseMenu = false;
 
 with(all){

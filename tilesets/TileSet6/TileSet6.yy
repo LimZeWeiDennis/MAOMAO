@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_ground7",
-    "path": "sprites/s_ground7/s_ground7.yy",
-  },
+  "spriteId": null,
   "tileWidth": 1,
   "tileHeight": 1,
   "tilexoff": 0,

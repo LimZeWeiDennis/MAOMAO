@@ -5,7 +5,8 @@ if(keyboard_check_pressed(vk_escape)
 	&& room != StoryLine 
 	&& room != Quit_Menu
 	&& room != Instructions
-	&& o_MaoMao.state != PLAYERSTATE.DEAD_IDLE_STATE)
+	&& o_MaoMao.state != PLAYERSTATE.DEAD_IDLE_STATE
+	&& !global.readNote)
 {
 	global.gamePaused = !global.gamePaused;
 	instructions = false;

@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_bgWall",
-    "path": "sprites/s_bgWall/s_bgWall.yy",
-  },
+  "spriteId": null,
   "tileWidth": 1,
   "tileHeight": 1,
   "tilexoff": 0,
@@ -1056,8 +1053,8 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Delete",
-    "path": "folders/Sprites/Delete.yy",
+    "name": "Environment",
+    "path": "folders/Sprites/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "t_bgWall",

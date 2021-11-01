@@ -1,7 +1,7 @@
 /// @description Draw UI
 
 //Draw heart
-if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions){
+if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions && room != Credits){
 	for (var i = 0; i < global.hp; i ++) 
 	{
 		draw_sprite(s_healthPoint, 0, hp_start_X, hp_start_Y);
@@ -27,7 +27,7 @@ if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instru
 }
 
 //Draw persistent text
-if (room != Main_Menu && room != StoryLine && room != Instructions)
+if (room != Main_Menu && room != StoryLine && room != Instructions && room != Credits)
 {
 	draw_set_color(c_white);
 	draw_set_font(fnt_default);
