@@ -15,6 +15,7 @@ switch(state){
 	}
 	
 	if(image_index >= 6){
+		audio_play_sound(sound_breakableGround, 1000, false);
 		instance_destroy();
 	}
 }

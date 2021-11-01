@@ -4,22 +4,26 @@
 switch(state)
 {
 	case(CAGESTATE.CLOSED):
-	image_index = 0;
-	image_speed = 0;
+
+	image_speed = 0.5;
 	
 	break;
 	
 	case(CAGESTATE.OPEN):
-	image_speed = 0.5;
+	if(sprite_index != open_sprite){
+		sprite_index = open_sprite;
+		image_index = 0;
+		image_speed = 0.5;
+	}
 	
-	if(image_index >= 7){
+	if(image_index >= last_index){
 		state = CAGESTATE.OPENED;
 	}
 	
 	break;
 	
 	case(CAGESTATE.OPENED):
-	image_index = 7;
+	image_index = last_index;
 	image_speed = 0;
 	break;
 }
