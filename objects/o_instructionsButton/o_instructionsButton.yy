@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "Menu  to be deleted",
+    "path": "folders/Objects/Menu  to be deleted.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_instructionsButton",

@@ -1,5 +1,10 @@
 /// @description create UI
 
+global.numReset = 0;
+global.numDeath = 0;
+global.numFriendSave = 0;
+global.readNote = false;
+
 //Health
 hp_start_X = 0;
 hp_start_Y = 10;
@@ -20,6 +25,9 @@ mainOption[0,3] = "Exit Game";
 mainOption[1,0] = "Yes";
 mainOption[1,1] = "No";
 
+//MM Instructions
+mainOption[2,0] = "Back";
+
 //MM Var
 mainOptionSelected = 0;
 mainMenuLevel = 0;
@@ -39,16 +47,16 @@ deathOptionSelected = 0;
 deathMenuLevel = 0;
 d_op_length = 0;
 
-
 //Pause Menu
 global.gamePaused = false;
+showPauseMenu = false;
 
 //with(all){
 //	// stores all the current image_speed of all instances
 //	gamePausedImageSpeed = image_speed;	
 //}
 
-//Pause Menu - Options
+//Pause Menu - Options [[0,1],[0,2]]
 pauseOption[0,0] = "Continue";
 pauseOption[0,1] = "Restart";
 pauseOption[0,2] = "Instructions";
@@ -58,6 +66,9 @@ pauseOption[0,4] = "Exit Game";
 //Pause Menu Exit 
 pauseOption[1,0] = "Yes";
 pauseOption[1,1] = "No";
+
+//Pause Menu Instructions 
+pauseOption[2,0] = "Back";
 
 //Pause Var
 p_op_length = 0;

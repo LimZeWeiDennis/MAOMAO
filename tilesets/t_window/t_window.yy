@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_window",
-    "path": "sprites/s_window/s_window.yy",
-  },
+  "spriteId": null,
   "tileWidth": 16,
   "tileHeight": 16,
   "tilexoff": 0,

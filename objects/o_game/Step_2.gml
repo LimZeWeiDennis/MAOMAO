@@ -5,10 +5,12 @@ if(keyboard_check_pressed(vk_escape)
 	&& room != StoryLine 
 	&& room != Quit_Menu
 	&& room != Instructions
-	&& o_MaoMao.state != PLAYERSTATE.DEAD_IDLE_STATE)
+	&& o_MaoMao.state != PLAYERSTATE.DEAD_IDLE_STATE
+	&& !global.readNote)
 {
 	global.gamePaused = !global.gamePaused;
 	instructions = false;
+	showPauseMenu = true;
 	pauseMenuLevel = 0; //reset back to primary pause screen
 	mainMenuLevel = 0;
 	
@@ -20,7 +22,6 @@ if(keyboard_check_pressed(vk_escape)
 			gamePausedImageSpeed = image_speed;
 			image_speed = 0;
 		}
-
 	}
 	else {
 		with(all){
@@ -28,12 +29,4 @@ if(keyboard_check_pressed(vk_escape)
 		}
 	}
 	
-	//using esc key to go back one level
-	if (mainMenuLevel != 0 || deathMenuLevel != 0 || pauseMenuLevel != 0 || instructions || credits){
-		instructions = false;
-		credits = false;
-		mainMenuLevel -= 1
-		deathMenuLevel -= 1
-		pauseMenuLevel -= 1
-	}
 }

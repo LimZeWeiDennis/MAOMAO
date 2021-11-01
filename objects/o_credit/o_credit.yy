@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_credit",
-    "path": "sprites/s_credit/s_credit.yy",
+    "name": "s_credits",
+    "path": "sprites/s_credits/s_credits.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,12 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":37,"eventType":9,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "Menu  to be deleted",
+    "path": "folders/Objects/Menu  to be deleted.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_credit",
