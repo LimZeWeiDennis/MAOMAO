@@ -78,7 +78,6 @@ if(!global.gamePaused){
 		{
 			sprite_index = jump_sprite;
 			image_speed = 0.6;
-			grounded = false;
 			//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
 		} 
@@ -197,7 +196,7 @@ if(!global.gamePaused){
 	
 		case PLAYERSTATE.HIT_STATE:
 	
-	
+		audio_play_sound(sound_maomaoHit, 1000, false);
 		hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
 		break;

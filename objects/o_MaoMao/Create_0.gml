@@ -69,7 +69,7 @@ enum PLAYERSTATE {
 }
 
 
-last_cleared_stage = "reset tutorial";
+last_cleared_stage = Level1;
 
 
 //setting up the sprites

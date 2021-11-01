@@ -12,6 +12,7 @@ switch(state)
 	
 	if (unlockedDoor){
 		state = DOOR_STATE.OPEN;
+		audio_play_sound(sound_doorOpen, 1000 ,false);
 	};
 	break;
 	
