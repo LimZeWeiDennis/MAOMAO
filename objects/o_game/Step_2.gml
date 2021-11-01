@@ -11,7 +11,9 @@ if(keyboard_check_pressed(vk_escape)
 	global.gamePaused = !global.gamePaused;
 	instructions = false;
 	showPauseMenu = true;
-	pauseMenuLevel = 0;
+	pauseMenuLevel = 0; //reset back to primary pause screen
+	mainMenuLevel = 0;
+	pauseOptionSelected = 0;
 	
 	if (global.gamePaused){
 
@@ -21,12 +23,12 @@ if(keyboard_check_pressed(vk_escape)
 			gamePausedImageSpeed = image_speed;
 			image_speed = 0;
 		}
-
 	}
 	else {
-		//showPauseenu = false;
 		with(all){
 			image_speed = gamePausedImageSpeed;
 		}
 	}
+	
 }
+

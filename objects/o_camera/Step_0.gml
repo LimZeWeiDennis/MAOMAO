@@ -16,7 +16,7 @@ else {
 	camera_set_view_pos(camera, camX, camY);
 }*/
 
-if(room == Main_Menu || room == StoryLine){
+if(room == Main_Menu || room == StoryLine || o_game.instructions || o_game.credits){
 	RES_Scale = 1;
 } else {
 	RES_Scale = 2;

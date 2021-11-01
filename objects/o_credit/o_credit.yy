@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_credit",
-    "path": "sprites/s_credit/s_credit.yy",
+    "name": "s_credits",
+    "path": "sprites/s_credits/s_credits.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "Menu  to be deleted",
+    "path": "folders/Objects/Menu  to be deleted.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_credit",

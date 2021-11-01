@@ -43,10 +43,6 @@ function RestartScript(){
 		o_BigBoss.x = 3453;
 		o_BigBoss.y = 211;
 		TransitionInto(Final, 3105, 240);
-	
-		
-
-
 
 		break;
 	}
