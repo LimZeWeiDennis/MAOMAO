@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "MaoMao",
-    "path": "MaoMao.yyp",
+    "name": "Delete",
+    "path": "folders/Sprites/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_fish",

@@ -25,13 +25,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"o_MaoMao","path":"objects/o_MaoMao/o_MaoMao.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "tutorial",
-    "path": "folders/Objects/Environment/tutorial.yy",
+    "name": "Doors",
+    "path": "folders/Objects/Environment/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_doorTut",

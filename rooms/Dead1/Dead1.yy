@@ -179,8 +179,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Delete",
+    "path": "folders/Rooms/Delete.yy",
   },
   "resourceVersion": "1.0",
   "name": "Dead1",

@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "MiniBoss",
-    "path": "folders/Objects/MiniBoss.yy",
+    "path": "folders/Objects/Delete/MiniBoss.yy",
   },
   "resourceVersion": "1.0",
   "name": "p_miniBoss",

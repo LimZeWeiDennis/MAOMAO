@@ -11,7 +11,7 @@ facing = -1;
 xMoved = 0;
 xToMove = 0;
 
-hpMax = 6;
+hpMax = 3;
 hp = hpMax;
 
 attackCoolDown = 0;
@@ -31,5 +31,7 @@ attackSprite = s_crabAttack;
 attackHBSprite = s_crabAttackHB;
 attack_last_index = 6;
 walking_sprite = s_crabWalk;
+
+attack_sound = sound_crabHitMao;
 
 state = ENEMY_STATE.FREE;

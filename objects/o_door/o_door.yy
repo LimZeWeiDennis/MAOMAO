@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "name": "Doors",
+    "path": "folders/Objects/Environment/Doors.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_door",

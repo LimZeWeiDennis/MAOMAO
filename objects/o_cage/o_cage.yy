@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_cage",
-    "path": "sprites/s_cage/s_cage.yy",
+    "name": "s_newCage",
+    "path": "sprites/s_newCage/s_newCage.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "name": "Interactables",
+    "path": "folders/Objects/Environment/Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_cage",

@@ -1,5 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+global.hpMax = 5;
+global.hp = global.hpMax;
+
 function checkPlayerHit(o_player, o_enemy){
 	var check = instance_place(x,y,o_enemy);
 	if(check != noone){
@@ -10,7 +13,7 @@ function checkPlayerHit(o_player, o_enemy){
 			show_debug_message("attacked by enemy");
 	
 			// minus health when touched
-				o_player.hp --;
+				global.hp --;
 	
 				o_player.state = PLAYERSTATE.HIT_STATE;
 	
@@ -23,7 +26,7 @@ function checkPlayerHit(o_player, o_enemy){
 				//for further experimentation on screen shake
 				//o_camera.shake = 3;
 	
-			if (o_player.hp > 0){
+			if (global.hp > 0){
 		
 				o_player.flash = 50;
 	
@@ -101,7 +104,7 @@ function checkPlayerEnvironmental(o_player){
 		{
 
 			// minus health when touched
-			o_player.hp --;
+			global.hp --;
 	
 			o_player.state = PLAYERSTATE.HIT_STATE;
 	

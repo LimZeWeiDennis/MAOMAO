@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy",
-    "path": "folders/Objects/Enemy.yy",
+    "name": "Alive",
+    "path": "folders/Objects/Crabs/Alive.yy",
   },
   "resourceVersion": "1.0",
   "name": "p_enemy",

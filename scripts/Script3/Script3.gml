@@ -26,7 +26,7 @@ function hit_stateP(obj, freeState, deadState)
 			
 		}
 		
-		if( obj.hp >= 1) {
+		if( global.hp >= 1) {
 			show_debug_message("still alive");
 			//changes the state back to free once the player hits the ground
 			obj.state = freeState;

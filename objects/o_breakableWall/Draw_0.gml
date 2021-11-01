@@ -7,4 +7,4 @@ if (shake > 0)
 else
 {
     draw_self();
-}
+}     

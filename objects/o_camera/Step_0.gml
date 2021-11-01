@@ -15,3 +15,9 @@ if (shake > 0){
 else {
 	camera_set_view_pos(camera, camX, camY);
 }*/
+
+if(room == Main_Menu || room == StoryLine){
+	RES_Scale = 1;
+} else {
+	RES_Scale = 2;
+}

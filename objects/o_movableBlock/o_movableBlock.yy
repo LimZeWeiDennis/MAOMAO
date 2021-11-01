@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Objects/Environment.yy",
+    "name": "Interactables",
+    "path": "folders/Objects/Environment/Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_movableBlock",

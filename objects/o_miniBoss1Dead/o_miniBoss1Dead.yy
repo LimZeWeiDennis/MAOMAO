@@ -31,7 +31,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "MiniBossDead",
-    "path": "folders/Objects/MiniBossDead.yy",
+    "path": "folders/Objects/Delete/MiniBossDead.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_miniBoss1Dead",
