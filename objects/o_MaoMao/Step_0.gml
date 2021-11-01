@@ -66,7 +66,12 @@ if(!global.gamePaused){
 		// checking for enemy collision
 		checkPlayerHit(o_MaoMao, p_enemy);
 		checkPlayerEnvironmental(o_MaoMao);
-	
+		
+		
+		
+		if(place_meeting(x,y,o_warpEnd)){
+			TransitionInto(Ending, 548, -50);
+		}
 
 	
 

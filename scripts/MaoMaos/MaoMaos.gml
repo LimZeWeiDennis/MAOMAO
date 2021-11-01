@@ -129,7 +129,7 @@ function checkPlayerMovableBlockCollision(o_player){
 	if(check != noone){
 		if(o_player.currentSize == 2){
 			audio_play_sound(sound_movingBox, 1000, false);
-			audio_sound_gain(sound_movingBox, 0.3, 0);
+			audio_sound_gain(sound_movingBox, 0.15, 0);
 			check.hsp = o_player.hsp * 3;
 		}
 		

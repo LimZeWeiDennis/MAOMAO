@@ -31,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_warpStart",
+  "name": "o_warpEnd",
   "tags": [],
   "resourceType": "GMObject",
 }

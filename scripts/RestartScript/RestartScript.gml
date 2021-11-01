@@ -38,6 +38,13 @@ function RestartScript(){
 		//o_MaoMao.x = 80;
 		//o_MaoMao.y = 129;
 		break;
+		
+		case("cage open"):
+		TransitionInto(Level2, 1928, 182);
+	
+		//o_MaoMao.x = 80;
+		//o_MaoMao.y = 129;
+		break;
 	
 		case(Level2):
 		o_BigBoss.x = 3453;

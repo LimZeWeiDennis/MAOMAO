@@ -69,7 +69,7 @@ enum PLAYERSTATE {
 }
 
 
-last_cleared_stage = Level1;
+last_cleared_stage = -1;
 
 
 //setting up the sprites
