@@ -7,7 +7,7 @@ global.readNote = false;
 
 //Health
 hp_start_X = 0;
-hp_start_Y = 10;
+hp_start_Y = 12;
 
 //Instructions
 instructions = false;

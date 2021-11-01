@@ -217,7 +217,6 @@ if(!global.gamePaused){
 	
 		if (image_index >= 14){
 			state = PLAYERSTATE.DEAD_IDLE_STATE
-		
 		}
 		break;
 	

@@ -105,19 +105,6 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 		//keep track of menu level
 		var _snl = pauseMenuLevel;
 		
-		
-		show_debug_message("len");
-		show_debug_message(p_op_length);
-		
-		
-		show_debug_message("opetion select");
-		show_debug_message(pauseOptionSelected);
-		
-		
-		show_debug_message("menu level");
-		show_debug_message(pauseMenuLevel);
-		
-		
 		switch(pauseMenuLevel){
 			//pause menu
 			case 0:
@@ -135,8 +122,9 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 					break;
 					//Instructions
 					case 2:  
-					pauseMenuLevel = 2; 
 					instructions = true;
+					pauseMenuLevel = 2; 
+					p_op_length = array_length(pauseOption[pauseMenuLevel]);
 					break;
 					//Return to MM
 					case 3: 
@@ -147,6 +135,7 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 					//Exit game
 					case 4: 
 					pauseMenuLevel = 1; 
+					p_op_length = array_length(pauseOption[pauseMenuLevel]);
 					break;
 				} break;
 				 
@@ -162,9 +151,12 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 			//instructions
 			case 2:
 				switch(pauseOptionSelected){
-					case 0: instructions = false; pauseMenuLevel = 0; break;
-			} break;
-			
+					case 0:
+						instructions = false;
+						pauseMenuLevel = 0;
+						break;
+				}
+				
 		//set option selected back to the first
 		if _snl != pauseMenuLevel {pauseOptionSelected = 0}; 
 		//correct option length 

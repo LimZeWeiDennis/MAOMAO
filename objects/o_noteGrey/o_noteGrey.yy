@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_noteSmall",
-    "path": "sprites/s_noteSmall/s_noteSmall.yy",
+    "name": "s_noteGrey",
+    "path": "sprites/s_noteGrey/s_noteGrey.yy",
   },
   "solid": false,
   "visible": true,
