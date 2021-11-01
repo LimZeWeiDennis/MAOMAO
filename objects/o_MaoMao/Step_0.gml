@@ -246,16 +246,18 @@ if(!global.gamePaused){
 					sprite_index = growing_sprite;
 					image_speed = 0.6;
 					mask_index = growing_sprite;
-
+					
 			}
 	
 			if(image_index >= 7){
+				audio_play_sound(sound_grow, 1000, false);
+
 				if(place_meeting(x, y ,o_ground)){
 						
 				}
 				else {
 					show_debug_message("can grow");
-		
+					
 					currentSize = 2;
 	
 					image_xscale = growthSize[currentSize - 1];
@@ -273,10 +275,13 @@ if(!global.gamePaused){
 			if(sprite_index != shrinking_sprite){
 					sprite_index = shrinking_sprite;
 					image_speed = 0.6;
+					
 
 			}
 	
 			if(image_index >= 8){
+					audio_play_sound(sound_grow, 1000, false);
+
 					currentSize = 1;
 					image_xscale = growthSize[currentSize - 1];
 					image_yscale = growthSize[currentSize - 1];

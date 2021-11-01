@@ -4,6 +4,8 @@ global.numReset = 0;
 global.numDeath = 0;
 global.numFriendSave = 0;
 
+audio_play_sound(sound_normBGM, 10 , true);
+
 //Health
 hp_start_X = 0;
 hp_start_Y = 10;

@@ -14,7 +14,7 @@ function checkPlayerHit(o_player, o_enemy){
 	
 			// minus health when touched
 				global.hp --;
-	
+				audio_play_sound(sound_crabHitMao, 1000, false);
 				o_player.state = PLAYERSTATE.HIT_STATE;
 	
 				o_player.hsp = o_player.facing * 5;
