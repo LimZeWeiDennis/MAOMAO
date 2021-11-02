@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_fish",
-    "path": "sprites/s_fish/s_fish.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

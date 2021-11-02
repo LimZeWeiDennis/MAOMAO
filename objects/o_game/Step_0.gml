@@ -1,9 +1,62 @@
 /// @description UI Menu
 
+if(audio_sound_get_gain(sound_normBGM) < 0){
+	audio_stop_sound(sound_normBGM);
+}
+
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
 keyActivate = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter);
+
+//Main Menu
+if (room == Main_Menu){
+	mm_op_length = array_length(mainOption[mainMenuLevel]);
+	mainOptionSelected += (keyDown - keyUp); 
+	if (mainOptionSelected >= mm_op_length){mainOptionSelected = 0};
+	if (mainOptionSelected < 0){mainOptionSelected = mm_op_length -1}; //wrap around options
+	
+	if (keyActivate)
+	{	
+		var _snl = mainMenuLevel;
+		switch(mainMenuLevel){
+			case 0:
+				switch(mainOptionSelected){
+					//Play
+					case 0: PlayButton(); break;
+					//Instructions
+					case 1: instructions = true; mainMenuLevel = 2; break;
+					//Credits
+					case 2: credits = true; mainMenuLevel = 2; break;
+					//Exit game
+					case 3: mainMenuLevel = 1; break;
+				}break;
+				
+			case 1:
+				switch(mainOptionSelected)
+				{
+					//Yes
+					case 0: game_end(); break;
+					//No
+					case 1: mainMenuLevel = 0; break;
+				} break;
+				
+			case 2:
+				switch(mainOptionSelected){
+					case 0:
+						instructions = false;
+						credits = false;
+						mainMenuLevel = 0;
+						break;
+				}
+		}
+		
+		//set option selected back to the first
+		if _snl != mainMenuLevel {mainOptionSelected = 0}; 
+		//correct option length 
+		mm_op_length = array_length(mainOption[mainMenuLevel]);
+	}
+}
 
 //Death Screen
 if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
@@ -20,8 +73,10 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 				switch(deathOptionSelected){
 					//Restart
 					case 0: RestartScript(); break;
+					//Return to MM
+					case 1: TransitionInto(Main_Menu,576,145); o_MaoMao.state = PLAYERSTATE.FREE; global.hp =5; break;
 					//Exit game
-					case 1: deathMenuLevel = 1; break;
+					case 2: deathMenuLevel = 1; break;
 				}break;
 				
 			case 1:
@@ -60,33 +115,56 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 				switch (pauseOptionSelected)
 				{
 					//Continue
-					case 0: global.gamePaused = false; break;
+					case 0:
+					global.gamePaused = false;
+					break;
 					
 					//Restart
- 					case 1: RestartScript(); global.gamePaused = false; break;
-		
+ 					case 1:
+					RestartScript();
+					global.gamePaused = false;
+					break;
 					//Instructions
-					case 2: if (keyActivate || keyboard_check_pressed(vk_escape)){instructions = !instructions;} break;
-					
+					case 2:  
+					instructions = true;
+					pauseMenuLevel = 2; 
+					p_op_length = array_length(pauseOption[pauseMenuLevel]);
+					break;
+					//Return to MM
+					case 3: 
+					TransitionInto(Main_Menu,576,145); 
+					showPauseMenu = false; 
+					global.gamePaused = false; 
+					break;
 					//Exit game
-					case 3: pauseMenuLevel = 1; break;
+					case 4: 
+					pauseMenuLevel = 1; 
+					p_op_length = array_length(pauseOption[pauseMenuLevel]);
+					break;
 				} break;
-				
+				 
 			//exit
 			case 1:
 				switch(pauseOptionSelected)
 				{
 					//Yes
 					case 0: game_end(); break;
-		
 					//No
 					case 1: pauseMenuLevel = 0; break;
 				} break;
-			}
-			
+			//instructions
+			case 2:
+				switch(pauseOptionSelected){
+					case 0:
+						instructions = false;
+						pauseMenuLevel = 0;
+						break;
+				}
+				
 		//set option selected back to the first
 		if _snl != pauseMenuLevel {pauseOptionSelected = 0}; 
 		//correct option length 
 		p_op_length = array_length(pauseOption[pauseMenuLevel]);
+		}
 	}
 }

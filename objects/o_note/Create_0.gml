@@ -10,3 +10,4 @@ enum NOTESTATE{
 state = NOTESTATE.NOT_READ;
 
 note_sprite = s_note;
+

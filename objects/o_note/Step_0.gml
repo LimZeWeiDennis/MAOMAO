@@ -8,6 +8,8 @@ switch(state) {
 	
 	if(place_meeting(x,y, o_MaoMao)){
 		state = NOTESTATE.READ;
+		global.readNote = true;
+		audio_play_sound(sound_note, 1000, false);
 	}
 	
 	break;

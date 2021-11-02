@@ -8,24 +8,6 @@ key_jump = keyboard_check_pressed(vk_space);
 
 jumpCD --;
 growthCD --;
-
-//if(key_restart) {
-//	hsp = 0
-//	vsp = 0
-//	hp = hpMax;
-//	state = PLAYERSTATE.FREE;
-	
-//	room_goto(Main_Menu);
-//	x = 676;
-//	y = 192;
-
-
-//}
-
-//this check if the key is pressed, doesnt allow holding
-//key_jump = keyboard_check_pressed(vk_space);  
-
-
 slashingCD --;
 
 if(!global.gamePaused){
@@ -43,6 +25,10 @@ if(!global.gamePaused){
 			state = PLAYERSTATE.GROWING_STATE;
 			growthCD = 60;
 		}	
+		
+		if(global.hp < 0){
+			state = PLAYERSTATE.DEAD_STATE;
+		}
 	
 		hitCoolDown --;
 		//to ensure that the player object does not move when both keys are pressed
@@ -80,7 +66,12 @@ if(!global.gamePaused){
 		// checking for enemy collision
 		checkPlayerHit(o_MaoMao, p_enemy);
 		checkPlayerEnvironmental(o_MaoMao);
-	
+		
+		
+		
+		if(place_meeting(x,y,o_warpEnd)){
+			TransitionInto(Ending, 548, -50);
+		}
 
 	
 
@@ -92,7 +83,6 @@ if(!global.gamePaused){
 		{
 			sprite_index = jump_sprite;
 			image_speed = 0.6;
-			grounded = false;
 			//if(sign(vsp) > 0 ) image_index = 0; else image_index = 1;
 	
 		} 
@@ -121,7 +111,11 @@ if(!global.gamePaused){
 			image_xscale = sign(hsp) * growthSize[currentSize - 1 ];
 		}
 	
-		if(key_attack && slashingCD <= 0) { state = PLAYERSTATE.ATTACK_STATE;}
+		if(key_attack && slashingCD <= 0) {
+			state = PLAYERSTATE.ATTACK_STATE;
+			audio_play_sound(sound_maomaoAttacks, 1000 ,false);
+		}
+			
 
 		//draw_sprite_ext(noone, 0, x,   y, move*facing, 1, 0, $FFFFF F & $ffffff, 1);
 		break;
@@ -135,7 +129,7 @@ if(!global.gamePaused){
 	
 		//reset the cooldown
 		slashingCD = currentSlashingCD;
-	
+		
 		//checking if the player sprite is in the right one
 		if (sprite_index != attack_sprite){
 			sprite_index = attack_sprite; 
@@ -171,6 +165,9 @@ if(!global.gamePaused){
 			var cageHit = instance_place(x ,y ,o_cage);
 			if(cageHit != noone && cageHit.state == CAGESTATE.CLOSED){
 				cageHit.state = CAGESTATE.OPEN;
+				audio_play_sound(sound_cageOpen, 1000, false);
+				audio_play_sound(sound_friendSaved, 1000, false);
+				global.numFriendSave ++;
 			}
 		}
 	
@@ -210,7 +207,7 @@ if(!global.gamePaused){
 	
 		case PLAYERSTATE.HIT_STATE:
 	
-	
+		
 		hit_stateP(o_MaoMao, PLAYERSTATE.FREE,  PLAYERSTATE.DEAD_STATE);
 	
 		break;
@@ -230,7 +227,6 @@ if(!global.gamePaused){
 	
 		if (image_index >= 14){
 			state = PLAYERSTATE.DEAD_IDLE_STATE
-		
 		}
 		break;
 	
@@ -259,16 +255,18 @@ if(!global.gamePaused){
 					sprite_index = growing_sprite;
 					image_speed = 0.6;
 					mask_index = growing_sprite;
-
+					
 			}
 	
 			if(image_index >= 7){
+				audio_play_sound(sound_grow, 1000, false);
+
 				if(place_meeting(x, y ,o_ground)){
 						
 				}
 				else {
 					show_debug_message("can grow");
-		
+					
 					currentSize = 2;
 	
 					image_xscale = growthSize[currentSize - 1];
@@ -286,10 +284,13 @@ if(!global.gamePaused){
 			if(sprite_index != shrinking_sprite){
 					sprite_index = shrinking_sprite;
 					image_speed = 0.6;
+					
 
 			}
 	
 			if(image_index >= 8){
+					audio_play_sound(sound_grow, 1000, false);
+
 					currentSize = 1;
 					image_xscale = growthSize[currentSize - 1];
 					image_yscale = growthSize[currentSize - 1];
@@ -303,32 +304,5 @@ if(!global.gamePaused){
 
 		break;
 	
-		//case PLAYERSTATE.LANDING_STATE:
-	
-		//show_debug_message("landing");
-	
-		//if (sprite_index != s_MaoMaoLanding){
-		//	sprite_index = s_MaoMaoLanding;
-		//	image_speed = 0.5;
-		//}
-	
-		////if(currentSize == 2){
-		
-		////	show_debug_message("breaking grounds!");
-		
-		////	var ground_id = instance_place(x, y+1, o_breakableGround);
-		
-		////	with(ground_id){
-		////		hp --;
-		////	}
-		////}
-
-	
-		//if (image_index >= 2){
-		//	state = PLAYERSTATE.FREE;
-		//	image_speed = 0.2;
-		//}
-	
-		//break;
 	}
 }

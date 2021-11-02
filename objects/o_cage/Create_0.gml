@@ -8,3 +8,7 @@ enum CAGESTATE {
 }
 
 state = CAGESTATE.CLOSED;
+
+last_index = 7;
+
+open_sprite = -1;
