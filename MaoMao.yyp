@@ -99,6 +99,7 @@
     {"id":{"name":"Room10","path":"rooms/Room10/Room10.yy",},"order":3,},
     {"id":{"name":"o_crabDead","path":"objects/o_crabDead/o_crabDead.yy",},"order":3,},
     {"id":{"name":"o_fish","path":"objects/o_fish/o_fish.yy",},"order":35,},
+    {"id":{"name":"o_cageWarning","path":"objects/o_cageWarning/o_cageWarning.yy",},"order":15,},
     {"id":{"name":"s_quitButton","path":"sprites/s_quitButton/s_quitButton.yy",},"order":5,},
     {"id":{"name":"o_noteGrey","path":"objects/o_noteGrey/o_noteGrey.yy",},"order":5,},
     {"id":{"name":"s_pixel","path":"sprites/s_pixel/s_pixel.yy",},"order":5,},
