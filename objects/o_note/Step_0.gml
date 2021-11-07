@@ -22,6 +22,7 @@ switch(state) {
 	if(check_c) {
 		state = NOTESTATE.DESTROYED;
 		global.gamePaused = false;
+		global.readNote = false;
 	}
 	
 	
