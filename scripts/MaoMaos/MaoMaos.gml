@@ -137,3 +137,14 @@ function checkPlayerMovableBlockCollision(o_player){
 	
 	
 }
+
+function grow(o_player){
+	audio_play_sound(sound_grow, 1000, false);
+	show_debug_message("can grow");
+					
+	o_player.currentSize = 2;
+	
+	image_xscale = o_player.growthSize[o_player.currentSize - 1];
+	image_yscale = o_player.growthSize[o_player.currentSize - 1];
+	image_xscale = o_player.facing * o_player.growthSize[o_player.currentSize - 1];
+}

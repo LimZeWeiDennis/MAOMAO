@@ -5,7 +5,6 @@ global.numDeath = 0;
 global.numFriendSave = 0;
 global.readNote = false;
 
-audio_play_sound(sound_normBGM, 10 , true);
 
 //Health
 hp_start_X = 0;

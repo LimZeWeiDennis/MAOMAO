@@ -1,8 +1,5 @@
 /// @description UI Menu
 
-if(audio_sound_get_gain(sound_normBGM) < 0){
-	audio_stop_sound(sound_normBGM);
-}
 
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
