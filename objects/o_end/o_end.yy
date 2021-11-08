@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_lastScene1",
-    "path": "sprites/s_lastScene1/s_lastScene1.yy",
+    "name": "s_ending",
+    "path": "sprites/s_ending/s_ending.yy",
   },
   "solid": false,
   "visible": true,
