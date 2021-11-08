@@ -38,8 +38,6 @@ switch(state) {
 	
 	case(INTROSTATE.END):
 	blink = false;
-	o_MaoMao.last_cleared_stage = -1;
-	global.hp = 5;
 	TransitionInto(Quit_Menu, 548, -50);
 	break;
 }

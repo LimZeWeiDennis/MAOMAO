@@ -20,6 +20,7 @@ switch(state)
 	
 	if(image_index >= last_index){
 		state = CAGESTATE.OPENED;
+
 	}
 	
 	break;
