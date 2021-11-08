@@ -184,6 +184,7 @@
     {"id":{"name":"s_groundFked","path":"sprites/s_groundFked/s_groundFked.yy",},"order":3,},
     {"id":{"name":"o_crab","path":"objects/o_crab/o_crab.yy",},"order":0,},
     {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},"order":1,},
+    {"id":{"name":"s_ending","path":"sprites/s_ending/s_ending.yy",},"order":11,},
     {"id":{"name":"fnt_default2","path":"fonts/fnt_default2/fnt_default2.yy",},"order":1,},
     {"id":{"name":"o_door","path":"objects/o_door/o_door.yy",},"order":3,},
     {"id":{"name":"fnt_mmoptions","path":"fonts/fnt_mmoptions/fnt_mmoptions.yy",},"order":4,},
