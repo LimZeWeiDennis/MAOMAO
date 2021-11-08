@@ -16,7 +16,7 @@ switch(state) {
 	
 	case(INTROSTATE.END):
 	blink = false;
-	
+	instance_destroy();
 	TransitionInto(Final, 3105, 240);
 	break;
 }

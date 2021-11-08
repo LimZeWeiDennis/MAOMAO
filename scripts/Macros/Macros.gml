@@ -44,8 +44,7 @@ function PlayButton(){
 	
 		case(Level2):
 		
-		o_BigBoss.x = 3453;
-		o_BigBoss.y = 211;
+		global.numFriendSave = 1;
 		TransitionInto(Final, 3105, 240);
 
 		break;

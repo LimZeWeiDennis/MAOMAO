@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-check_c = keyboard_check_pressed(ord("C"));
+check_c = keyboard_check_pressed(vk_enter);
 
 switch(state) {
 	case(NOTESTATE.NOT_READ):
@@ -22,6 +22,7 @@ switch(state) {
 	if(check_c) {
 		state = NOTESTATE.DESTROYED;
 		global.gamePaused = false;
+		global.readNote = false;
 	}
 	
 	

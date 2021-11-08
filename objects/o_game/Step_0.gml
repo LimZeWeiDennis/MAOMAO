@@ -1,14 +1,79 @@
 /// @description UI Menu
 
-if(audio_sound_get_gain(sound_normBGM) < 0){
-	audio_stop_sound(sound_normBGM);
-}
 
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
 keyActivate = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter);
 
+// QUIT MENU
+if(room == Quit_Menu) {
+	end_game_op_length = array_length(endGameOption);
+	endGameOptionSelected += (keyDown - keyUp); 
+	
+	if(global.numFriendSave < 5) {
+		
+		if (endGameOptionSelected >= end_game_op_length){
+			endGameOptionSelected = 0
+		};
+		if (endGameOptionSelected < 0){
+			endGameOptionSelected = end_game_op_length - 1
+		}; //wrap around options
+	
+		if (keyActivate)
+		{	
+			switch(endGameOptionSelected) {
+				case 0:
+					// go back to final
+					TransitionInto(Final, 3105, 240);
+					//reset freidns saved to 1
+					global.numFriendSave = 1;
+					global.hp = 5;
+					break;
+				case 1:
+					// go back to main menu
+					TransitionInto(Main_Menu,576,145); 
+					o_MaoMao.last_cleared_stage = -1;
+					global.hp = 5;
+					global.numFriendSave = 0;
+					break;
+				case 2: 
+					// exit game
+					game_end();
+					break;
+			}
+		}
+	}
+	
+	// hero and saved all friends
+	if(global.numFriendSave == 5 ) {
+		if (endGameOptionSelected >= end_game_op_length){
+			endGameOptionSelected = 1
+		};
+		if (endGameOptionSelected < 1){
+			endGameOptionSelected = end_game_op_length - 1
+		}; //wrap around options
+	
+		if (keyActivate)
+		{	
+			switch(endGameOptionSelected) {
+				case 1:
+					// go back to main menu
+					TransitionInto(Main_Menu,576,145); 
+					o_MaoMao.last_cleared_stage = -1;
+					global.hp = 5;
+					global.numFriendSave = 0;
+					break;
+				case 2: 
+					// exit game
+					game_end();
+					break;
+			}
+		}
+	}
+		
+}
+	
 //Main Menu
 if (room == Main_Menu){
 	mm_op_length = array_length(mainOption[mainMenuLevel]);
@@ -168,3 +233,4 @@ if (global.gamePaused && showPauseMenu && o_MaoMao.state != PLAYERSTATE.DEAD_IDL
 		}
 	}
 }
+

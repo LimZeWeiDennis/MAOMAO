@@ -173,3 +173,72 @@ if (room == Main_Menu){
 	}
 }
 
+//Draw main menu
+if (room == Quit_Menu){
+
+	//Header
+	if (global.numFriendSave < 5){ 
+		BlackOverlay();
+		draw_set_color(c_white);
+		draw_set_font(fnt_menuheader);
+		draw_text(1280 * 0.5, 600 * 0.34,
+		"You saved " + string(global.numFriendSave) + "/5 cats! \n Don't worry! Purple got the rest out for you!");
+	} else if (global.numFriendSave == 5){ 
+		BlackOverlay();
+		draw_set_color(c_white);
+		draw_set_font(fnt_menuheader);
+		draw_text(1280 * 0.5, 600 * 0.43, "WOW! You really ARE a HERO! \n You saved EVERYONE!");
+	}
+	
+	//Options
+	draw_set_halign(fa_center);
+	draw_set_valign(fa_middle);
+	draw_set_color(c_white);
+
+	draw_set_font(fnt_menuoptions);
+	if(global.numFriendSave < 5) {
+		
+		for (var i = 0; i < end_game_op_length; i++)
+		{
+			var _print = "";
+		
+			if (i == endGameOptionSelected)
+			{
+				_print += "> " + endGameOption[i] + " <";
+			}
+			else
+			{
+				_print += endGameOption[i];
+				draw_set_alpha(0.7);
+			}
+		
+			draw_set_font(fnt_mmoptions);
+			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
+			draw_set_alpha(1.0);
+			
+		}
+	}
+	
+		if(global.numFriendSave == 5) {
+		
+		for (var i = 1; i < end_game_op_length; i++)
+		{
+			var _print = "";
+		
+			if (i == endGameOptionSelected)
+			{
+				_print += "> " + endGameOption[i] + " <";
+			}
+			else
+			{
+				_print += endGameOption[i];
+				draw_set_alpha(0.7);
+			}
+		
+			draw_set_font(fnt_mmoptions);
+			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
+			draw_set_alpha(1.0);
+			
+		}
+	}
+}

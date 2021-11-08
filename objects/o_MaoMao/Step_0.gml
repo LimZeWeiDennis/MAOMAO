@@ -18,7 +18,7 @@ if(!global.gamePaused){
 		//case where the player is not attacking
 		case PLAYERSTATE.FREE: 
 	
-		show_debug_message("free state");
+		//show_debug_message("free state");
 
 	
 		if(key_growth && global.hp > 0 && growthCD <= 0){
@@ -66,15 +66,12 @@ if(!global.gamePaused){
 		// checking for enemy collision
 		checkPlayerHit(o_MaoMao, p_enemy);
 		checkPlayerEnvironmental(o_MaoMao);
-		
-		
-		
+	
+	
+		// check for meeting the end
 		if(place_meeting(x,y,o_warpEnd)){
 			TransitionInto(Ending, 548, -50);
 		}
-
-	
-
 
 	  //Animation ------------
 
@@ -124,7 +121,7 @@ if(!global.gamePaused){
 		//case where the player is attacking
 		case PLAYERSTATE.ATTACK_STATE:	
 	
-		show_debug_message("attack state");
+		//show_debug_message("attack state");
 	
 	
 		//reset the cooldown
@@ -246,32 +243,35 @@ if(!global.gamePaused){
 		break;
 	
 		case PLAYERSTATE.GROWING_STATE:
-		show_debug_message("growing state");
+		//show_debug_message("growing state");
 	
 	
 		if(currentSize == 1){
 	
 			if(sprite_index != growing_sprite){
 					sprite_index = growing_sprite;
-					image_speed = 0.6;
+					image_speed = 1;
 					mask_index = growing_sprite;
+					y = y - sprite_height/3;
 					
 			}
 	
 			if(image_index >= 7){
-				audio_play_sound(sound_grow, 1000, false);
+				
 
 				if(place_meeting(x, y ,o_ground)){
+					
+					if(place_meeting(x, y + 1 , o_ground) && place_meeting(x + 1, y, o_ground)
+						&& !place_meeting(x - 1, y, o_ground)){
+							x = x - 1;
+							grow(o_MaoMao);
+					}
+					
+				
 						
 				}
 				else {
-					show_debug_message("can grow");
-					
-					currentSize = 2;
-	
-					image_xscale = growthSize[currentSize - 1];
-					image_yscale = growthSize[currentSize - 1];
-					image_xscale = facing * growthSize[currentSize - 1];
+					grow(o_MaoMao);
 		
 				} 
 				mask_index = s_MaoMaoIdle;
@@ -295,6 +295,8 @@ if(!global.gamePaused){
 					image_xscale = growthSize[currentSize - 1];
 					image_yscale = growthSize[currentSize - 1];
 					image_xscale = facing * growthSize[currentSize - 1];
+					y = y + sprite_height/3;
+				
 			
 				state = PLAYERSTATE.FREE;
 			}
