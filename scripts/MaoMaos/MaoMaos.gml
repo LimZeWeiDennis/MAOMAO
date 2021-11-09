@@ -129,11 +129,22 @@ function checkPlayerMovableBlockCollision(o_player){
 	if(check != noone){
 		if(o_player.currentSize == 2){
 			audio_play_sound(sound_movingBox, 1000, false);
-			audio_sound_gain(sound_movingBox, 0.3, 0);
+			audio_sound_gain(sound_movingBox, 0.15, 0);
 			check.hsp = o_player.hsp * 3;
 		}
 		
     }
 	
 	
+}
+
+function grow(o_player){
+	audio_play_sound(sound_grow, 1000, false);
+	show_debug_message("can grow");
+					
+	o_player.currentSize = 2;
+	
+	image_xscale = o_player.growthSize[o_player.currentSize - 1];
+	image_yscale = o_player.growthSize[o_player.currentSize - 1];
+	image_xscale = o_player.facing * o_player.growthSize[o_player.currentSize - 1];
 }

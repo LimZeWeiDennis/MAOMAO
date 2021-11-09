@@ -29,7 +29,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"o_JAJHINT","path":"objects/o_JAJHINT/o_JAJHINT.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.8553,"scaleY":1.3125,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1547.0,"y":138.0,"resourceVersion":"1.0","name":"inst_79357922","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"text","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"o_noteGrey","path":"objects/o_noteGrey/o_noteGrey.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.0302736424,"scaleY":0.0302736424,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2319.99976,"y":288.0,"resourceVersion":"1.0","name":"inst_6BD133E8","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_noteBlue","path":"objects/o_noteBlue/o_noteBlue.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2328.0,"y":296.0,"resourceVersion":"1.0","name":"inst_214A60FE","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"letter","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"o_crab","path":"objects/o_crab/o_crab.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1003.0,"y":148.9375,"resourceVersion":"1.0","name":"inst_21B43E7A","tags":[],"resourceType":"GMRInstance",},
@@ -1371,7 +1371,6 @@
     {"name":"inst_5963607C","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_4023EB7E","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_727ACF84","path":"rooms/Tutorial/Tutorial.yy",},
-    {"name":"inst_6BD133E8","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_23A742E4","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_DC5B2E6","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_56A30981","path":"rooms/Tutorial/Tutorial.yy",},
@@ -2327,6 +2326,7 @@
     {"name":"inst_3BD72832","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_6B0467DE","path":"rooms/Tutorial/Tutorial.yy",},
     {"name":"inst_79357922","path":"rooms/Tutorial/Tutorial.yy",},
+    {"name":"inst_214A60FE","path":"rooms/Tutorial/Tutorial.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
