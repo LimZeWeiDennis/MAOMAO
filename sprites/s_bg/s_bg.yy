@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Tile",
-    "path": "folders/Sprites/Environment/Tile.yy",
+    "path": "folders/Sprites/Friends/Environment/Tile.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_bg",

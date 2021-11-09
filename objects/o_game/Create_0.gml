@@ -5,6 +5,7 @@ global.numDeath = 0;
 global.numFriendSave = 0;
 global.readNote = false;
 
+
 //Health
 hp_start_X = 0;
 hp_start_Y = 12;
@@ -74,3 +75,15 @@ pauseOption[2,0] = "Back";
 p_op_length = 0;
 pauseMenuLevel = 0;
 pauseOptionSelected = 0;
+
+
+//End Game Menu 
+endGameOption[0] = "Try Again";
+endGameOption[1] = "Return to Main Menu";
+endGameOption[2] = "Exit Game";
+
+
+//Pause Var
+end_game_op_length = 0;
+endGameMenuLevel = 0;
+endGameOptionSelected = 0;

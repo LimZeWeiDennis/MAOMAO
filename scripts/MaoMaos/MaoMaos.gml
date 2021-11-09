@@ -14,7 +14,7 @@ function checkPlayerHit(o_player, o_enemy){
 	
 			// minus health when touched
 				global.hp --;
-	
+				audio_play_sound(sound_maomaoHit, 1000, false);
 				o_player.state = PLAYERSTATE.HIT_STATE;
 	
 				o_player.hsp = o_player.facing * 5;
@@ -107,7 +107,7 @@ function checkPlayerEnvironmental(o_player){
 			global.hp --;
 	
 			o_player.state = PLAYERSTATE.HIT_STATE;
-	
+			audio_play_sound(sound_maomaoHit, 1000, false);
 			o_player.hsp =  o_player.facing * 3;
 			o_player.vsp = -2;
 	
@@ -128,11 +128,23 @@ function checkPlayerMovableBlockCollision(o_player){
 	var check = instance_place(o_player.x + sign(o_player.hsp), o_player.y,  o_movableBlock);
 	if(check != noone){
 		if(o_player.currentSize == 2){
-			
+			audio_play_sound(sound_movingBox, 1000, false);
+			audio_sound_gain(sound_movingBox, 0.15, 0);
 			check.hsp = o_player.hsp * 3;
 		}
 		
     }
 	
 	
+}
+
+function grow(o_player){
+	audio_play_sound(sound_grow, 1000, false);
+	show_debug_message("can grow");
+					
+	o_player.currentSize = 2;
+	
+	image_xscale = o_player.growthSize[o_player.currentSize - 1];
+	image_yscale = o_player.growthSize[o_player.currentSize - 1];
+	image_xscale = o_player.facing * o_player.growthSize[o_player.currentSize - 1];
 }

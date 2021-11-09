@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_starting",
-    "path": "sprites/s_starting/s_starting.yy",
+    "name": "s_introLetterBox",
+    "path": "sprites/s_introLetterBox/s_introLetterBox.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu  to be deleted",
-    "path": "folders/Objects/Menu  to be deleted.yy",
+    "name": "Cinematics",
+    "path": "folders/Objects/Cinematics.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_intro",

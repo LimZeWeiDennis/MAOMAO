@@ -2,8 +2,7 @@
 // You can write your code in this editor
 
 if(!global.gamePaused){
-	
-	show_debug_message(abs(x - o_MaoMao.x));
+
 	switch (state) 
 	{
 		case ENEMY_STATE.FREE:

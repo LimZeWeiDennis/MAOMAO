@@ -34,7 +34,6 @@ deadObject = -1;
 attack_last_index = -1;
 walking_sprite = -1;
 
-attack_sound = sound_crabHitMao;
 
 state = ENEMY_STATE.FREE;
 
