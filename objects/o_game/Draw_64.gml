@@ -177,17 +177,14 @@ if (room == Main_Menu){
 if (room == Quit_Menu){
 
 	//Header
+	BlackOverlay();
+	draw_set_color(c_white);
+	draw_set_font(fnt_menuheader);
 	if (global.numFriendSave < 5){ 
-		BlackOverlay();
-		draw_set_color(c_white);
-		draw_set_font(fnt_menuheader);
-		draw_text(1280 * 0.5, 600 * 0.34,
+		draw_text(1280 * 0.5, 600 * 0.4,
 		"You saved " + string(global.numFriendSave) + "/5 cats! \n Don't worry! Purple got the rest out for you!");
 	} else if (global.numFriendSave == 5){ 
-		BlackOverlay();
-		draw_set_color(c_white);
-		draw_set_font(fnt_menuheader);
-		draw_text(1280 * 0.5, 600 * 0.43, "WOW! You're a hero! \n You saved everyone!");
+		draw_text(1280 * 0.5, 600 * 0.40, "WOW! You're a hero! \n You saved everyone!");
 	}
 	
 	//Options
@@ -196,47 +193,31 @@ if (room == Quit_Menu){
 	draw_set_color(c_white);
 
 	draw_set_font(fnt_menuoptions);
-	if(global.numFriendSave < 5) {
+
 		
-		for (var i = 0; i < end_game_op_length; i++)
-		{
-			var _print = "";
-		
-			if (i == endGameOptionSelected)
-			{
-				_print += "> " + endGameOption[i] + " <";
-			}
-			else
-			{
-				_print += endGameOption[i];
-				draw_set_alpha(0.7);
-			}
-		
-			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
-			draw_set_alpha(1.0);
+	for (var i = 0; i < end_game_op_length; i++)
+	{
 			
+		var _print = "";
+		
+		if (i == endGameOptionSelected)
+			
+		{
+			show_debug_message(endGameOption[endGameLevel,i]);
+			_print += "> " + endGameOption[endGameLevel,i] + " <";
+
+				
 		}
+		else
+		{
+			_print += endGameOption[endGameLevel,i];
+			draw_set_alpha(0.7);
+		}
+		
+		draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
+		draw_set_alpha(1.0);
+			
 	}
 	
-		if(global.numFriendSave == 5) {
-		
-		for (var i = 1; i < end_game_op_length; i++)
-		{
-			var _print = "";
-		
-			if (i == endGameOptionSelected)
-			{
-				_print += "> " + endGameOption[i] + " <";
-			}
-			else
-			{
-				_print += endGameOption[i];
-				draw_set_alpha(0.7);
-			}
-		
-			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
-			draw_set_alpha(1.0);
-			
-		}
-	}
+	
 }
