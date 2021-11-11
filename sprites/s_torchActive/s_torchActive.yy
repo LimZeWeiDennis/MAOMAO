@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Non-Interactables",
-    "path": "folders/Sprites/Environment/Non-Interactables.yy",
+    "path": "folders/Sprites/Friends/Environment/Non-Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_torchActive",
