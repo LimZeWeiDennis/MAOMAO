@@ -173,7 +173,7 @@ if (room == Main_Menu){
 	}
 }
 
-//Draw main menu
+//Draw end game
 if (room == Quit_Menu){
 
 	//Header
@@ -187,7 +187,7 @@ if (room == Quit_Menu){
 		BlackOverlay();
 		draw_set_color(c_white);
 		draw_set_font(fnt_menuheader);
-		draw_text(1280 * 0.5, 600 * 0.43, "WOW! You really ARE a HERO! \n You saved EVERYONE!");
+		draw_text(1280 * 0.5, 600 * 0.43, "WOW! You're a hero! \n You saved everyone!");
 	}
 	
 	//Options
@@ -212,7 +212,6 @@ if (room == Quit_Menu){
 				draw_set_alpha(0.7);
 			}
 		
-			draw_set_font(fnt_mmoptions);
 			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
 			draw_set_alpha(1.0);
 			
@@ -235,7 +234,6 @@ if (room == Quit_Menu){
 				draw_set_alpha(0.7);
 			}
 		
-			draw_set_font(fnt_mmoptions);
 			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
 			draw_set_alpha(1.0);
 			

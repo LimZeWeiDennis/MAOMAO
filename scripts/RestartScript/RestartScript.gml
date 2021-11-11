@@ -50,7 +50,7 @@ function RestartScript(){
 		o_BigBoss.x = 3453;
 		o_BigBoss.y = 211;
 		global.numFriendSave = 1;
-		TransitionInto(Final, 3105, 240);
+		TransitionInto(Final, 3770, 75);
 
 		break;
 	}

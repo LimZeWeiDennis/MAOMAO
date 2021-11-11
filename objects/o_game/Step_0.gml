@@ -6,7 +6,7 @@ keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
 keyActivate = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter);
 
-// QUIT MENU
+// ENDGAME
 if(room == Quit_Menu) {
 	end_game_op_length = array_length(endGameOption);
 	endGameOptionSelected += (keyDown - keyUp); 
@@ -25,7 +25,7 @@ if(room == Quit_Menu) {
 			switch(endGameOptionSelected) {
 				case 0:
 					// go back to final
-					TransitionInto(Final, 3105, 240);
+					TransitionInto(Final, 3770, 75);
 					//reset freidns saved to 1
 					global.numFriendSave = 1;
 					global.hp = 5;
