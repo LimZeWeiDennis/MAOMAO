@@ -1054,7 +1054,7 @@
   },
   "parent": {
     "name": "Environment",
-    "path": "folders/Sprites/Environment.yy",
+    "path": "folders/Sprites/Friends/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "t_bgWall",
