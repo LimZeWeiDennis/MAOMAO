@@ -86,6 +86,7 @@
     {"id":{"name":"o_MaoMao","path":"objects/o_MaoMao/o_MaoMao.yy",},"order":0,},
     {"id":{"name":"p_environmental","path":"objects/p_environmental/p_environmental.yy",},"order":4,},
     {"id":{"name":"s_MaoMaoGrows","path":"sprites/s_MaoMaoGrows/s_MaoMaoGrows.yy",},"order":4,},
+    {"id":{"name":"sound_eat","path":"sounds/sound_eat/sound_eat.yy",},"order":15,},
     {"id":{"name":"Main_Menu","path":"rooms/Main_Menu/Main_Menu.yy",},"order":0,},
     {"id":{"name":"s_purple","path":"sprites/s_purple/s_purple.yy",},"order":0,},
     {"id":{"name":"o_floorbreaktut","path":"objects/o_floorbreaktut/o_floorbreaktut.yy",},"order":4,},
