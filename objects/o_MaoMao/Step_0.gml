@@ -72,6 +72,11 @@ if(!global.gamePaused){
 		if(place_meeting(x,y,o_warpEnd)){
 			TransitionInto(Ending, 548, -50);
 		}
+		
+		if(place_meeting(x,y, o_startBoss)){
+			show_debug_message("touched");
+			global.bossActive = true;
+		}
 
 	  //Animation ------------
 

@@ -4,7 +4,7 @@ global.numReset = 0;
 global.numDeath = 0;
 global.numFriendSave = 0;
 global.readNote = false;
-
+global.bossActive = false;
 
 //Health
 hp_start_X = 0;
