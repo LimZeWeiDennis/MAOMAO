@@ -1,6 +1,6 @@
 /// @description UI Menu
 
-
+show_debug_message(global.bossActive);
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
