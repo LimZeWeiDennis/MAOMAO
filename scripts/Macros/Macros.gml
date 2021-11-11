@@ -48,5 +48,6 @@ function PlayButton(){
 		TransitionInto(Final, 3770, 75);
 
 		break;
+		
 	}
  }

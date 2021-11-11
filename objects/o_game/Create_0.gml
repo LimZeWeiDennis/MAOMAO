@@ -78,12 +78,15 @@ pauseOptionSelected = 0;
 
 
 //End Game Menu 
-endGameOption[0] = "Try Again";
-endGameOption[1] = "Return to Main Menu";
-endGameOption[2] = "Exit Game";
+endGameOption[0,0] = "Play Again";
+endGameOption[0,1] = "Return to Main Menu";
+endGameOption[0,2] = "Exit Game";
 
+//End Game Exit 
+endGameOption[1,0] = "Yes";
+endGameOption[1,1] = "No";
 
-//Pause Var
+//End Game Var
 end_game_op_length = 0;
-endGameMenuLevel = 0;
+endGameLevel = 0;
 endGameOptionSelected = 0;
