@@ -28,7 +28,7 @@ switch (o_MaoMao.last_cleared_stage){
 	case(Level2):
 	
 	room_goto(Final);
-	o_MaoMao.x = 3118;
-	o_MaoMao.y = 240;
+	o_MaoMao.x = 3770;
+	o_MaoMao.y = 75;
 	break;
 }

@@ -38,7 +38,7 @@ if collision_point(mouse_x, mouse_y, id, true, false) { //Arguments are (x, y, o
 		
 		o_BigBoss.x = 3453;
 		o_BigBoss.y = 211;
-		TransitionInto(Final, 3105, 240);
+		TransitionInto(Final, 3770, 75);
 
 		break;
 	}
