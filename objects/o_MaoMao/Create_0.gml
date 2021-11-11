@@ -2,7 +2,7 @@
 hsp = 0;
 vsp = 0;
 grav = 0.2 ;
-walk_spd = [2,2];
+walk_spd = [2, 1.5];
 
 jump_height = [4,2];
 
@@ -61,6 +61,7 @@ enum PLAYERSTATE {
 
 
 last_cleared_stage = -1;
+
 
 
 //setting up the sprites

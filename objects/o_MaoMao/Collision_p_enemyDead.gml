@@ -15,6 +15,7 @@ if(state == PLAYERSTATE.FREE){
 		{
 		
 			instance_destroy();
+			audio_play_sound(sound_eat, 1000, false);
 			o_MaoMao.state = PLAYERSTATE.EAT_STATE;
 		
 			if(global.hp < global.hpMax){
