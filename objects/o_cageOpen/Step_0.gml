@@ -19,7 +19,7 @@ switch(state) {
 	}
 	image_speed = 1.0 //initialise to 0.3
 	
-	if(image_index >= 179){
+	if(image_index >= 176){
 		state = INTROSTATE.END;
 	}
 	

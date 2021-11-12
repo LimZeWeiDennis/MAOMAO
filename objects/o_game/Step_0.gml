@@ -1,6 +1,5 @@
 /// @description UI Menu
 
-show_debug_message(global.bossActive);
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
@@ -30,15 +29,13 @@ if(room == Quit_Menu) {
 						// go back to final
 						TransitionInto(Final, 3770, 75);
 						//reset freidns saved to 1
-						global.numFriendSave = 1;
 						global.hp = 5;
 						break;
 					case 1:
 						// go back to main menu
 						TransitionInto(Main_Menu,576,145); 
 						o_MaoMao.last_cleared_stage = -1;
-						global.hp = 5;
-						global.numFriendSave = 0;
+				
 						break;
 					case 2: 
 						// exit game
@@ -79,9 +76,17 @@ if (room == Main_Menu){
 					//Play
 					case 0: PlayButton(); break;
 					//Instructions
-					case 1: instructions = true; mainMenuLevel = 2; break;
+					case 1: 
+					instructions = true; 
+					mainMenuLevel = 2;
+					break;
+					
 					//Credits
-					case 2: credits = true; mainMenuLevel = 2; break;
+					case 2: 
+					credits = true; 
+					mainMenuLevel = 2; 
+					break;
+					
 					//Exit game
 					case 3: mainMenuLevel = 1; break;
 				}break;
@@ -130,7 +135,9 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 					RestartScript();
 					break;
 					//Return to MM
-					case 1: TransitionInto(Main_Menu,576,145); 
+					case 1:
+					TransitionInto(Main_Menu,576,145); 
+					
 					break;
 					//Exit game
 					case 2: deathMenuLevel = 1; break;

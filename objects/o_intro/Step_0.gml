@@ -20,7 +20,7 @@ switch(state) {
 		sprite_index = s_introLetterBox;
 	}
 	
-	if(image_index >= 287){
+	if(image_index >= 285){
 		state = INTROSTATE.END;
 	}
 

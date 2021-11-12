@@ -15,3 +15,4 @@ audio_sound_gain(sound_normBGM, 1, 2000);
 
 global.hp = 5;
 o_MaoMao.state = PLAYERSTATE.FREE;
+global.numFriendSave = 0;

@@ -43,8 +43,7 @@ function PlayButton(){
 		break;
 	
 		case(Level2):
-		
-		global.numFriendSave = 1;
+	
 		TransitionInto(Final, 3770, 75);
 
 		break;

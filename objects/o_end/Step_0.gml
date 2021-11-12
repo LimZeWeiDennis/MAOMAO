@@ -19,7 +19,7 @@ switch(state) {
 	}
 	image_speed = 1.0 //initialise to 0.3
 	
-	if(image_index >= 139 && image_index <= 140){
+	if(image_index >= 139 && image_index <= 142){
 		state = INTROSTATE.HAPPY;
 		audio_sound_gain(sound_BossBGM, 0, 2000);
 		audio_stop_sound(sound_BossBGM);
@@ -43,7 +43,7 @@ switch(state) {
 	
 	case(INTROSTATE.HAPPY):
 		
-	if(image_index >= 239){
+	if(image_index >= 237){
 		state = INTROSTATE.END;
 	}
 	break;
