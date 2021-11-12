@@ -1,7 +1,7 @@
 /// @description Draw UI
 
 //Draw heart
-if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions && room != Credits){
+if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions && room != Credits && room!= CageOpen && room!=Ending){
 	for (var i = 0; i < global.hp; i ++) 
 	{
 		draw_sprite(s_healthPoint, 0, hp_start_X, hp_start_Y);
@@ -27,7 +27,7 @@ if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instru
 }
 
 //Draw persistent text
-if (room != Main_Menu && room != StoryLine && room != Instructions && room != Credits)
+if (room != Main_Menu && room != StoryLine && room != Instructions && room != Credits && room!= Quit_Menu && room!= CageOpen && room!=Ending)
 {
 	draw_set_color(c_white);
 	draw_set_font(fnt_default2);
@@ -180,11 +180,15 @@ if (room == Quit_Menu){
 	BlackOverlay();
 	draw_set_color(c_white);
 	draw_set_font(fnt_menuheader);
-	if (global.numFriendSave < 5){ 
+	if (global.numFriendSave < 5 && endGameLevel==0){ 
 		draw_text(1280 * 0.5, 600 * 0.4,
 		"You saved " + string(global.numFriendSave) + "/5 cats! \n Don't worry! Purple got the rest out for you!");
-	} else if (global.numFriendSave == 5){ 
+	} else if (global.numFriendSave == 5 && endGameLevel == 0){ 
 		draw_text(1280 * 0.5, 600 * 0.40, "WOW! You're a hero! \n You saved everyone!");
+	}
+	if (endGameLevel == 1){
+		draw_set_color(c_white); 
+		draw_text(1280 * 0.5, 600 * 0.43, "Are you sure you want to quit?");
 	}
 	
 	//Options
@@ -203,10 +207,7 @@ if (room == Quit_Menu){
 		if (i == endGameOptionSelected)
 			
 		{
-			show_debug_message(endGameOption[endGameLevel,i]);
 			_print += "> " + endGameOption[endGameLevel,i] + " <";
-
-				
 		}
 		else
 		{

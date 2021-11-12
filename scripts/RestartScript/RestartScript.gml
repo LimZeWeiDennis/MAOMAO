@@ -57,5 +57,6 @@ function RestartScript(){
 	o_MaoMao.currentSize = 1;
 	o_MaoMao.image_xscale = o_MaoMao.growthSize[o_MaoMao.currentSize - 1];
 	o_MaoMao.image_yscale = o_MaoMao.growthSize[o_MaoMao.currentSize - 1];
-}
+	
+	}
 }

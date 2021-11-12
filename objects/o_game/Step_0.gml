@@ -10,9 +10,6 @@ keyActivate = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_ente
 if(room == Quit_Menu) {
 	end_game_op_length = array_length(endGameOption[endGameLevel]);
 	endGameOptionSelected += (keyDown - keyUp); 
-	
-	
-
 		
 	if (endGameOptionSelected >= end_game_op_length){
 		endGameOptionSelected = 0;
@@ -64,9 +61,6 @@ if(room == Quit_Menu) {
 	//correct option length 
 	end_game_op_length = array_length(endGameOption[endGameLevel]);
 	}
-	
-	
-		
 }
 	
 //Main Menu
