@@ -30,7 +30,7 @@ if(room == Quit_Menu) {
 						// go back to final
 						TransitionInto(Final, 3770, 75);
 						//reset freidns saved to 1
-						global.numFriendSave = 1;
+						//global.numFriendSave = 1;
 						global.hp = 5;
 						break;
 					case 1:
@@ -38,7 +38,7 @@ if(room == Quit_Menu) {
 						TransitionInto(Main_Menu,576,145); 
 						o_MaoMao.last_cleared_stage = -1;
 						global.hp = 5;
-						global.numFriendSave = 0;
+						//global.numFriendSave = 0;
 						break;
 					case 2: 
 						// exit game
@@ -128,7 +128,7 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 					//Restart
 					case 0: RestartScript(); break;
 					//Return to MM
-					case 1: TransitionInto(Main_Menu,576,145);  global.hp =5; o_MaoMao.state = PLAYERSTATE.FREE; break;
+					case 1: TransitionInto(Main_Menu,576,145); break;
 					//Exit game
 					case 2: deathMenuLevel = 1; break;
 				}break;
