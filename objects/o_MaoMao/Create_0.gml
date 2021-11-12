@@ -39,9 +39,6 @@ currentAttack = 2;
 notes = 0;
 
 
-//to be deleted
-unlockRoom = false;
-
 // setting damage
 flash = 3;
 hitCoolDown = 0;
@@ -60,7 +57,7 @@ enum PLAYERSTATE {
 }
 
 
-last_cleared_stage = Level2;
+last_cleared_stage = -1;
 
 
 

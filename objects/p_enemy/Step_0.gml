@@ -139,6 +139,7 @@ if(!global.gamePaused){
 			//only attacks if the hp is not max, attack has cooled down and maomao is within attack range1
 			if(attackCoolDown <= 0 && abs(o_MaoMao.x - x) <= attack_range){
 				state = ENEMY_STATE.ATTACK;
+				
 			}
 	
 			break;
@@ -163,6 +164,7 @@ if(!global.gamePaused){
 			image_xscale = sign(o_MaoMao.x - x);
 		
 			if(sprite_index != attackSprite){
+				audio_play_sound(sound_hitCrab, 1000, false);
 				sprite_index = attackSprite;
 				mask_index = attackHBSprite;
 				image_speed = 0.5;

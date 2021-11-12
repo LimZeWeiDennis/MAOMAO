@@ -17,7 +17,7 @@ function checkHitBy(hitByNow, hits)
 				with(hitID)
 				{
 					if(state != ENEMY_STATE.ATTACK){
-						audio_play_sound(sound_hitCrab, 1000, false);
+						
 						hp -= o_MaoMao.currentAttack;
 						flash = 20;
 						hsp += sign(o_MaoMao.hsp) * 1 ;
