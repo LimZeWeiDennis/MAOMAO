@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Tutorial",
-    "path": "folders/Objects/Environment/Tutorial.yy",
+    "path": "folders/Objects/Tutorial.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_breakableGroundTut",

@@ -1,77 +1,66 @@
 /// @description UI Menu
 
-
+show_debug_message(global.bossActive);
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
 keyActivate = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter);
 
-// QUIT MENU
+// ENDGAME
 if(room == Quit_Menu) {
-	end_game_op_length = array_length(endGameOption);
+	end_game_op_length = array_length(endGameOption[endGameLevel]);
 	endGameOptionSelected += (keyDown - keyUp); 
-	
-	if(global.numFriendSave < 5) {
 		
-		if (endGameOptionSelected >= end_game_op_length){
-			endGameOptionSelected = 0
-		};
-		if (endGameOptionSelected < 0){
-			endGameOptionSelected = end_game_op_length - 1
-		}; //wrap around options
-	
-		if (keyActivate)
-		{	
-			switch(endGameOptionSelected) {
-				case 0:
-					// go back to final
-					TransitionInto(Final, 3105, 240);
-					//reset freidns saved to 1
-					global.numFriendSave = 1;
-					global.hp = 5;
-					break;
-				case 1:
-					// go back to main menu
-					TransitionInto(Main_Menu,576,145); 
-					o_MaoMao.last_cleared_stage = -1;
-					global.hp = 5;
-					global.numFriendSave = 0;
-					break;
-				case 2: 
-					// exit game
-					game_end();
-					break;
-			}
-		}
-	}
-	
-	// hero and saved all friends
-	if(global.numFriendSave == 5 ) {
-		if (endGameOptionSelected >= end_game_op_length){
-			endGameOptionSelected = 1
-		};
-		if (endGameOptionSelected < 1){
-			endGameOptionSelected = end_game_op_length - 1
-		}; //wrap around options
-	
-		if (keyActivate)
-		{	
-			switch(endGameOptionSelected) {
-				case 1:
-					// go back to main menu
-					TransitionInto(Main_Menu,576,145); 
-					o_MaoMao.last_cleared_stage = -1;
-					global.hp = 5;
-					global.numFriendSave = 0;
-					break;
-				case 2: 
-					// exit game
-					game_end();
-					break;
-			}
-		}
+	if (endGameOptionSelected >= end_game_op_length){
+		endGameOptionSelected = 0;
 	}
 		
+	if (endGameOptionSelected < 0){
+		endGameOptionSelected = end_game_op_length - 1;
+	} //wrap around options
+	
+	if (keyActivate)
+	{	
+		var _snl = endGameLevel;
+		switch(endGameLevel) {
+			case 0:
+				switch(endGameOptionSelected)
+				{
+					case 0:
+						// go back to final
+						TransitionInto(Final, 3770, 75);
+						//reset freidns saved to 1
+						global.numFriendSave = 1;
+						global.hp = 5;
+						break;
+					case 1:
+						// go back to main menu
+						TransitionInto(Main_Menu,576,145); 
+						o_MaoMao.last_cleared_stage = -1;
+						global.hp = 5;
+						global.numFriendSave = 0;
+						break;
+					case 2: 
+						// exit game
+						endGameLevel=1;
+						break;
+				}break;
+					
+			case 1:
+				switch(endGameOptionSelected)
+				{
+					//Yes
+					case 0: game_end(); break;
+					//No
+					case 1: endGameLevel = 0; break;
+				} break;
+		}
+		
+	//set option selected back to the first
+	if _snl != endGameLevel {endGameOptionSelected = 0}; 
+	//correct option length 
+	end_game_op_length = array_length(endGameOption[endGameLevel]);
+	}
 }
 	
 //Main Menu
@@ -139,7 +128,7 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 					//Restart
 					case 0: RestartScript(); break;
 					//Return to MM
-					case 1: TransitionInto(Main_Menu,576,145); o_MaoMao.state = PLAYERSTATE.FREE; global.hp =5; break;
+					case 1: TransitionInto(Main_Menu,576,145);  global.hp =5; o_MaoMao.state = PLAYERSTATE.FREE; break;
 					//Exit game
 					case 2: deathMenuLevel = 1; break;
 				}break;

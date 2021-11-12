@@ -1,7 +1,7 @@
 /// @description Draw UI
 
 //Draw heart
-if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions && room != Credits){
+if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instructions && room != Credits && room!= CageOpen && room!=Ending){
 	for (var i = 0; i < global.hp; i ++) 
 	{
 		draw_sprite(s_healthPoint, 0, hp_start_X, hp_start_Y);
@@ -27,7 +27,7 @@ if (room != Main_Menu && room!= StoryLine && room != Quit_Menu && room != Instru
 }
 
 //Draw persistent text
-if (room != Main_Menu && room != StoryLine && room != Instructions && room != Credits)
+if (room != Main_Menu && room != StoryLine && room != Instructions && room != Credits && room!= Quit_Menu && room!= CageOpen && room!=Ending)
 {
 	draw_set_color(c_white);
 	draw_set_font(fnt_default2);
@@ -173,21 +173,22 @@ if (room == Main_Menu){
 	}
 }
 
-//Draw main menu
+//Draw end game
 if (room == Quit_Menu){
 
 	//Header
-	if (global.numFriendSave < 5){ 
-		BlackOverlay();
-		draw_set_color(c_white);
-		draw_set_font(fnt_menuheader);
-		draw_text(1280 * 0.5, 600 * 0.34,
+	BlackOverlay();
+	draw_set_color(c_white);
+	draw_set_font(fnt_menuheader);
+	if (global.numFriendSave < 5 && endGameLevel==0){ 
+		draw_text(1280 * 0.5, 600 * 0.4,
 		"You saved " + string(global.numFriendSave) + "/5 cats! \n Don't worry! Purple got the rest out for you!");
-	} else if (global.numFriendSave == 5){ 
-		BlackOverlay();
-		draw_set_color(c_white);
-		draw_set_font(fnt_menuheader);
-		draw_text(1280 * 0.5, 600 * 0.43, "WOW! You really ARE a HERO! \n You saved EVERYONE!");
+	} else if (global.numFriendSave == 5 && endGameLevel == 0){ 
+		draw_text(1280 * 0.5, 600 * 0.40, "WOW! You're a hero! \n You saved everyone!");
+	}
+	if (endGameLevel == 1){
+		draw_set_color(c_white); 
+		draw_text(1280 * 0.5, 600 * 0.43, "Are you sure you want to quit?");
 	}
 	
 	//Options
@@ -196,49 +197,28 @@ if (room == Quit_Menu){
 	draw_set_color(c_white);
 
 	draw_set_font(fnt_menuoptions);
-	if(global.numFriendSave < 5) {
+
 		
-		for (var i = 0; i < end_game_op_length; i++)
-		{
-			var _print = "";
-		
-			if (i == endGameOptionSelected)
-			{
-				_print += "> " + endGameOption[i] + " <";
-			}
-			else
-			{
-				_print += endGameOption[i];
-				draw_set_alpha(0.7);
-			}
-		
-			draw_set_font(fnt_mmoptions);
-			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
-			draw_set_alpha(1.0);
+	for (var i = 0; i < end_game_op_length; i++)
+	{
 			
+		var _print = "";
+		
+		if (i == endGameOptionSelected)
+			
+		{
+			_print += "> " + endGameOption[endGameLevel,i] + " <";
 		}
+		else
+		{
+			_print += endGameOption[endGameLevel,i];
+			draw_set_alpha(0.7);
+		}
+		
+		draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
+		draw_set_alpha(1.0);
+			
 	}
 	
-		if(global.numFriendSave == 5) {
-		
-		for (var i = 1; i < end_game_op_length; i++)
-		{
-			var _print = "";
-		
-			if (i == endGameOptionSelected)
-			{
-				_print += "> " + endGameOption[i] + " <";
-			}
-			else
-			{
-				_print += endGameOption[i];
-				draw_set_alpha(0.7);
-			}
-		
-			draw_set_font(fnt_mmoptions);
-			draw_text(1280 * 0.5, 600*0.48 + 19 + (i*31), _print);
-			draw_set_alpha(1.0);
-			
-		}
-	}
+	
 }

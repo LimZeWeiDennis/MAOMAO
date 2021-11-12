@@ -3,12 +3,12 @@
 
 switch(state) {
 	case (INTROSTATE.STARTING):
-	if(sprite_index != s_openCage){
-		sprite_index = s_openCage;
+	if(sprite_index != s_cageNani){
+		sprite_index = s_cageNani;
 	}
 	image_speed = 0.3 //initialise to 0.3
 	
-	if(image_index >= 122){
+	if(image_index >= 179){
 		state = INTROSTATE.END;
 	}
 	
@@ -17,6 +17,6 @@ switch(state) {
 	case(INTROSTATE.END):
 	blink = false;
 	instance_destroy();
-	TransitionInto(Final, 3105, 240);
+	TransitionInto(Final, 3770, 75);
 	break;
 }

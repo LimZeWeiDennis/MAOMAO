@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Environment/Ground.yy",
+    "path": "folders/Sprites/Friends/Environment/Ground.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_ground5",

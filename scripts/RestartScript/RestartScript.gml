@@ -50,12 +50,13 @@ function RestartScript(){
 		o_BigBoss.x = 3453;
 		o_BigBoss.y = 211;
 		global.numFriendSave = 1;
-		TransitionInto(Final, 3105, 240);
+		TransitionInto(Final, 3770, 75);
 
 		break;
 	}
 	o_MaoMao.currentSize = 1;
 	o_MaoMao.image_xscale = o_MaoMao.growthSize[o_MaoMao.currentSize - 1];
 	o_MaoMao.image_yscale = o_MaoMao.growthSize[o_MaoMao.currentSize - 1];
-}
+	
+	}
 }
