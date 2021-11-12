@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_openCage",
-    "path": "sprites/s_openCage/s_openCage.yy",
+    "name": "s_cageNani",
+    "path": "sprites/s_cageNani/s_cageNani.yy",
   },
   "solid": false,
   "visible": true,

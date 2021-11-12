@@ -1,6 +1,6 @@
 /// @description UI Menu
 
-
+show_debug_message(global.bossActive);
 //Check Input
 keyUp = keyboard_check_pressed(vk_up);
 keyDown = keyboard_check_pressed(vk_down);
@@ -128,7 +128,7 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 					//Restart
 					case 0: RestartScript(); break;
 					//Return to MM
-					case 1: TransitionInto(Main_Menu,576,145); o_MaoMao.state = PLAYERSTATE.FREE; global.hp =5; break;
+					case 1: TransitionInto(Main_Menu,576,145);  global.hp =5; o_MaoMao.state = PLAYERSTATE.FREE; break;
 					//Exit game
 					case 2: deathMenuLevel = 1; break;
 				}break;

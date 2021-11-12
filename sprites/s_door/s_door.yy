@@ -98,7 +98,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Interactables",
-    "path": "folders/Sprites/Environment/Interactables.yy",
+    "path": "folders/Sprites/Friends/Environment/Interactables.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_door",

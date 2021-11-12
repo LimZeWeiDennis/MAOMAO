@@ -28,8 +28,6 @@ switch(state)
 	image_index = last_index;
 	image_speed = 0;
 	
-	TransitionInto(CageOpen, 548, -50);
-	
 	o_MaoMao.last_cleared_stage = Level2;
 	break;
 }

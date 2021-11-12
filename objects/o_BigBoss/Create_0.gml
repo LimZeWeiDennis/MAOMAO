@@ -28,3 +28,4 @@ attack_last_index = 6;
 walking_sprite = s_BigBossWalk;
 
 state = ENEMY_STATE.FREE;
+

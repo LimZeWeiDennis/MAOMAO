@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu  to be deleted",
-    "path": "folders/Objects/Menu  to be deleted.yy",
+    "name": "Cinematics",
+    "path": "folders/Objects/Cinematics.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_credit",

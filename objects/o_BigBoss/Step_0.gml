@@ -1,7 +1,8 @@
  /// @description Enemy Movement
 // You can write your code in this editor
 
-if(!global.gamePaused){
+
+if(!global.gamePaused && global.bossActive){
 
 	switch (state) 
 	{

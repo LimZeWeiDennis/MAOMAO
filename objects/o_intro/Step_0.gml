@@ -3,38 +3,17 @@
 
 switch(state) {
 	case (INTROSTATE.STARTING):
-	if(sprite_index != s_starting){
-		sprite_index = s_starting;
+	if(sprite_index != s_introLetterBox){
+		sprite_index = s_introLetterBox;
 	}
 	image_speed = 0.3 //initialise to 0.3
 	
-	if(image_index >= 15){
-		state = INTROSTATE.KIDNAP;
-	}
-	
-	break;
-	
-	case(INTROSTATE.KIDNAP):
-	if(sprite_index != s_kidnapped){
-		sprite_index = s_kidnapped;
-	}
-	
-	if(image_index >= 131){
-		state = INTROSTATE.ANGRY;
-	}
-
-	break;
-	
-	case(INTROSTATE.ANGRY):
-	if(sprite_index != s_angryMao){
-		sprite_index = s_angryMao;
-	}
-	
-	if(image_index >= 59){
+	if(image_index >= 287){
 		state = INTROSTATE.END;
 	}
-
+	
 	break;
+
 	
 	case(INTROSTATE.END):
 	blink = false;
