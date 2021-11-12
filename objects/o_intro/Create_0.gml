@@ -3,6 +3,7 @@
 
 enum INTROSTATE {
 	STARTING,
+	HAPPY,
 	END
 }
 
