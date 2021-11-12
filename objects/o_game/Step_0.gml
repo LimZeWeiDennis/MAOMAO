@@ -131,8 +131,6 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 					break;
 					//Return to MM
 					case 1: TransitionInto(Main_Menu,576,145); 
-					global.hp =5;
-					o_MaoMao.state = PLAYERSTATE.FREE; 
 					break;
 					//Exit game
 					case 2: deathMenuLevel = 1; break;

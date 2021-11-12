@@ -1,12 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+buttonff = keyboard_check(vk_space);
+
+if(buttonff){
+	image_speed = 4;
+	showtext  = 0;
+} else {
+	showtext = 1;
+	image_speed = 1 //initialise to 0.3
+}
+
 switch(state) {
 	case (INTROSTATE.STARTING):
 	if(sprite_index != s_ending){
 		sprite_index = s_ending;
 	}
-	image_speed = 0.3 //initialise to 0.3
+	image_speed = 1.0 //initialise to 0.3
 	
 	if(image_index >= 139 && image_index <= 140){
 		state = INTROSTATE.HAPPY;
