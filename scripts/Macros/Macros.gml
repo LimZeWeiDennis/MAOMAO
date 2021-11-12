@@ -49,12 +49,12 @@ function PlayButton(){
 
 		break;
 		
-		//case(Final):
+		case(Final):
 		
-		//global.numFriendSave = 2;
-		//TransitionInto(Quit_Menu, 500, -100);
+		global.numFriendSave = 2;
+		TransitionInto(Ending, 500, -100);
 
-		//break;
+		break;
 		
 	}
  }

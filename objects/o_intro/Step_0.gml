@@ -6,7 +6,7 @@ switch(state) {
 	if(sprite_index != s_introLetterBox){
 		sprite_index = s_introLetterBox;
 	}
-	image_speed = 0.3 //initialise to 0.3
+	image_speed = 1 //initialise to 0.3
 	
 	if(image_index >= 287){
 		state = INTROSTATE.END;

@@ -126,9 +126,14 @@ if (o_MaoMao.state == PLAYERSTATE.DEAD_IDLE_STATE){
 			case 0:
 				switch(deathOptionSelected){
 					//Restart
-					case 0: RestartScript(); break;
+					case 0:
+					RestartScript();
+					break;
 					//Return to MM
-					case 1: TransitionInto(Main_Menu,576,145);  global.hp =5; o_MaoMao.state = PLAYERSTATE.FREE; break;
+					case 1: TransitionInto(Main_Menu,576,145); 
+					global.hp =5;
+					o_MaoMao.state = PLAYERSTATE.FREE; 
+					break;
 					//Exit game
 					case 2: deathMenuLevel = 1; break;
 				}break;
